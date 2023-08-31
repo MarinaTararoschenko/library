@@ -1,0 +1,34 @@
+.matSidenavContainer {
+  height: 100%;
+}
+
+.matSidenav,
+.mat-drawer-inner-container {
+  overflow: initial !important;
+}
+
+.matSidenav {
+  display: block !important;
+  visibility: visible !important;
+  transform: translate3d(0, 0, 0) !important;
+  transition: width .4s;
+  width: 64px;
+
+  &.mat-drawer-opened {
+    width: 280px !important;
+  }
+
+  .mdc-label {
+    white-space: nowrap;
+  }
+}
+
+
+.matSidenavContent {
+  margin-left: 64px !important;
+  transition: margin-left .4s;
+}
+
+.mat-drawer-opened~.matSidenavContent {
+  margin-left: 280px !important;
+}

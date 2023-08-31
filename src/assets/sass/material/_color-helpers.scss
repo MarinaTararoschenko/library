@@ -1,0 +1,164 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  // Get the color config from the theme.
+  $color-config: mat.get-color-config($theme);
+
+  // Get the primary color palette from the color-config.
+  $primary-palette: map.get($color-config, 'primary');
+  $secondary-palette: map.get($color-config, 'accent');
+  $warn-palette: map.get($color-config, 'warn');
+
+  // text on background
+  .on-primary-accent {
+    color: mat.get-contrast-color-from-palette($primary-palette, 500);
+    background-color: mat.get-color-from-palette($primary-palette, 500);
+
+    &-light {
+      color: mat.get-contrast-color-from-palette($primary-palette, 50);
+      background-color: mat.get-color-from-palette($primary-palette, 50);
+    }
+
+    &-dark {
+      color: mat.get-contrast-color-from-palette($primary-palette, 700);
+      background-color: mat.get-color-from-palette($primary-palette, 700);
+    }
+  }
+
+  .on-secondary-accent {
+    color: mat.get-contrast-color-from-palette($secondary-palette, 200);
+    background-color: mat.get-color-from-palette($secondary-palette, 200);
+
+    &-light {
+      color: mat.get-contrast-color-from-palette($secondary-palette, 50);
+      background-color: mat.get-color-from-palette($secondary-palette, 50);
+    }
+
+    &-dark {
+      color: mat.get-contrast-color-from-palette($secondary-palette, 700);
+      background-color: mat.get-color-from-palette($secondary-palette, 700);
+    }
+  }
+
+  .on-warn-accent {
+    color: mat.get-contrast-color-from-palette($warn-palette, 500);
+    background-color: mat.get-color-from-palette($warn-palette, 500);
+
+    &-light {
+      color: mat.get-contrast-color-from-palette($warn-palette, 100);
+      background-color: mat.get-color-from-palette($warn-palette, 100);
+    }
+
+    &-dark {
+      color: mat.get-contrast-color-from-palette($warn-palette, 900);
+      background-color: mat.get-color-from-palette($warn-palette, 900);
+    }
+  }
+
+  // text colors
+  .color-primary {
+    color: var(--primaryText);
+  }
+
+  .color-secondary {
+    color: var(--secondaryText);
+  }
+
+  .color-disabled {
+    color: var(--disabledText);
+  }
+
+  .color-accent-primary {
+    color: mat.get-color-from-palette($primary-palette, default);
+
+    &-light {
+      color: mat.get-color-from-palette($primary-palette, lighter);
+    }
+
+    &-dark {
+      color: mat.get-color-from-palette($primary-palette, darker);
+    }
+  }
+
+  .color-accent-secondary {
+    color: mat.get-color-from-palette($secondary-palette, default);
+
+    &-light {
+      color: mat.get-color-from-palette($secondary-palette, lighter);
+    }
+
+    &-dark {
+      color: mat.get-color-from-palette($secondary-palette, darker);
+    }
+  }
+
+  .color-warn {
+    color: mat.get-color-from-palette($warn-palette, default);
+
+    &-light {
+      color: mat.get-color-from-palette($warn-palette, lighter);
+    }
+
+    &-dark {
+      color: mat.get-color-from-palette($warn-palette, darker);
+    }
+  }
+
+  // background colors
+  .bg-primary {
+    background-color: var(--surface);
+  }
+
+  .bg-secondary {
+    background-color: var(--primaryBackground);
+  }
+
+  .bg-disabled {
+    background-color: var(--disabledBackground);
+  }
+
+  .bg-accent-primary {
+    background-color: mat.get-color-from-palette($primary-palette, default);
+
+    &-light {
+      background-color: mat.get-color-from-palette($primary-palette, lighter);
+    }
+
+    &-dark {
+      background-color: mat.get-color-from-palette($primary-palette, darker);
+    }
+  }
+
+  .bg-accent-secondary {
+    background-color: mat.get-color-from-palette($secondary-palette, default);
+
+    &-light {
+      background-color: mat.get-color-from-palette($secondary-palette, lighter);
+    }
+
+    &-dark {
+      background-color: mat.get-color-from-palette($secondary-palette, darker);
+    }
+  }
+
+  .bg-warn {
+    background-color: mat.get-color-from-palette($warn-palette, default);
+
+    &-light {
+      background-color: mat.get-color-from-palette($warn-palette, lighter);
+    }
+
+    &-dark {
+      background-color: mat.get-color-from-palette($warn-palette, darker);
+    }
+  }
+}
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+
+  @if $color-config !=null {
+    @include color($theme);
+  }
+}

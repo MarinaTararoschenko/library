@@ -1,0 +1,209 @@
+@use '@angular/material' as mat;
+@use 'color-helpers' as color-helpers;
+
+@include mat.core();
+
+$custom-primary-light-palette: (
+  50: #EAEDFF,
+  100: #D0D8FF,
+  200: #A1B1FF,
+  300: #7388FF,
+  400: #5068FF,
+  500: #1633FF,
+  600: #1026DB,
+  700: #0B1CB7,
+  800: #071393,
+  900: #040C7A,
+  contrast: (
+    50: var(--onPrimaryInvert),
+    100: var(--onPrimaryInvert),
+    200: var(--onPrimaryInvert),
+    300: var(--onPrimaryInvert),
+    400: var(--onPrimaryInvert),
+    500: var(--onPrimary),
+    600: var(--onPrimary),
+    700: var(--onPrimary),
+    800: var(--onPrimary),
+    900: var(--onPrimary))
+);
+
+$custom-primary-dark-palette: (
+  50: #eaedff,
+  100: #cbd2ff,
+  200: #a8b4ff,
+  300: #8595ff,
+  400: #6a7fff,
+  500: #5068ff,
+  600: #4960ff,
+  700: #4055ff,
+  800: #374bff,
+  900: #273aff,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #d4d8ff,
+  A700: #bbc0ff,
+  contrast: (
+    50: var(--onPrimaryInvert),
+    100: var(--onPrimaryInvert),
+    200: var(--onPrimaryInvert),
+    300: var(--onPrimaryInvert),
+    400: var(--onPrimaryInvert),
+    500: var(--onPrimary),
+    600: var(--onPrimary),
+    700: var(--onPrimary),
+    800: var(--onPrimary),
+    900: var(--onPrimary))
+);
+
+$custom-accent-palette: (
+  50: #C8FFF4,
+  100: #70EFDE,
+  200: #03DAC5,
+  300: #00C4B4,
+  400: #00B3A6,
+  500: #01A299,
+  600: #019592,
+  700: #018786,
+  800: #017374,
+  900: #005457,
+  contrast: (
+    50: var(--onPrimaryInvert),
+    100: var(--onPrimaryInvert),
+    200: var(--onPrimaryInvert),
+    300: var(--onPrimaryInvert),
+    400: var(--onPrimaryInvert),
+    500: var(--onPrimary),
+    600: var(--onPrimary),
+    700: var(--onPrimary),
+    800: var(--onPrimary),
+    900: var(--onPrimary))
+);
+
+$custom-warn-light-palette: (
+  50: #fee7e5,
+  100: #fdc2bf,
+  200: #fc9a95,
+  300: #fb716a,
+  400: #fa524a,
+  500: #f9342a,
+  600: #f82f25,
+  700: #f7271f,
+  800: #f62119,
+  900: #f5150f,
+  contrast: (
+    50: var(--onPrimaryInvert),
+    100: var(--onPrimaryInvert),
+    200: var(--onPrimaryInvert),
+    300: var(--onPrimaryInvert),
+    400: var(--onPrimaryInvert),
+    500: var(--onPrimary),
+    600: var(--onPrimary),
+    700: var(--onPrimary),
+    800: var(--onPrimary),
+    900: var(--onPrimary))
+);
+
+$custom-warn-dark-palette: (
+  50: #ffeeec,
+  100: #fed5cf,
+  200: #fdb9af,
+  300: #fc9d8e,
+  400: #fc8876,
+  500: #fb735e,
+  600: #fa6b56,
+  700: #fa604c,
+  800: #f95642,
+  900: #f84331,
+  contrast: (
+    50: var(--onPrimaryInvert),
+    100: var(--onPrimaryInvert),
+    200: var(--onPrimaryInvert),
+    300: var(--onPrimaryInvert),
+    400: var(--onPrimaryInvert),
+    500: var(--onPrimary),
+    600: var(--onPrimary),
+    700: var(--onPrimary),
+    800: var(--onPrimary),
+    900: var(--onPrimary))
+);
+
+// light theme
+$theme-light-primary: mat.define-palette($custom-primary-light-palette, 500, 50, 700);
+$theme-light-accent: mat.define-palette($custom-accent-palette, 200, 50, 500);
+$theme-light-warn: mat.define-palette($custom-warn-light-palette, 500, 100, 900);
+
+$custom-light-theme: mat.define-light-theme((
+  color: (
+    primary: $theme-light-primary,
+    accent: $theme-light-accent,
+    warn: $theme-light-warn
+  )
+));
+
+// dark theme
+$theme-dark-primary: mat.define-palette($custom-primary-dark-palette, 500, 50, 900);
+$theme-dark-accent: mat.define-palette($custom-accent-palette, 200, 50, 700);
+$theme-dark-warn: mat.define-palette($custom-warn-dark-palette, 500, 100, 900);
+
+$custom-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $theme-dark-primary,
+    accent: $theme-dark-accent,
+    warn: $theme-dark-warn
+  )
+));
+
+@include mat.all-component-themes($custom-light-theme);
+@include color-helpers.theme($custom-light-theme); // add helpers classes based on material palette
+
+// include custom dark theme
+.dark {
+  @include mat.all-component-colors($custom-dark-theme);
+  @include color-helpers.theme($custom-dark-theme); // add helpers classes based on material palette
+}
+
+// To convert hex to RGB codes
+@function hexToRGB($hexcolor, $opacity) {
+  $red: red($hexcolor);
+  $green: green($hexcolor);
+  $blue: blue($hexcolor);
+  $alpha: alpha($hexcolor);
+
+  @if $opacity ==1 or $opacity ==100% {
+    @return unquote("rgba(#{$red},#{$green},#{$blue},#{$alpha})");
+  }
+
+  @else {
+    @return unquote("rgba(#{$red},#{$green},#{$blue},#{$opacity})");
+  }
+}
+
+// set varibales with accent colors
+:root {
+  --primaryAccent: #{mat.get-color-from-palette($custom-primary-light-palette, 500)};
+  --primaryAccentLight: #{mat.get-color-from-palette($custom-primary-light-palette, 50)};
+  --primaryAccentDark: #{mat.get-color-from-palette($custom-primary-light-palette, 700)};
+  --borderPrimaryAccentLight: #{hexToRGB(mat.get-color-from-palette($custom-primary-light-palette, 500),.12)};
+
+  --secondaryAccent: #{mat.get-color-from-palette($custom-accent-palette, 200)};
+  --secondaryAccentLight: #{mat.get-color-from-palette($custom-accent-palette, 50)};
+  --secondaryAccentDark: #{mat.get-color-from-palette($custom-accent-palette, 500)};
+  --borderSecondaryAccentLight: #{hexToRGB(mat.get-color-from-palette($custom-accent-palette, 200),.12)};
+
+  --warn: #{mat.get-color-from-palette($custom-warn-light-palette, 500)};
+  --warnLight: #{mat.get-color-from-palette($custom-warn-light-palette, 100)};
+  --warnDark: #{mat.get-color-from-palette($custom-warn-light-palette, 900)};
+  --borderWarnLight: #{hexToRGB(mat.get-color-from-palette($custom-warn-light-palette, 500),.12)};
+}
+
+:root .dark {
+  --primaryAccent: #{mat.get-color-from-palette($custom-primary-dark-palette, 500)};
+  --primaryAccentLight: #{mat.get-color-from-palette($custom-primary-dark-palette, 50)};
+  --primaryAccentDark: #{mat.get-color-from-palette($custom-primary-dark-palette, 700)};
+  --borderPrimaryAccentLight: #{hexToRGB(mat.get-color-from-palette($custom-primary-dark-palette, 500),.12)};
+
+  --warn: #{mat.get-color-from-palette($custom-warn-dark-palette, 500)};
+  --warnLight: #{mat.get-color-from-palette($custom-warn-dark-palette, 100)};
+  --warnDark: #{mat.get-color-from-palette($custom-warn-dark-palette, 900)};
+  --borderWarnLight: #{hexToRGB(mat.get-color-from-palette($custom-warn-dark-palette, 500),.12)};
+}

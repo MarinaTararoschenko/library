@@ -1,0 +1,22 @@
+<div class="p-x-24 p-y-32">
+
+  <mat-accordion>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span class="mat-body-1">Info banner</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <app-info-banner [type]="'info'"></app-info-banner>
+      <br>
+      <app-info-banner [type]="'success'" [icon]="'check_circle'"></app-info-banner>
+      <br>
+      <app-info-banner [type]="'error'" [icon]="'error'"></app-info-banner>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+</div>

@@ -1,0 +1,33 @@
+.infoBanner {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+
+  .material-symbols-outlined {
+    margin-right: 16px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.info {
+  color: var(--primaryAccent);
+  background-color: var(--primaryAccentLight);
+  border-color: var(--borderPrimaryAccentLight);
+}
+
+.success {
+  color: var(--secondaryAccent);
+  background-color: var(--secondaryAccentLight);
+  border-color: var(--borderSecondaryAccentLight);
+}
+
+.error {
+  color: var(--warn);
+  background-color: var(--warnLight);
+  border-color: var(--borderWarnLight);
+}

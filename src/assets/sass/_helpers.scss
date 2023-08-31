@@ -1,0 +1,107 @@
+.upper {
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  @extend .flex;
+  flex-direction: column
+}
+
+.flex-center-center {
+  @extend .flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-justify-center {
+  @extend .flex;
+  justify-content: center;
+}
+
+.flex-justify-between {
+  @extend .flex;
+  justify-content: space-between;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// dynamically generates helper classes with multiples of 8
+@for $i from 0 through 32 {
+  @if $i % 8 == 0 {
+    .m-l-#{$i} {
+      margin-left: #{$i}px;
+    }
+    .m-r-#{$i} {
+      margin-right: #{$i}px;
+    }
+    .m-b-#{$i} {
+      margin-bottom: #{$i}px;
+    }
+    .p-x-#{$i} {
+      padding-left: #{$i}px;
+      padding-right: #{$i}px;
+    }
+    .p-y-#{$i} {
+      padding-top: #{$i}px;
+      padding-bottom: #{$i}px;
+    }
+    .p-l-#{$i} {
+      padding-left: #{$i}px;
+    }
+
+    .p-r-#{$i} {
+      padding-right: #{$i}px;
+    }
+  }
+
+  @if $i > 16 {
+    @if $i % 8==0  {
+      .size-#{$i} {
+        font-size: #{$i}px;
+      }
+    }
+  }
+
+
+}
+
+.grid {
+  display: grid;
+}
+
+// dynamically generates helper classes for the grid columns
+@for $i from 1 to 4 {
+  .g-template-columns-#{$i} {
+    grid-template-columns: repeat($i, 1fr);
+  }
+  .g-column-start-#{$i} {
+    grid-column-start: $i;
+  }
+  .g-column-end-#{$i} {
+    grid-column-end: $i + 1;
+  }
+}

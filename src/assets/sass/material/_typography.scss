@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+@use "sass:map";
+
+$custom-typography-config: mat.define-typography-config(
+  $font-family: var(--primaryFont),
+  $headline-5: mat.define-typography-level(48px, 1, 400), // mat-h1, mat-headline-5
+  $headline-6: mat.define-typography-level(40px, 1, 400), // mat-h2, mat-headline-6
+  $subtitle-1: mat.define-typography-level(32px, 1, 400), // mat-h3, mat-subtitle-1
+  $body-1: mat.define-typography-level(2rem, 1.2, 400), // mat-h4, mat-body-1
+  $body-2: mat.define-typography-level(1.6rem, 1.2, 400), // mat-body, mat-body-2
+  $caption: mat.define-typography-level(1.2rem, 1.2, 400), // mat-caption, mat-small
+  $button: mat.define-typography-level(16px, 1, 500)
+);
+
+@include mat.all-component-typographies($custom-typography-config);
+
+@mixin typography($theme) {
+  .mat-mdc-form-field {
+    @include mat.typography-level(mat.get-typography-config($theme), 'body-2')
+  }
+
+  .mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
+    @include mat.typography-level(mat.get-typography-config($theme), 'body-2');
+  }
+}
+@include typography($custom-typography-config);
+
+.mat-typography .mat-body-1 {
+  margin-bottom: 0;
+}

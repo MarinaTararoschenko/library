@@ -1,0 +1,32 @@
+@media only screen and (min-width: 990px) {
+  :host-context(.open-dropdown) .dropdownMenu {
+    transform: scaleY(1);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .dropdownMenu {
+    position: sticky;
+    left: 0;
+    top: 64px;
+    display: flex;
+    flex-direction: column;
+    width: 940px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: var(--surface);
+    box-shadow: 0 2px 4px var(--border-color);
+    transition-duration: .25s;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 103;
+
+    >.mdc-icon-button {
+      margin-left: auto;
+    }
+  }
+}

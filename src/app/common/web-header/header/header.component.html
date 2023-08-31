@@ -1,0 +1,44 @@
+<header #header class="wrapHeader">
+  <div class="wrapHeader__container">
+    <a class="logo mat-body-1 color-accent-primary" [routerLink]="['/']">
+      <b>Logo website</b>
+    </a>
+
+    <nav class="wrapHeader__nav">
+      <ul class="wrapHeader__list">
+        <li><b (mouseenter)="openDropdownMenu()">Dropdown menu</b></li>
+        <li><a href="/"><b>Point 1</b></a></li>
+        <li><a href="/"><b>Point 2</b></a></li>
+        <li><a href="/"><b>Point 3</b></a></li>
+      </ul>
+    </nav>
+
+    <button
+      class="wrapHeader__btn-menu"
+      mat-button
+      [matMenuTriggerFor]="headerMenu"
+      (menuOpened)="isOpenMatMenu = true"
+      (menuClosed)="isOpenMatMenu = false">
+      <span class="flex-center-center">
+        <b>Open menu</b>
+        <span class="material-symbols-outlined">{{isOpenMatMenu ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</span>
+      </span>
+    </button>
+
+    <mat-menu #headerMenu="matMenu" class="matMenuHader">
+      <button mat-menu-item *ngFor="let item of matMenuList">
+        <b>{{item.text}}</b>
+      </button>
+    </mat-menu>
+
+    <button class="m-l-8" mat-stroked-button color="primary">
+      <span>Header button</span>
+    </button>
+
+    <button mat-icon-button class="humburger">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</header>
+
+<app-dropdown-menu (hideMenu)="closeDropdownMenu()"></app-dropdown-menu>
