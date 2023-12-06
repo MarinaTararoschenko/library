@@ -7,7 +7,7 @@ import { Component, Renderer2, ViewEncapsulation } from '@angular/core';
     encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-    isOpenedSidenav = true;
+    isOpenedSidenav = false;
 
     constructor(
         private renderer: Renderer2

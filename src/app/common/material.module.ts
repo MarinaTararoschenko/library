@@ -11,6 +11,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
     imports: [
@@ -24,7 +25,8 @@ import { MatMenuModule } from '@angular/material/menu';
         MatListModule,
         MatSlideToggleModule,
         MatExpansionModule,
-        MatMenuModule
+        MatMenuModule,
+        MatCardModule
     ],
     exports: [
         FormsModule,
@@ -38,7 +40,8 @@ import { MatMenuModule } from '@angular/material/menu';
         MatListModule,
         MatSlideToggleModule,
         MatExpansionModule,
-        MatMenuModule
+        MatMenuModule,
+        MatCardModule
     ]
 })
 export class CustomMaterialModule {}

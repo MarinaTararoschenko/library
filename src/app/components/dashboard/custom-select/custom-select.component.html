@@ -1,0 +1,40 @@
+<div class="flex_center">
+  <span [ngClass]="type === 1 ? 'subtitle font-medium' : 'textBody1 color-light'">
+    <ng-container *ngIf="current.label">{{current.label}}</ng-container>
+    <ng-container *ngIf="!current.label">
+      <ng-container *ngIf="type === 1">
+        {{current.optionValue.charAt(0).toUpperCase() + current.optionValue.slice(1)}}
+      </ng-container>
+      <ng-container *ngIf="type !== 1">
+        {{current.optionValue}}
+      </ng-container>
+    </ng-container>
+  </span>
+  <button
+    mat-icon-button
+    class="m-l-8"
+    [ngStyle]="{'transform': menuTriger.menuOpen ? 'rotate(180deg)' : null}"
+    [matMenuTriggerFor]="menu" #menuTriger="matMenuTrigger">
+    <mat-icon>{{menuTriger.menuOpen ? 'arrow_drop_up' : 'arrow_drop_down'}}</mat-icon>
+  </button>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="selectedOption(lableObj, 0)" *ngIf="!!lableObj">
+    <span class="flex_between_center color-on-background">
+      <span>{{lableObj.label}}</span>
+      <mat-icon *ngIf="current === lableObj">done</mat-icon>
+    </span>
+  </button>
+
+  <ng-container *ngFor="let option of data; let i = index">
+    <button mat-menu-item *ngIf="option !== lableObj" (click)="selectedOption(option, i)">
+      <span class="flex_between_center color-on-background">
+        <span *ngIf="type === 1">{{option.optionValue.charAt(0).toUpperCase() + option.optionValue.slice(1)}}</span>
+        <span *ngIf="type !== 1">{{option.optionValue}}</span>
+        <mat-icon *ngIf="current === option">done</mat-icon>
+      </span>
+    </button>
+  </ng-container>
+
+</mat-menu>

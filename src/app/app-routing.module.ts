@@ -5,6 +5,7 @@ import { TypographyComponent } from './common/typography/typography.component';
 import { ColorHelpersComponent } from './common/color-helpers/color-helpers.component';
 import { WebHeaderComponent } from './common/web-header/web-header.component';
 import { ComponentsComponent } from './components/components.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
     {
@@ -27,6 +28,10 @@ const routes: Routes = [
     {
         path: 'web-header',
         component: WebHeaderComponent
+    },
+    {
+        path: 'dashboard',
+        component: DashboardComponent
     }
 ];
 

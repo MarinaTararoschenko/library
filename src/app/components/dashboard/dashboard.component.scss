@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  min-height: auto;
+  padding: 54px 40px 40px;
+
+  @media (max-width: 670px) {
+    padding: 54px 24px 40px;
+  }
+}
+
+.mdc-card {
+  padding: 24px 16px;
+}

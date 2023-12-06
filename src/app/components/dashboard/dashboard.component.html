@@ -1,0 +1,21 @@
+<mat-card>
+  <app-custom-select
+    [current]="currentMonth"
+    [options]="currentMonthesPeriod"
+    [type]="1"
+    (selected)="changeCurrentMonth($event)">
+  </app-custom-select>
+
+  <br>
+
+  <app-custom-select
+    [current]="previousMonth"
+    [options]="previousMonthesPeriod"
+    [type]="2"
+    (selected)="changePreviousMonth($event)">
+  </app-custom-select>
+
+  <br>
+
+  <app-bar-chart [chartSettings]="chartSettings" [data]="chartData"></app-bar-chart>
+</mat-card>
