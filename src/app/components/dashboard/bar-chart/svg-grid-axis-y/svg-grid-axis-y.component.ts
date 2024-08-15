@@ -17,7 +17,7 @@ import { IAxisYSettings, IDataAxisY } from '../bar-chart.component';
     `,
     styles: [`
         path {
-            stroke: #191C1D;
+            stroke: var(--primaryText);
             stroke-opacity: 0.16;
         }
 
@@ -28,7 +28,7 @@ import { IAxisYSettings, IDataAxisY } from '../bar-chart.component';
             font-weight: 500;
             line-height: 14px;
             letter-spacing: 1.5px;
-            fill: #191C1D;
+            fill: var(--primaryText);
             text-transform: uppercase;
             transform: translateY(3px);
         }

@@ -25,7 +25,7 @@ import { IDataAxisX } from '../bar-chart.component';
             font-weight: 500;
             line-height: 14px;
             letter-spacing: 1.5px;
-            fill: #191C1D;
+            fill: var(--primaryText);
             text-transform: uppercase;
         }
     `]
