@@ -23,6 +23,11 @@
   flex-direction: column
 }
 
+.flex-align-center {
+  @extend .flex;
+  align-items: center;
+}
+
 .flex-center-center {
   @extend .flex;
   justify-content: center;

@@ -19,4 +19,29 @@
 
   </mat-accordion>
 
+  <br>
+  <br>
+
+  <div class="flex-justify-between">
+    <div class="flex-align-center mat-body-1">
+      <mat-icon class="m-r-8" appTooltip [templateRef]="tooltipTemplate" [position]="{y: 'top', x: 'start'}">
+        info
+      </mat-icon>
+      <b>Show tooltip with top/start position</b>
+    </div>
+
+    <div class="flex-align-center mat-body-1">
+      <b>Show tooltip with bottom/end position</b>
+      <mat-icon class="m-l-8" appTooltip [templateRef]="tooltipTemplate" [position]="{y: 'bottom', x: 'end'}">
+        info
+      </mat-icon>
+    </div>
+  </div>
+
+  <ng-template #tooltipTemplate>
+    <app-tooltip>
+      Test tooltip text
+    </app-tooltip>
+  </ng-template>
+
 </div>

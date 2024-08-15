@@ -26,12 +26,14 @@ import { SvgBarComponent } from './components/dashboard/bar-chart/svg-bar/svg-ba
 import { SvgGridAxisYComponent } from './components/dashboard/bar-chart/svg-grid-axis-y/svg-grid-axis-y.component';
 import { SvgGridAxisXComponent } from './components/dashboard/bar-chart/svg-grid-axis-x/svg-grid-axis-x.component';
 import { SvgTooltipComponent } from './components/dashboard/bar-chart/svg-tooltip/svg-tooltip.component';
+import { TooltipComponent } from './components/tooltip/tooltip.component';
 
 // services
 import { ThemeService } from './common/services/theme.services';
 
 // directives
 import { SvgTooltipDirective } from './components/dashboard/bar-chart/svg-tooltip.directive';
+import { TooltipDirective } from './common/directives/tooltip.directive';
 
 @NgModule({
     declarations: [
@@ -51,7 +53,9 @@ import { SvgTooltipDirective } from './components/dashboard/bar-chart/svg-toolti
         SvgGridAxisYComponent,
         SvgGridAxisXComponent,
         SvgTooltipComponent,
-        SvgTooltipDirective
+        SvgTooltipDirective,
+        TooltipComponent,
+        TooltipDirective
     ],
     imports: [
         BrowserModule,
