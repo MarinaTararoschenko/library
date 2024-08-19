@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 
+import { DropdownService } from '../../services/dropdown.service';
+
 interface IMatMenuList {
     icon: string;
     text: string;
@@ -14,6 +16,7 @@ export class HeaderComponent implements OnInit {
     @ViewChild('header', { static: true }) header!: ElementRef;
 
     isOpenMatMenu = false;
+    isOpenDropdown = false;
 
     matMenuList: Array<IMatMenuList> = [
         {
@@ -31,21 +34,26 @@ export class HeaderComponent implements OnInit {
     ];
 
     constructor(
-        private renderer: Renderer2
+        private renderer: Renderer2,
+        private _dropdownSrv: DropdownService
     ) {
     }
 
     ngOnInit(): void {
     }
 
-    openDropdownMenu(): void {
+    openDropdownMenu(ev: any): void {
+        this.isOpenDropdown = true;
+
         setTimeout(() => {
+            this._dropdownSrv.setDropdownPosition(ev.target.getBoundingClientRect().left);
             this.renderer.addClass(document.body, 'open-dropdown');
-        }, 0);
+        }, 100);
     }
 
     closeDropdownMenu(): void {
         this.renderer.removeClass(document.body, 'open-dropdown');
+        this.isOpenDropdown = false;
     }
 
 }

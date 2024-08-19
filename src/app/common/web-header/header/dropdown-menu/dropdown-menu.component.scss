@@ -7,8 +7,7 @@
   }
 
   .dropdownMenu {
-    position: sticky;
-    left: 0;
+    position: fixed;
     top: 64px;
     display: flex;
     flex-direction: column;
@@ -18,7 +17,9 @@
     padding: 16px;
     background-color: var(--surface);
     box-shadow: 0 2px 4px var(--border-color);
-    transition-duration: .25s;
+    transform: scale(0);
+    transform-origin: top center;
+    transition: transform .25s;
     overflow: hidden;
     opacity: 0;
     visibility: hidden;

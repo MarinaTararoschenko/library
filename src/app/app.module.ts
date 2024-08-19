@@ -30,6 +30,7 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
 
 // services
 import { ThemeService } from './common/services/theme.services';
+import { DropdownService } from './common/services/dropdown.service';
 
 // directives
 import { SvgTooltipDirective } from './components/dashboard/bar-chart/svg-tooltip.directive';
@@ -64,7 +65,7 @@ import { TooltipDirective } from './common/directives/tooltip.directive';
         CustomMaterialModule,
         HttpClientModule
     ],
-    providers: [ThemeService],
+    providers: [ThemeService, DropdownService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

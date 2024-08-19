@@ -6,7 +6,7 @@
 
     <nav class="wrapHeader__nav">
       <ul class="wrapHeader__list">
-        <li><b (mouseenter)="openDropdownMenu()">Dropdown menu</b></li>
+        <li><b (mouseenter)="openDropdownMenu($event)">Dropdown menu</b></li>
         <li><a href="/"><b>Point 1</b></a></li>
         <li><a href="/"><b>Point 2</b></a></li>
         <li><a href="/"><b>Point 3</b></a></li>
@@ -41,4 +41,4 @@
   </div>
 </header>
 
-<app-dropdown-menu (hideMenu)="closeDropdownMenu()"></app-dropdown-menu>
+<app-dropdown-menu (hideMenu)="closeDropdownMenu()" *ngIf="isOpenDropdown"></app-dropdown-menu>
