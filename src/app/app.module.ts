@@ -28,6 +28,9 @@ import { SvgGridAxisXComponent } from './components/dashboard/bar-chart/svg-grid
 import { SvgTooltipComponent } from './components/dashboard/bar-chart/svg-tooltip/svg-tooltip.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { SvgIconsComponent } from './common/sidenav/svg-icons/svg-icons.component';
+import { PhoneFieldComponent } from './components/form/phone-field/phone-field.component';
+import { PhoneFieldMenuSuffixComponent } from './components/form/phone-field-menu-suffix/phone-field-menu-suffix.component';
+import { PhoneFieldMenuPrefixComponent } from './components/form/phone-field-menu-prefix/phone-field-menu-prefix.component';
 
 // services
 import { ThemeService } from './common/services/theme.services';
@@ -57,6 +60,9 @@ import { TooltipDirective } from './common/directives/tooltip.directive';
         SvgTooltipComponent,
         TooltipComponent,
         SvgIconsComponent,
+        PhoneFieldComponent,
+        PhoneFieldMenuSuffixComponent,
+        PhoneFieldMenuPrefixComponent,
         // directives
         SvgTooltipDirective,
         TooltipDirective,

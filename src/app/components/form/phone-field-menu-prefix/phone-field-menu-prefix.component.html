@@ -1,0 +1,21 @@
+<mat-form-field appearance="outline" class="formFiled__phone" floatLabel="always" [formGroup]="form">
+  <mat-label>Teléfono</mat-label>
+  <input matInput type="text" formControlName="phoneMenuPrefix">
+
+  <span matTextPrefix>
+    <span class="formFiled__phone-country">
+      <span [matMenuTriggerFor]="menuCountry">
+        <img [src]="contact.flag_url" [alt]="contact.country" width="24px" height="17px">
+        <mat-icon svgIcon="angle-small-down"></mat-icon>
+      </span>
+      <span>{{contact.phone_code}}</span>
+    </span>
+  </span>
+</mat-form-field>
+
+<mat-menu #menuCountry="matMenu" xPosition="before">
+  <button mat-menu-item *ngFor="let option of contactList" (click)="contact = option">
+    <img [src]="option.flag_url" [alt]="option.country" width="24px" height="17px" class="m-r-8">
+    <span class="mat-body-2"><b>{{option.city}}, </b> {{option.country}}</span>
+  </button>
+</mat-menu>

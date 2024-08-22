@@ -1,0 +1,17 @@
+.formFiled__phone {
+  &-country {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 8px;
+    margin-right: 8px;
+    vertical-align: middle;
+
+    span {
+      color: var(--secondaryText);
+    }
+  }
+
+  input {
+    vertical-align: middle;
+  }
+}

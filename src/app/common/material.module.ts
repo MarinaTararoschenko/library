@@ -7,6 +7,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -22,6 +23,7 @@ import { MatCardModule } from '@angular/material/card';
         MatButtonModule,
         MatFormFieldModule,
         MatInputModule,
+        MatSelectModule,
         MatListModule,
         MatSlideToggleModule,
         MatExpansionModule,
@@ -37,6 +39,7 @@ import { MatCardModule } from '@angular/material/card';
         MatButtonModule,
         MatFormFieldModule,
         MatInputModule,
+        MatSelectModule,
         MatListModule,
         MatSlideToggleModule,
         MatExpansionModule,

@@ -1,0 +1,32 @@
+.formFiled__phone {
+  &-country {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 8px;
+    margin-right: 8px;
+    vertical-align: middle;
+
+    span {
+      color: var(--secondaryText);
+    }
+  }
+
+  input {
+    vertical-align: middle;
+  }
+
+  .mdc-icon-button {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    line-height: 32px;
+    padding: 0;
+    vertical-align: middle;
+  }
+}
+
+.mat-mdc-menu-item {
+  img {
+    vertical-align: middle;
+  }
+}
