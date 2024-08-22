@@ -14,15 +14,16 @@
       <app-info-banner [type]="'success'" [svgIcon]="'check-circle'"></app-info-banner>
       <br>
       <app-info-banner [type]="'error'" [matIcon]="'error'"></app-info-banner>
-
     </mat-expansion-panel>
 
-  </mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span class="mat-body-1">Custom tooltip</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
 
-  <br>
-  <br>
-
-  <div class="flex-justify-between">
+      <div class="flex-justify-between p-y-16">
     <div class="flex-align-center mat-body-1">
       <mat-icon class="m-r-8" appTooltip [templateRef]="tooltipTemplate" [position]="{y: 'top', x: 'start'}">
         info
@@ -44,4 +45,5 @@
     </app-tooltip>
   </ng-template>
 
+    </mat-expansion-panel>
 </div>
