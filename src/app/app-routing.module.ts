@@ -6,6 +6,7 @@ import { ColorHelpersComponent } from './common/color-helpers/color-helpers.comp
 import { WebHeaderComponent } from './common/web-header/web-header.component';
 import { ComponentsComponent } from './components/components.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SvgIconsComponent } from './common/sidenav/svg-icons/svg-icons.component';
 
 const routes: Routes = [
     {
@@ -32,6 +33,10 @@ const routes: Routes = [
     {
         path: 'dashboard',
         component: DashboardComponent
+    },
+    {
+        path: 'icons',
+        component: SvgIconsComponent
     }
 ];
 

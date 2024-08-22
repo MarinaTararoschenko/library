@@ -27,6 +27,7 @@ import { SvgGridAxisYComponent } from './components/dashboard/bar-chart/svg-grid
 import { SvgGridAxisXComponent } from './components/dashboard/bar-chart/svg-grid-axis-x/svg-grid-axis-x.component';
 import { SvgTooltipComponent } from './components/dashboard/bar-chart/svg-tooltip/svg-tooltip.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { SvgIconsComponent } from './common/sidenav/svg-icons/svg-icons.component';
 
 // services
 import { ThemeService } from './common/services/theme.services';
@@ -54,9 +55,11 @@ import { TooltipDirective } from './common/directives/tooltip.directive';
         SvgGridAxisYComponent,
         SvgGridAxisXComponent,
         SvgTooltipComponent,
-        SvgTooltipDirective,
         TooltipComponent,
-        TooltipDirective
+        SvgIconsComponent,
+        // directives
+        SvgTooltipDirective,
+        TooltipDirective,
     ],
     imports: [
         BrowserModule,

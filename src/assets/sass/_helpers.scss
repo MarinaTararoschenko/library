@@ -15,6 +15,7 @@
 }
 
 .flex-wrap {
+  @extend .flex;
   flex-wrap: wrap;
 }
 
