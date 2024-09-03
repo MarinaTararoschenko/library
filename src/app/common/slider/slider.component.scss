@@ -1,0 +1,50 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+
+  &__nav {
+    padding: 24px;
+    text-align: right;
+
+    .mat-mdc-icon-button {
+      & + .mat-mdc-icon-button {
+        margin-left: 16px;
+      }
+
+      &[disabled] {
+        background-color: var(--disabledBackground);
+      }
+    }
+  }
+
+  &--inner {
+    display: flex;
+    transition: all 0s;
+    transition-duration: .4s;
+  }
+
+  &--item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &.active {
+      .carousel__card {
+        background-color: var(--color-menu-active);
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 320px;
+    height: 340px;
+    padding: 40px 30px;
+    border-radius: 8px;
+    transition: .3s;
+    overflow: hidden;
+  }
+}

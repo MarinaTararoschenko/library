@@ -7,6 +7,7 @@ import { WebHeaderComponent } from './common/web-header/web-header.component';
 import { ComponentsComponent } from './components/components.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SvgIconsComponent } from './common/sidenav/svg-icons/svg-icons.component';
+import { SliderComponent } from './common/slider/slider.component';
 
 const routes: Routes = [
     {
@@ -37,6 +38,10 @@ const routes: Routes = [
     {
         path: 'icons',
         component: SvgIconsComponent
+    },
+    {
+        path: 'slider',
+        component: SliderComponent
     }
 ];
 

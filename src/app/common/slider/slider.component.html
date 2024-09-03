@@ -1,0 +1,31 @@
+<div class="p-y-32">
+
+  <section class="p-l-24">
+    <div #carousel class="carousel">
+      <div class="carousel--inner">
+        <div
+          class="carousel--item"
+          *ngFor="let card of sliderData; let i = index">
+          <div class="carousel__card bg-primary">
+            <div class="carousel__card--title mat-subtitle-1" *ngIf="card.title">
+              <b>{{card.title}}</b>
+            </div>
+            <div class="carousel__card--suptitle mat-body-2" *ngIf="card.suptitle">
+              {{card.suptitle}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel__nav">
+      <button class="bg-accent-primary" mat-icon-button [disabled]="isPrevDisabled" (click)="moveSlider('prev')">
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+      <button class="bg-accent-primary" mat-icon-button [disabled]="isNextDisabled" (click)="moveSlider('next')">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+    </div>
+  </section>
+
+</div>
