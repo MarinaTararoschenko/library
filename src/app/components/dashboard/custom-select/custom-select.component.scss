@@ -1,16 +1,11 @@
 .mat-mdc-icon-button {
   display: inline-flex;
   align-items: center;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem; // 32px
+  height: 1.5rem; // 32px
+  line-height: 1.5rem;
   padding: 0;
   vertical-align: middle;
-
-  mat-icon {
-    width: 24px;
-    height: 24px;
-    font-size: 24px;
-  }
 }
 
 .color-light {

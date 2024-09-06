@@ -1,0 +1,38 @@
+// mat-button
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-unelevated-button,
+.mat-mdc-outlined-button {
+  &.mat-mdc-button-base {
+    height: 2.25rem; // 36px
+  }
+}
+
+// mat-icon-button
+.mat-mdc-icon-button.mat-mdc-button-base {
+  line-height: 48px;
+  padding: 0;
+
+  .material-symbols-outlined,
+  .material-icons {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .mat-icon {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+@for $size from 24 through 48 {
+  @if $size % 8==0 {
+    .mat-mdc-icon-button.mat-mdc-button-base {
+      &.size-#{$size} {
+        width: #{$size/16}rem;
+        height: #{$size/16}rem;
+        line-height: #{$size/16}rem;
+        font-size: #{($size - 8)/16}rem;
+      }
+    }
+  }
+}

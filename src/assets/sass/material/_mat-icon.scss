@@ -1,0 +1,17 @@
+.mat-icon.material-icons {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+}
+
+@for $i from 16 through 32 {
+  @if $i % 8==0 {
+    .font-size-#{$i} {
+      font-size: #{$i/16}rem;
+    }
+    .mat-icon.size-#{$i} {
+      width: #{$i/16}rem;
+      height: #{$i/16}rem;
+    }
+  }
+}

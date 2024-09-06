@@ -20,10 +20,10 @@ import { IDataAxisX } from '../bar-chart.component';
     styles: [`
         text {
             font-family: 'CircularStd-Book';
-            font-size: 10px;
+            font-size: 0.625rem;
             font-style: normal;
             font-weight: 500;
-            line-height: 14px;
+            line-height: 0.875rem;
             letter-spacing: 1.5px;
             fill: var(--primaryText);
             text-transform: uppercase;

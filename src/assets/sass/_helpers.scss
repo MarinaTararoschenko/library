@@ -49,6 +49,10 @@
   flex-grow: 1;
 }
 
+.flex-shrink-0 {
+  flex-shrink: 0;;
+}
+
 .text-ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -83,16 +87,6 @@
       padding-right: #{$i}px;
     }
   }
-
-  @if $i > 16 {
-    @if $i % 8==0  {
-      .size-#{$i} {
-        font-size: #{$i}px;
-      }
-    }
-  }
-
-
 }
 
 .grid {

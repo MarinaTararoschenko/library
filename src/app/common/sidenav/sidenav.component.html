@@ -1,9 +1,23 @@
 <div class="sidenav">
   <div class="sidenav__top p-l-16">
-    <mat-slide-toggle [(ngModel)]="isChecked" (toggleChange)="changeThemeMode()" labelPosition="before" color="primary">
-      <span class="m-r-8">{{isChecked ? 'Dark mode' : 'Light mode'}}</span>
-    </mat-slide-toggle>
-    <button mat-icon-button (click)="toggle()">
+    <div class="accessibility">
+      <mat-slide-toggle
+        [(ngModel)]="isChecked"
+        (toggleChange)="changeThemeMode()"
+        labelPosition="before"
+        color="primary">
+        <span class="m-r-8">{{isChecked ? 'Dark' : 'Light'}}</span>
+      </mat-slide-toggle>
+      <mat-icon>text_fields</mat-icon>
+      <button mat-icon-button class="size-32" (click)="toScale(1)" [disabled]="scale > 1">
+        <mat-icon>add</mat-icon>
+      </button>
+      <button mat-icon-button class="size-32" (click)="toScale(2)" [disabled]="scale < -1">
+        <mat-icon>remove</mat-icon>
+      </button>
+    </div>
+
+    <button mat-icon-button class="size-32" (click)="toggle()">
       <span class="material-symbols-outlined">chevron_right</span>
     </button>
   </div>

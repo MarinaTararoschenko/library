@@ -12,6 +12,7 @@ export class SidenavComponent implements OnInit {
     @Output() sidebarState = new EventEmitter(true);
 
     isChecked = false;
+    scale = 0;
 
     constructor(
         private renderer: Renderer2,
@@ -30,6 +31,12 @@ export class SidenavComponent implements OnInit {
                 this.renderer.removeClass(document.body, 'dark');
             }
         });
+
+        // set scale from localStorage
+        if (localStorage.getItem('scale') !== null) {
+            this.renderer.addClass(document.body.parentElement, 'scale-' + localStorage.getItem('scale'));
+            this.scale = Number(localStorage.getItem('scale'));
+        }
     }
 
     changeThemeMode(): void {
@@ -39,5 +46,25 @@ export class SidenavComponent implements OnInit {
     toggle(): void {
         this.isOpen = !this.isOpen;
         this.sidebarState.emit(this.isOpen);
+    }
+
+    toScale(type: number): void {
+        if (type === 1) {
+            if (this.scale < 2) {
+                this.renderer.removeClass(document.body.parentElement, 'scale-' + this.scale);
+                localStorage.removeItem('scale');
+                this.scale++;
+            }
+        } else {
+            if (this.scale > -2) {
+                this.renderer.removeClass(document.body.parentElement, 'scale-' + this.scale);
+                localStorage.removeItem('scale');
+                this.scale--;
+            }
+        }
+        if (this.scale !== 0) {
+            this.renderer.addClass(document.body.parentElement, 'scale-' + this.scale);
+            localStorage.setItem('scale', this.scale + '');
+        }
     }
 }
