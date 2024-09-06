@@ -7,6 +7,9 @@
     text-align: right;
 
     .mat-mdc-icon-button {
+      color: #fff;
+      background-color: var(--primaryAccent);
+
       & + .mat-mdc-icon-button {
         margin-left: 16px;
       }
@@ -30,6 +33,7 @@
 
     &.active {
       .carousel__card {
+        color: #fff;
         background-color: var(--color-menu-active);
       }
     }
