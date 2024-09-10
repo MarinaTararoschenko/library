@@ -28,10 +28,10 @@
   @if $size % 8==0 {
     .mat-mdc-icon-button.mat-mdc-button-base {
       &.size-#{$size} {
-        width: #{$size/16}rem;
-        height: #{$size/16}rem;
-        line-height: #{$size/16}rem;
-        font-size: #{($size - 8)/16}rem;
+        width: #{calc($size/16)}rem;
+        height: #{calc($size/16)}rem;
+        line-height: #{calc($size/16)}rem;
+        font-size: #{calc(($size - 8)/16)}rem;
       }
     }
   }
