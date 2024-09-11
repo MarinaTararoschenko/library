@@ -1,12 +1,10 @@
 {
+  "subtext": "Translating text using pipe. Hello, {{name}}!",
   "title": "Hello, {{value}} component!",
   "text": "Text of the {{value}} component",
-  "subtext": "Translating text using pipe. Hello, {{name}}!",
-  "nested": {
-    "title": "Nested header.",
-    "text": "Nested text."
-  },
   "textWithCount": "Dima {dynamicCount, plural, =0{has no apples} =1{has an apple} other{has {dynamicCount} apples}}",
+  "nested.title": "Nested header.",
+  "nested.text": "Nested text.",
   "list": [
     "Point <span class='color-warn'>1</span>",
     "Point <span class='color-warn'>2</span>",
@@ -14,5 +12,6 @@
   ],
   "date": "Date",
   "numberFormat": "Number Format",
-  "symbol": "Symbol"
+  "symbol": "Symbol",
+  "newKey": "Missing value for 'firstComponent.newKey'"
 }

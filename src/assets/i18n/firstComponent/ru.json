@@ -1,12 +1,10 @@
 {
+  "subtext": "Перевод текста с использованием pipe. Привет, {{name}}!",
   "title": "Привет, {{value}} компонент!",
   "text": "Текст {{value}} компонента",
-  "subtext": "Перевод текста с использованием pipe. Привет, {{name}}!",
-  "nested": {
-    "title": "Вложенный заголовок",
-    "text": "Вложенный текст"
-  },
   "textWithCount": "Dima {dynamicCount, plural, =0{не имеет яблок} =1{имеет 1 яблоко} other{имеет {dynamicCount} яблок}}",
+  "nested.title": "Вложенный заголовок",
+  "nested.text": "Вложенный текст",
   "list": [
     "Пункт <span class='color-warn'>1</span>",
     "Пункт <span class='color-warn'>2</span>",
@@ -14,5 +12,6 @@
   ],
   "date": "Дата",
   "numberFormat": "Формат числа",
-  "symbol": "Символ"
+  "symbol": "Символ",
+  "newKey": "Missing value for 'firstComponent.newKey'"
 }

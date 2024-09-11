@@ -1,12 +1,10 @@
 {
+  "subtext": "Traducir texto usando tubería. Hola, {{name}}!",
   "title": "Hola, {{value}} componente!",
   "text": "Texto del {{value}} componente",
-  "subtext": "Traducir texto usando tubería. Hola, {{name}}!",
-  "nested": {
-    "title": "Encabezado anidado",
-    "text": "Texto anidado"
-  },
   "textWithCount": "Dima {dynamicCount, plural, =0{no tiene manzanas} =1{tiene 1 manzana} other{tiene {dynamicCount} manzanas}}",
+  "nested.title": "Encabezado anidado",
+  "nested.text": "Texto anidado",
   "list": [
     "Punto <span class='color-warn'>1</span>",
     "Punto <span class='color-warn'>2</span>",
@@ -14,5 +12,6 @@
   ],
   "date": "Fecha",
   "numberFormat": "Formato de número",
-  "symbol": "Símbolo"
+  "symbol": "Símbolo",
+  "newKey": "Missing value for 'firstComponent.newKey'"
 }

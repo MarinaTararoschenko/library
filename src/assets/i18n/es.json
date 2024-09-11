@@ -1,9 +1,7 @@
 {
-  "title": "¡Hola {{name}}!",
   "text": "Traducir texto usando una directiva.",
   "textKeys": "Traduce texto usando claves, como el {{name}}.",
-  "nested": {
-    "title": "Encabezado anidado",
-    "text": "Texto anidado"
-  }
+  "nested.title": "Encabezado anidado",
+  "nested.text": "Texto anidado",
+  "title": "¡Hola {{name}}!"
 }
