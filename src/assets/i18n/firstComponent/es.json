@@ -6,5 +6,10 @@
     "title": "Encabezado anidado",
     "text": "Texto anidado"
   },
-  "textWithCount": "Dima {dynamicCount, plural, =0{no tiene manzanas} =1{tiene 1 manzana} other{tiene {dynamicCount} manzanas}}"
+  "textWithCount": "Dima {dynamicCount, plural, =0{no tiene manzanas} =1{tiene 1 manzana} other{tiene {dynamicCount} manzanas}}",
+  "list": [
+    "Punto 1",
+    "Punto 2",
+    "Punto 3"
+  ]
 }

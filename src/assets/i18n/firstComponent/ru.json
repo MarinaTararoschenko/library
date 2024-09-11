@@ -6,5 +6,10 @@
     "title": "Вложенный заголовок",
     "text": "Вложенный текст"
   },
-  "textWithCount": "Dima {dynamicCount, plural, =0{не имеет яблок} =1{имеет 1 яблоко} other{имеет {dynamicCount} яблок}}"
+  "textWithCount": "Dima {dynamicCount, plural, =0{не имеет яблок} =1{имеет 1 яблоко} other{имеет {dynamicCount} яблок}}",
+  "list": [
+    "Пункт 1",
+    "Пункт 2",
+    "Пункт 3"
+  ]
 }

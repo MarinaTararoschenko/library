@@ -43,6 +43,12 @@
       <h3 class="mat-subtitle-1">{{t('nested.title')}}</h3>
       <p class="mat-body-1">{{t('nested.text')}}</p>
     </div>
+    <br>
+    <ul>
+      <li *ngFor="let option of t('list');">
+        <span class="mat-body-1">{{option}}</span>
+      </li>
+    </ul>
   </ng-container>
 
   <br>
