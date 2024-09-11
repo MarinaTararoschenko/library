@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+import { TranslocoRootModule } from './transoloco-root.module';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -74,9 +76,13 @@ import { TooltipDirective } from './common/directives/tooltip.directive';
         AppRoutingModule,
         BrowserAnimationsModule,
         CustomMaterialModule,
-        HttpClientModule
+        HttpClientModule,
+        TranslocoRootModule
     ],
-    providers: [ThemeService, DropdownService],
+    providers: [
+        ThemeService,
+        DropdownService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

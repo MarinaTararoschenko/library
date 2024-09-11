@@ -1,4 +1,53 @@
 <div class="p-x-24 p-y-32">
+  <h1 class="mat-subtitle-1 center upper color-accent-primary"><b>Transloco</b></h1>
+
+  <br>
+  <br>
+
+  <button
+    mat-button
+    class="m-r-16"
+    *ngFor="let lang of availableLangs;"
+    (click)="changeLang(lang.id)"
+    [class.bg-accent-primary]="activeLang === lang.id">
+    {{ lang.label }}
+  </button>
+
+  <br>
+  <br>
+
+  <h2 class="mat-subtitle-1 color-accent-secondary center">{{ greetingText }}</h2>
+
+  <div class="mat-body-1" transloco="text"></div>
+  <div class="mat-body-1" transloco="textKeys" [translocoParams]="{name: 'Dima'}"></div>
+
+  <br>
+
+  <div class="p-l-24" *transloco="let t;">
+    <h3 class="mat-subtitle-1">{{ t('nested.title') }}</h3>
+    <p class="mat-body-1">{{t('nested.text')}}</p>
+  </div>
+
+  <br>
+  <br>
+
+  <br>
+
+  <ng-container *transloco="let t; prefix: 'firstComponent'">
+    <h3 class="mat-subtitle-1 color-accent-secondary center">{{ t('title', {value: 1}) }}</h3>
+    <p class="mat-body-1">{{t('text', {value: 1})}}</p>
+    <p class="mat-body-1">{{ 'firstComponent.subtext' | transloco: {name: 'Nicol'} }}</p>
+    <br>
+    <div class="p-l-24">
+      <h3 class="mat-subtitle-1">{{t('nested.title')}}</h3>
+      <p class="mat-body-1">{{t('nested.text')}}</p>
+    </div>
+  </ng-container>
+
+  <br>
+  <br>
+  <br>
+  <br>
 
   <mat-accordion>
 

@@ -1,0 +1,10 @@
+{
+  "title": "Hello, {{value}} component!",
+  "text": "Text of the {{value}} component",
+  "subtext": "Translating text using pipe. Hello, {{name}}!",
+  "nested": {
+    "title": "Nested header.",
+    "text": "Nested text."
+  },
+  "searchResults": "{numOfResults, plural, =0 {no results found} one {1 search result} other {# search results}}"
+}

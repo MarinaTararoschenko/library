@@ -1,0 +1,10 @@
+{
+  "title": "Hola, {{value}} componente!",
+  "text": "Texto del {{value}} componente",
+  "subtext": "Traducir texto usando tubería. Hola, {{name}}!",
+  "nested": {
+    "title": "Encabezado anidado",
+    "text": "Texto anidado"
+  },
+  "searchResults": "{numOfResults, plural, =0 {no se encontraron resultados} one {1 resultado de búsqueda} other {# resultados de búsqueda}}"
+}

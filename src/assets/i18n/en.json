@@ -1,0 +1,9 @@
+{
+  "title": "Hello, {{name}}!",
+  "text": "Translating text using a directive.",
+  "textKeys": "Translate text using keys, such as a {{name}}.",
+  "nested": {
+    "title": "Nested header",
+    "text": "Nested text"
+  }
+}
