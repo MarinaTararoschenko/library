@@ -6,5 +6,5 @@
     "title": "Вложенный заголовок",
     "text": "Вложенный текст"
   },
-  "searchResults": "{numOfResults, plural, =0 {результаты не найдены} one {1 результат поиска} other {# результатов поиска}}"
+  "textWithCount": "Dima {dynamicCount, plural, =0{не имеет яблок} =1{имеет 1 яблоко} other{имеет {dynamicCount} яблок}}"
 }

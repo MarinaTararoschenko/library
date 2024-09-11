@@ -16,7 +16,7 @@ export class ComponentsComponent implements OnDestroy {
     public availableLangs = this.translocoService.getAvailableLangs() as LangDefinition[];
     public activeLang = this.translocoService.getActiveLang();
     public greetingText!: string;
-    public numOfResults = 0;
+    public dynamicCount = 10;
 
     constructor(
         private _formBuilder: FormBuilder,

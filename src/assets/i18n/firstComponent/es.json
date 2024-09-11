@@ -6,5 +6,5 @@
     "title": "Encabezado anidado",
     "text": "Texto anidado"
   },
-  "searchResults": "{numOfResults, plural, =0 {no se encontraron resultados} one {1 resultado de búsqueda} other {# resultados de búsqueda}}"
+  "textWithCount": "Dima {dynamicCount, plural, =0{no tiene manzanas} =1{tiene 1 manzana} other{tiene {dynamicCount} manzanas}}"
 }

@@ -5,6 +5,7 @@ import {
 import { NgModule } from '@angular/core';
 
 import { TranslocoHttpLoader } from './transloco-loader';
+import { provideTranslocoMessageformat } from '@jsverse/transloco-messageformat';
 
 @NgModule({
     exports: [TranslocoModule],
@@ -22,7 +23,8 @@ import { TranslocoHttpLoader } from './transloco-loader';
                 reRenderOnLangChange: true
             },
             loader: TranslocoHttpLoader
-        })
+        }),
+        provideTranslocoMessageformat()
     ],
 })
 export class TranslocoRootModule { }

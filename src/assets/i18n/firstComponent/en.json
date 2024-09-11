@@ -6,5 +6,5 @@
     "title": "Nested header.",
     "text": "Nested text."
   },
-  "searchResults": "{numOfResults, plural, =0 {no results found} one {1 search result} other {# search results}}"
+  "textWithCount": "Dima {dynamicCount, plural, =0{has no apples} =1{has an apple} other{has {dynamicCount} apples}}"
 }
