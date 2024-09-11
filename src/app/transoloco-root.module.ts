@@ -6,9 +6,10 @@ import { NgModule } from '@angular/core';
 
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTranslocoMessageformat } from '@jsverse/transloco-messageformat';
+import { provideTranslocoLocale, TranslocoLocaleModule } from '@jsverse/transloco-locale';
 
 @NgModule({
-    exports: [TranslocoModule],
+    exports: [TranslocoModule, TranslocoLocaleModule],
     providers: [
         provideTransloco({
             config: {
@@ -24,7 +25,14 @@ import { provideTranslocoMessageformat } from '@jsverse/transloco-messageformat'
             },
             loader: TranslocoHttpLoader
         }),
-        provideTranslocoMessageformat()
+        provideTranslocoMessageformat(),
+        provideTranslocoLocale({
+            langToLocaleMapping: {
+                en: "en-US",
+                es: "es-ES",
+                ru: "ru-RU",
+            },
+        }),
     ],
 })
 export class TranslocoRootModule { }

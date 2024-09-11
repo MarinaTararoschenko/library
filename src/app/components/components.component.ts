@@ -1,6 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { LangDefinition, provideTranslocoScope, TranslocoService } from '@jsverse/transloco';
+import { TranslocoLocaleService } from '@jsverse/transloco-locale';
 import { Subscription, take } from 'rxjs';
 
 @Component({
@@ -17,10 +18,12 @@ export class ComponentsComponent implements OnDestroy {
     public activeLang = this.translocoService.getActiveLang();
     public greetingText!: string;
     public dynamicCount = 10;
+    public date = new Date();
 
     constructor(
         private _formBuilder: FormBuilder,
-        private readonly translocoService: TranslocoService
+        private readonly translocoService: TranslocoService,
+        private localeService: TranslocoLocaleService
     ) {
         this.form = this._formBuilder.group({
             phone: [''],
@@ -50,6 +53,10 @@ export class ComponentsComponent implements OnDestroy {
                 this.translocoService.setActiveLang(lang);
                 this.activeLang = this.translocoService.getActiveLang()
             });
+    }
+
+    get currencySymbol() {
+        return this.localeService.getCurrencySymbol();
     }
 
 }

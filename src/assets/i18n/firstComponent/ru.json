@@ -11,5 +11,8 @@
     "Пункт <span class='color-warn'>1</span>",
     "Пункт <span class='color-warn'>2</span>",
     "Пункт <span class='color-warn'>3</span>"
-  ]
+  ],
+  "date": "Дата",
+  "numberFormat": "Формат числа",
+  "symbol": "Символ"
 }

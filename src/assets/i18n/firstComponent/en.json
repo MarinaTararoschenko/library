@@ -11,5 +11,8 @@
     "Point <span class='color-warn'>1</span>",
     "Point <span class='color-warn'>2</span>",
     "Point <span class='color-warn'>3</span>"
-  ]
+  ],
+  "date": "Date",
+  "numberFormat": "Number Format",
+  "symbol": "Symbol"
 }
