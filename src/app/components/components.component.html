@@ -46,7 +46,7 @@
     <br>
     <ul>
       <li *ngFor="let option of t('list');">
-        <span class="mat-body-1">{{option}}</span>
+        <span class="mat-body-1" [innerHTML]="option"></span>
       </li>
     </ul>
   </ng-container>

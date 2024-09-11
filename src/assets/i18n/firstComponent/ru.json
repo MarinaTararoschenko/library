@@ -8,8 +8,8 @@
   },
   "textWithCount": "Dima {dynamicCount, plural, =0{не имеет яблок} =1{имеет 1 яблоко} other{имеет {dynamicCount} яблок}}",
   "list": [
-    "Пункт 1",
-    "Пункт 2",
-    "Пункт 3"
+    "Пункт <span class='color-warn'>1</span>",
+    "Пункт <span class='color-warn'>2</span>",
+    "Пункт <span class='color-warn'>3</span>"
   ]
 }
