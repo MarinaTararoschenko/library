@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTranslocoMessageformat } from '@jsverse/transloco-messageformat';
 import { provideTranslocoLocale, TranslocoLocaleModule } from '@jsverse/transloco-locale';
+import { provideTranslocoPersistLang } from '@jsverse/transloco-persist-lang';
 
 @NgModule({
     exports: [TranslocoModule, TranslocoLocaleModule],
@@ -35,6 +36,11 @@ import { provideTranslocoLocale, TranslocoLocaleModule } from '@jsverse/transloc
                 ar: "ar-AR"
             },
         }),
+        provideTranslocoPersistLang({
+            storage: {
+                useValue: localStorage,
+            },
+        })
     ],
 })
 export class TranslocoRootModule { }
