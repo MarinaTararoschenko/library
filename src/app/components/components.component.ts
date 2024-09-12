@@ -1,4 +1,5 @@
-import { Component, OnDestroy } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { LangDefinition, provideTranslocoScope, TranslocoService } from '@jsverse/transloco';
 import { TranslocoLocaleService } from '@jsverse/transloco-locale';
@@ -23,7 +24,8 @@ export class ComponentsComponent implements OnDestroy {
     constructor(
         private _formBuilder: FormBuilder,
         private readonly translocoService: TranslocoService,
-        private localeService: TranslocoLocaleService
+        private localeService: TranslocoLocaleService,
+        @Inject(DOCUMENT) private _document: Document
     ) {
         this.form = this._formBuilder.group({
             phone: [''],
@@ -51,7 +53,10 @@ export class ComponentsComponent implements OnDestroy {
             .pipe(take(1))
             .subscribe(() => {
                 this.translocoService.setActiveLang(lang);
-                this.activeLang = this.translocoService.getActiveLang()
+                this.activeLang = this.translocoService.getActiveLang();
+                const doc = this._document.getElementsByTagName("html")[0];
+                doc.setAttribute('lang', this.activeLang);
+                doc.setAttribute('dir', this.activeLang === 'ar' ? 'rtl' : 'ltr');
             });
     }
 

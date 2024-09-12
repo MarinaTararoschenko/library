@@ -32,3 +32,16 @@
 .mat-drawer-opened~.matSidenavContent {
   margin-left: 280px !important;
 }
+
+[dir="rtl"] {
+  .matSidenavContent {
+    margin-right: 64px !important;
+    margin-left: 0 !important;
+    transition: margin-right .4s;
+  }
+
+  .mat-drawer-opened~.matSidenavContent {
+    margin-right: 280px !important;
+    margin-left: 0 !important;
+  }
+}

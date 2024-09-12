@@ -10,6 +10,13 @@
   }
 }
 
+:host-context([dir="rtl"]) {
+  .sidenav__top >.mdc-icon-button {
+    left: -1rem;
+    right: initial;
+  }
+}
+
 .sidenav {
   display: flex;
   flex-direction: column;

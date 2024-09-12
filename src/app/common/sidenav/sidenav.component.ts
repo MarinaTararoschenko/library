@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, Renderer2 } from '@angular/core';
+import { TranslocoService } from '@jsverse/transloco';
 
 import { ThemeService } from '../services/theme.services';
 
@@ -16,7 +17,8 @@ export class SidenavComponent implements OnInit {
 
     constructor(
         private renderer: Renderer2,
-        private srvTheme: ThemeService
+        private srvTheme: ThemeService,
+        public translocoService: TranslocoService
     ) {
         this.isOpen = true;
     }
@@ -66,5 +68,9 @@ export class SidenavComponent implements OnInit {
             this.renderer.addClass(document.body.parentElement, 'scale-' + this.scale);
             localStorage.setItem('scale', this.scale + '');
         }
+    }
+
+    get currencyLang() {
+        return this.translocoService.getActiveLang();
     }
 }

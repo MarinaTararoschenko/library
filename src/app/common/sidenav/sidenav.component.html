@@ -18,7 +18,8 @@
     </div>
 
     <button mat-icon-button class="size-32" (click)="toggle()">
-      <span class="material-symbols-outlined">chevron_right</span>
+      <span class="material-symbols-outlined" *ngIf="currencyLang !== 'ar'">chevron_right</span>
+      <span class="material-symbols-outlined" *ngIf="currencyLang === 'ar'">chevron_left</span>
     </button>
   </div>
   <div class="sidenav__body">

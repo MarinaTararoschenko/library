@@ -1,0 +1,17 @@
+{
+  "subtext": "ترجمة النص باستخدام الأنابيب. مرحبًا، {{name}}!",
+  "title": "مرحبًا، مكون {{value}}!",
+  "text": "نص مكون {{value}}",
+  "textWithCount": "Missing value for 'firstComponent.textWithCount'",
+  "nested.title": "Missing value for 'firstComponent.nested.title'",
+  "nested.text": "Missing value for 'firstComponent.nested.text'",
+  "list": [
+    "نقطة <span class='color-warn'>1</span>",
+    "نقطة <span class='color-warn'>2</span>",
+    "نقطة <span class='color-warn'>3</span>"
+  ],
+  "date": "Missing value for 'firstComponent.date'",
+  "numberFormat": "Missing value for 'firstComponent.numberFormat'",
+  "symbol": "Missing value for 'firstComponent.symbol'",
+  "newKey": "Missing value for 'firstComponent.newKey'"
+}

@@ -17,6 +17,7 @@ import { provideTranslocoLocale, TranslocoLocaleModule } from '@jsverse/transloc
                     { id: "en", label: "English" },
                     { id: "es", label: "Spanish" },
                     { id: "ru", label: "Russia" },
+                    { id: "ar", label: "Arabic" },
                 ],
                 defaultLang: 'en',
                 fallbackLang: "es",
@@ -31,6 +32,7 @@ import { provideTranslocoLocale, TranslocoLocaleModule } from '@jsverse/transloc
                 en: "en-US",
                 es: "es-ES",
                 ru: "ru-RU",
+                ar: "ar-AR"
             },
         }),
     ],
