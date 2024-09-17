@@ -1,5 +1,18 @@
 <div class="p-x-24 p-y-32">
 
+  <h1 class="mat-subtitle-1" i18n>Hello i18n!</h1>
+  <p class="mat-body-1" i18n>Text to translate</p>
+  <p class="mat-body-1" i18n>{{today | date:'fullDate'}}</p>
+  <p class="mat-body-1" i18n>
+    Plural: {tasksCount, plural, =0 {no tasks} =1 {one task} other {{{tasksCount}} tasks}}
+  </p>
+  <p class="mat-body-1" i18n>
+    Updated: {minutes, plural, =0 {just now} =1 {one minute ago} other {{{minutes}} minutes ago}}
+  </p>
+
+  <br>
+  <br>
+
   <mat-accordion>
 
     <mat-expansion-panel>

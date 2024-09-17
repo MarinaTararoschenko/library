@@ -7,6 +7,10 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class ComponentsComponent {
 
+    public today: number = Date.now();
+    public tasksCount = 1;
+    public minutes = 0;
+
     public form: FormGroup;
 
     constructor(

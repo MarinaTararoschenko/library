@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" target-language="es-CL" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4150330030790364157" datatype="html">
+        <source>Hello i18n!</source>
+        <target>Hola i18n!</target>
+      </trans-unit>
+      <trans-unit id="2523518576211766623" datatype="html">
+        <source>Text to translate</source>
+        <target state="new">Texto a traducir</target>
+      </trans-unit>
+      <trans-unit id="187187500641108332" datatype="html">
+        <source>
+          <x id="INTERPOLATION" equiv-text="{{today | date:&apos;fullDate&apos;}}"/>
+        </source>
+        <target state="new">
+          <x id="INTERPOLATION" equiv-text="{{today | date:&apos;fullDate&apos;}}"/>
+        </target>
+      </trans-unit>
+      <trans-unit id="3997394384927241200" datatype="html">
+        <source> Plural: <x id="ICU" equiv-text="{tasksCount, plural, =0 {no tasks} =1 {one task} other {{{tasksCount}} tasks}}" xid="449972870239973505"/> </source>
+        <target state="new">Plural: <x id="ICU" equiv-text="{tasksCount, plural, =0 {sin tareas} =1 {una tarea} other {{{tasksCount}} tareas}}" xid="449972870239973505"/></target>
+      </trans-unit>
+      <trans-unit id="1905583134648350404" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {no tasks} =1 {one task} other {<x id="INTERPOLATION"/> tasks}}</source>
+        <target state="new">{VAR_PLURAL, plural, =0 {sin tareas} =1 {una tarea} other {<x id="INTERPOLATION"/> tareas}}</target>
+      </trans-unit>
+      <trans-unit id="313334560682618967" datatype="html">
+        <source> Updated: <x id="ICU" equiv-text="{minutes, plural, =0 {just now} =1 {one minute ago} other {{{minutes}} minutes ago}}" xid="1887283401472369100"/> </source>
+        <target state="new">Actualizado: <x id="ICU" equiv-text="{minutes, plural, =0 {en este momento} =1 {hace un minuto} other {{{minutes}} minutos atrás}}" xid="1887283401472369100"/></target>
+      </trans-unit>
+      <trans-unit id="2002272803511843863" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {just now} =1 {one minute ago} other {<x id="INTERPOLATION"/> minutes ago}}</source>
+        <target state="new">{VAR_PLURAL, plural, =0 {en este momento} =1 {hace un minuto} other {<x id="INTERPOLATION"/> minutos atrás}}</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

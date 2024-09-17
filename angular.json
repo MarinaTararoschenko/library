@@ -13,6 +13,17 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "es-CL": {
+            "translation": "src/locale/messages.cl.xlf"
+          },
+          "ru": {
+            "translation": "src/locale/messages.ru.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -33,7 +44,8 @@
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "i18nMissingTranslation": "error"
           },
           "configurations": {
             "production": {
@@ -58,6 +70,16 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "ru": {
+              "localize": [
+                "ru"
+              ]
+            },
+            "es-CL": {
+              "localize": [
+                "es-CL"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -70,14 +92,27 @@
             },
             "development": {
               "browserTarget": "library:build:development"
+            },
+            "ru": {
+              "browserTarget": "library:build:development,ru"
+            },
+            "cl": {
+              "browserTarget": "library:build:development,es-CL"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "ng-extract-i18n-merge:ng-extract-i18n-merge",
           "options": {
-            "browserTarget": "library:build"
+            "buildTarget": "library:build",
+            "format": "xlf",
+            "outputPath": "src/locale",
+            "targetFiles": [
+              "messages.cl.xlf",
+              "messages.ru.xlf"
+            ],
+            "sourceFile": "messages.xlf"
           }
         },
         "test": {
