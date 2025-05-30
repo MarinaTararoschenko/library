@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "i18n:extract": "transloco-keys-manager extract",
-    "i18n:find": "transloco-keys-manager find"
+    "i18n:find": "transloco-keys-manager find",
+    "storybook": "ng run library:storybook",
+    "build-storybook": "ng run library:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -34,7 +36,15 @@
     "@angular-devkit/build-angular": "^17.3.17",
     "@angular/cli": "~17.3.17",
     "@angular/compiler-cli": "^17.3.12",
+    "@compodoc/compodoc": "^1.1.26",
     "@jsverse/transloco-keys-manager": "^5.1.0",
+    "@storybook/addon-docs": "8.6.14",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-onboarding": "8.6.14",
+    "@storybook/angular": "8.6.14",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/test": "^8.6.14",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
@@ -42,6 +52,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "storybook": "8.6.14",
     "typescript": "~5.4.5"
   }
 }
