@@ -1,0 +1,15 @@
+<div class="banner__container">
+  <ng-content select="[bannerIcon]"></ng-content>
+
+  <div class="banner__body">
+    <ng-content select="[bannerTitle]"></ng-content>
+    <ng-content select="[bannerText]"></ng-content>
+  </div>
+
+  <ng-content select="[bannerClose]"></ng-content>
+</div>
+
+<div class="banner__footer">
+  <ng-content select="[bannerButton]"></ng-content>
+</div>
+

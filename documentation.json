@@ -527,6 +527,196 @@
             "extends": []
         },
         {
+            "name": "IDialogBasic",
+            "id": "interface-IDialogBasic-e04003817373641c0c6f88aa444134220451c9d9933b0169d1d75751d36a63ea75e87fb69cbcbd9fc446ba99279b48bf15ae05ee740cb61db7acb88331c2929a",
+            "file": "src/app/library/components/dialog-basic/dialog-basic.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component, Inject, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule, MatIconRegistry } from '@angular/material/icon';\nimport { DomSanitizer } from '@angular/platform-browser';\nimport { MAT_DIALOG_DATA, MatDialogActions, MatDialogClose, MatDialogContent } from '@angular/material/dialog';\n\nimport { ButtonTextComponent } from '../buttons/button-text/button-text.component';\nimport { ButtonFilledComponent } from '../buttons/button-filled/button-filled.component';\n\n\nexport interface IDialogBasic {\n    title: string;\n    description: string;\n    actions: Array<{text: string}>;\n    icon?: string;\n    style?: string;\n}\n\n@Component({\n    standalone: true,\n    selector: 'app-dialog-basic',\n    templateUrl: './dialog-basic.component.html',\n    styleUrl: './dialog-basic.component.scss',\n    imports: [\n        MatButtonModule,\n        MatDialogClose,\n        MatDialogContent,\n        MatDialogActions,\n        MatIconModule,\n        ButtonTextComponent,\n        ButtonFilledComponent\n    ],\n})\nexport class DialogBasicComponent {\n\n    public dialogData: IDialogBasic;\n\n    constructor(\n        private _iconRegistry: MatIconRegistry,\n        private _sanitizer: DomSanitizer,\n        @Inject(MAT_DIALOG_DATA) public data: IDialogBasic,\n    ) {\n        this._iconRegistry.addSvgIconSet(this._sanitizer.bypassSecurityTrustResourceUrl('./assets/images/icons/set.svg'));\n        this.dialogData = this.data;\n    }\n}\n",
+            "properties": [
+                {
+                    "name": "actions",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Array<literal type>",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "description",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "icon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "style",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "IFormFieldInput",
+            "id": "interface-IFormFieldInput-4338fbe340a2949bc5a79942c0efd7b4bb74b78e6c3ed6de8c64b26f5821a4c6b7f4c126a6ab6c78019afb196022a68e3d0b60b032e13ab69848a2636e747bfb",
+            "file": "src/app/library/components/form-field-input/form-field-input.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatInputModule } from '@angular/material/input';\n\nexport interface IFormFieldInput {\n    label?: string;\n    placeholder?: string;\n    suffix?: string;\n    btnSuffix?: string;\n    prefix?: string;\n    hint?: string;\n    error?: string;\n    value?: string;\n    controlName: string;\n    readonly?: boolean;\n    prefixPhone?: { img: string; code: string; };\n}\n\n@Component({\n    standalone: true,\n    selector: 'app-form-field-input',\n    templateUrl: './form-field-input.component.html',\n    imports: [\n        MatFormFieldModule,\n        MatInputModule,\n        FormsModule,\n        ReactiveFormsModule,\n        MatButtonModule,\n        MatIconModule\n    ],\n})\nexport class FormFieldInputComponent {\n    @Input() public data!: IFormFieldInput;\n    @Input() public form!: FormGroup;\n    @Output() public emitClick: EventEmitter<HTMLInputElement> = new EventEmitter();\n}\n",
+            "properties": [
+                {
+                    "name": "btnSuffix",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "controlName",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "error",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "hint",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "placeholder",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "prefix",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "prefixPhone",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "readonly",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "suffix",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 16
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
             "name": "IMatMenuList",
             "id": "interface-IMatMenuList-237faf2fcb8a8047139fa91c46098d16c2e6783879102c2ced4d5adb084fb52ef8e32cf88bc05cbf5de3a2c35a74fa18f24f774035d21644ff0cee532ad7c265",
             "file": "src/app/common/web-header/header/header.component.ts",
@@ -1523,6 +1713,260 @@
             "templateData": "<mat-sidenav-container class=\"matSidenavContainer bg-secondary\">\n  <mat-sidenav\n    #sidenav\n    mode=\"side\"\n    class=\"matSidenav bg-primary\"\n    [(opened)]=\"isOpenedSidenav\">\n    <app-sidenav [isOpen]=\"isOpenedSidenav\" (sidebarState)=\"getStateSidebar($event)\"></app-sidenav>\n  </mat-sidenav>\n\n  <mat-sidenav-content class=\"matSidenavContent\" (scroll)=\"getScrollEvent($event)\">\n    <router-outlet></router-outlet>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
         },
         {
+            "name": "BannerComponent",
+            "id": "component-BannerComponent-1929f8422663123ba5d9f9f6e2896a930bff7c8aa454a40086a32a8d6a5dcebd8cb90040e44f9c8a9c672c60ec18859eb96f677b2a94af41615415c9e980e648",
+            "file": "src/app/library/components/banner/banner.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-banner",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./banner.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "style",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "\"info\" | \"warn\" | \"error\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "currentStyle",
+                    "defaultValue": "'info'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"info\" | \"warn\" | \"error\"",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, HostBinding, Input } from '@angular/core';\n\n@Component({\n    standalone: true,\n    selector: 'app-banner',\n    templateUrl: './banner.component.html',\n    styleUrl: './banner.component.scss',\n})\nexport class BannerComponent {\n    public currentStyle: 'info' | 'warn' | 'error' = 'info';\n\n    @Input() public set style(value: 'info' | 'warn' | 'error') {\n        this.currentStyle = value;\n    }\n\n    @HostBinding('class') public get classes() {\n        return 'banner-' + this.currentStyle;\n    }\n}\n",
+            "styleUrl": "./banner.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "style": {
+                    "name": "style",
+                    "setSignature": {
+                        "name": "style",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "\"info\" | \"warn\" | \"error\"",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 12,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "\"info\" | \"warn\" | \"error\"",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "",
+                        "returnType": "",
+                        "line": 16
+                    }
+                }
+            },
+            "templateData": "<div class=\"banner__container\">\n  <ng-content select=\"[bannerIcon]\"></ng-content>\n\n  <div class=\"banner__body\">\n    <ng-content select=\"[bannerTitle]\"></ng-content>\n    <ng-content select=\"[bannerText]\"></ng-content>\n  </div>\n\n  <ng-content select=\"[bannerClose]\"></ng-content>\n</div>\n\n<div class=\"banner__footer\">\n  <ng-content select=\"[bannerButton]\"></ng-content>\n</div>\n\n"
+        },
+        {
+            "name": "BannerDemoComponent",
+            "id": "component-BannerDemoComponent-bbdac77c769a8fbf85b451c9144c396861af9273972018c8c9c5499ccd31cecc020bec7ef45155c55b5fd2d558d44044ad89875a17aa650b0dd6b27ae0297963",
+            "file": "src/stories/components/banner/banner-demo.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-banner-demo",
+            "styleUrls": [],
+            "styles": [
+                "\n        .demo-container {\n            padding: 16px;\n        }\n        pre {\n            background: #f5f5f5;\n            padding: 8px;\n            border-radius: 4px;\n        }\n    "
+            ],
+            "templateUrl": [
+                "./banner-demo.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "style",
+                    "defaultValue": "'info'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 34,
+                    "type": "\"info\" | \"warn\" | \"error\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "componentCode",
+                    "defaultValue": "`\n        public style: 'info' | 'warn' | 'error' = 'info';\n\n        constructor(\n            private _iconRegistry: MatIconRegistry,\n            private _sanitizer: DomSanitizer,\n        ) {\n            this._iconRegistry.addSvgIconSet(this._sanitizer.bypassSecurityTrustResourceUrl('./assets/images/icons/set.svg'));\n        }\n    `",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "<p>Example code for ts</p>\n",
+                    "line": 53,
+                    "rawdescription": "\nExample code for ts",
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "templateCode",
+                    "defaultValue": "`\n        <app-banner [style]=\"style\">\n            <mat-icon class=\"size-24\" [svgIcon]=\"'info'\" bannerIcon>info</mat-icon>\n            <span class=\"mat-body-1\" bannerTitle>Title</span>\n            <span class=\"mat-body-2\" bannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>\n\n            <app-button-text class=\"m-l-8\" bannerButton>\n                <span class=\"mat-body-2\">Button</span>\n            </app-button-text>\n            <app-button-text class=\"m-l-8\" bannerButton>\n                <span class=\"mat-body-2\">Button</span>\n            </app-button-text>\n        </app-banner>\n    `",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "<p>Example code for html</p>\n",
+                    "line": 37,
+                    "rawdescription": "\nExample code for html",
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "BannerComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ButtonTextComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "MatCardModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatTabsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from \"@angular/core\";\nimport { MatCardModule } from \"@angular/material/card\";\nimport { MatIconModule, MatIconRegistry } from \"@angular/material/icon\";\nimport { MatTabsModule } from \"@angular/material/tabs\";\nimport { DomSanitizer } from \"@angular/platform-browser\";\n\nimport { BannerComponent } from \"src/app/library/components/banner/banner.component\";\nimport { ButtonTextComponent } from \"src/app/library/components/buttons/button-text/button-text.component\";\n\n@Component({\n    standalone: true,\n    selector: 'app-banner-demo',\n    templateUrl: './banner-demo.component.html',\n    styles: [`\n        .demo-container {\n            padding: 16px;\n        }\n        pre {\n            background: #f5f5f5;\n            padding: 8px;\n            border-radius: 4px;\n        }\n    `],\n    imports: [\n\n        BannerComponent,\n        MatIconModule,\n        ButtonTextComponent,\n        MatCardModule,\n        MatTabsModule,\n    ],\n})\nexport class BannerDemoComponent {\n    @Input() public style: 'info' | 'warn' | 'error' = 'info';\n\n    /** Example code for html */\n    public templateCode = `\n        <app-banner [style]=\"style\">\n            <mat-icon class=\"size-24\" [svgIcon]=\"'info'\" bannerIcon>info</mat-icon>\n            <span class=\"mat-body-1\" bannerTitle>Title</span>\n            <span class=\"mat-body-2\" bannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>\n\n            <app-button-text class=\"m-l-8\" bannerButton>\n                <span class=\"mat-body-2\">Button</span>\n            </app-button-text>\n            <app-button-text class=\"m-l-8\" bannerButton>\n                <span class=\"mat-body-2\">Button</span>\n            </app-button-text>\n        </app-banner>\n    `;\n\n    /** Example code for ts */\n    public componentCode = `\n        public style: 'info' | 'warn' | 'error' = 'info';\n\n        constructor(\n            private _iconRegistry: MatIconRegistry,\n            private _sanitizer: DomSanitizer,\n        ) {\n            this._iconRegistry.addSvgIconSet(this._sanitizer.bypassSecurityTrustResourceUrl('./assets/images/icons/set.svg'));\n        }\n    `;\n\n    constructor(\n        private _iconRegistry: MatIconRegistry,\n        private _sanitizer: DomSanitizer,\n    ) {\n        this._iconRegistry.addSvgIconSet(this._sanitizer.bypassSecurityTrustResourceUrl('/assets/images/icons/set.svg'));\n    }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n        .demo-container {\n            padding: 16px;\n        }\n        pre {\n            background: #f5f5f5;\n            padding: 8px;\n            border-radius: 4px;\n        }\n    \n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "_iconRegistry",
+                        "type": "MatIconRegistry",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "_sanitizer",
+                        "type": "DomSanitizer",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 62,
+                "jsdoctags": [
+                    {
+                        "name": "_iconRegistry",
+                        "type": "MatIconRegistry",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "_sanitizer",
+                        "type": "DomSanitizer",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "templateData": "<mat-card>\n  <mat-card-content>\n    <mat-tab-group>\n      <mat-tab label=\"Demo\">\n        <div class=\"demo-container mat-typography\">\n          <app-banner [style]=\"style\">\n            <mat-icon class=\"size-24\" [svgIcon]=\"'info'\" bannerIcon>info</mat-icon>\n            <span class=\"mat-body-1\" bannerTitle>Title</span>\n            <span class=\"mat-body-2\" bannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>\n\n            <app-button-text class=\"m-l-8\" bannerButton>\n              <span class=\"mat-body-2\">Button</span>\n            </app-button-text>\n            <app-button-text class=\"m-l-8\" bannerButton>\n              <span class=\"mat-body-2\">Button</span>\n            </app-button-text>\n          </app-banner>\n\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"html\">\n        <pre><code>{{ templateCode }}</code></pre>\n      </mat-tab>\n\n      <mat-tab label=\"ts\">\n        <pre><code>{{ componentCode }}</code></pre>\n      </mat-tab>\n    </mat-tab-group>\n  </mat-card-content>\n</mat-card>\n"
+        },
+        {
             "name": "BarChartComponent",
             "id": "component-BarChartComponent-89e5c0218d97314791553c70b525c602f26ff497b4351bc3b5527876e3021bdcaf126e0b371f280d3a04e9eb88cb2887acbad939cac2590092164f9962fd5eeb",
             "file": "src/app/components/dashboard/bar-chart/bar-chart.component.ts",
@@ -1991,6 +2435,273 @@
                         "type": "[]",
                         "returnType": "string[]",
                         "line": 43
+                    }
+                }
+            }
+        },
+        {
+            "name": "ButtonFilledComponent",
+            "id": "component-ButtonFilledComponent-fc69e5e6c21ff490b5ee6b91939b6facdaaec7f25804d26a565f12fb6906c7c40274967b910bc5b3c5d2d52eae1f115941472ac8d28595ebd7148c4bdfaa223a",
+            "file": "src/app/library/components/buttons/button-filled/button-filled.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button-filled",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<button\n    mat-flat-button\n    color=\"primary\"\n    [ngClass]=\"classes\"\n    [disabled]=\"disabled\"\n    (click)=\"onClick.emit($event)\">\n    <ng-content></ng-content>\n</button>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nState button",
+                    "description": "<p>State button</p>\n",
+                    "line": 26,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'md'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nHow large should the button be?",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 23,
+                    "type": "\"sm\" | \"md\" | \"lg\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nOptional click handler",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 29,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "NgClass"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { NgClass } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\n\n@Component({\n    selector: 'app-button-filled',\n    standalone: true,\n    template: `\n        <button\n            mat-flat-button\n            color=\"primary\"\n            [ngClass]=\"classes\"\n            [disabled]=\"disabled\"\n            (click)=\"onClick.emit($event)\">\n            <ng-content></ng-content>\n        </button>\n    `,\n    styleUrl: './button-filled.component.scss',\n    imports: [MatButtonModule, NgClass]\n})\nexport class ButtonFilledComponent {\n    /** How large should the button be? */\n    @Input() size: 'sm' | 'md' | 'lg' = 'md';\n\n    /** State button */\n    @Input() disabled: boolean = false;\n\n    /** Optional click handler */\n    @Output() onClick = new EventEmitter<Event>();\n\n    public get classes(): string[] {\n        return ['button-filled', `button-filled--${this.size}`];\n    }\n}\n",
+            "styleUrl": "./button-filled.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 31
+                    }
+                }
+            }
+        },
+        {
+            "name": "ButtonOutlinedComponent",
+            "id": "component-ButtonOutlinedComponent-4fe88fb1fdf18041fc579c14c48983b7cbd70dbe1e9164a2f3cf27b130faac6479b620e9e728c1773f5af3553e689ef9f0aed7e66bc73636eb05b55e04e173fb",
+            "file": "src/app/library/components/buttons/button-outlined/button-outlined.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button-outlined",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<button\n    mat-stroked-button\n    color=\"primary\"\n    [ngClass]=\"classes\"\n    [disabled]=\"disabled\"\n    (click)=\"onClick.emit($event)\">\n    <ng-content></ng-content>\n</button>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nState button",
+                    "description": "<p>State button</p>\n",
+                    "line": 26,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'md'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nHow large should the button be?",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 23,
+                    "type": "\"sm\" | \"md\" | \"lg\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nOptional click handler",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 29,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "NgClass"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { NgClass } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\n\n@Component({\n    selector: 'app-button-outlined',\n    standalone: true,\n    template: `\n        <button\n            mat-stroked-button\n            color=\"primary\"\n            [ngClass]=\"classes\"\n            [disabled]=\"disabled\"\n            (click)=\"onClick.emit($event)\">\n            <ng-content></ng-content>\n        </button>\n    `,\n    styleUrl: './button-outlined.component.scss',\n    imports: [MatButtonModule, NgClass]\n})\nexport class ButtonOutlinedComponent {\n    /** How large should the button be? */\n    @Input() size: 'sm' | 'md' | 'lg' = 'md';\n\n    /** State button */\n    @Input() disabled: boolean = false;\n\n    /** Optional click handler */\n    @Output() onClick = new EventEmitter<Event>();\n\n    public get classes(): string[] {\n        return ['button-outlined', `button-outlined--${this.size}`];\n    }\n}\n",
+            "styleUrl": "./button-outlined.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 31
+                    }
+                }
+            }
+        },
+        {
+            "name": "ButtonTextComponent",
+            "id": "component-ButtonTextComponent-1c971bb162ebde35b809ab13f6c1ea49e7a61c295576de063dc85901cc6d0c43063d25fb51ef753b0f1e41d9cff66d82939195acaf5596173674a8c1778b77ba",
+            "file": "src/app/library/components/buttons/button-text/button-text.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button-text",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<button\n    mat-button\n    [ngClass]=\"classes\"\n    [disabled]=\"disabled\"\n    (click)=\"onClick.emit($event)\">\n    <ng-content></ng-content>\n</button>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nState button",
+                    "description": "<p>State button</p>\n",
+                    "line": 25,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'md'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nHow large should the button be?",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 22,
+                    "type": "\"sm\" | \"md\" | \"lg\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nOptional click handler",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 28,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "NgClass"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { NgClass } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\n\n@Component({\n    selector: 'app-button-text',\n    standalone: true,\n    template: `\n        <button\n            mat-button\n            [ngClass]=\"classes\"\n            [disabled]=\"disabled\"\n            (click)=\"onClick.emit($event)\">\n            <ng-content></ng-content>\n        </button>\n    `,\n    styleUrl: './button-text.component.scss',\n    imports: [MatButtonModule, NgClass]\n})\nexport class ButtonTextComponent {\n    /** How large should the button be? */\n    @Input() size: 'sm' | 'md' | 'lg' = 'md';\n\n    /** State button */\n    @Input() disabled: boolean = false;\n\n    /** Optional click handler */\n    @Output() onClick = new EventEmitter<Event>();\n\n    public get classes(): string[] {\n        return ['button-text', `button-text--${this.size}`];\n    }\n}\n",
+            "styleUrl": "./button-text.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 30
                     }
                 }
             }
@@ -2860,6 +3571,384 @@
             "templateData": "<mat-card>\n  <app-custom-select\n    [current]=\"currentMonth\"\n    [options]=\"currentMonthesPeriod\"\n    [type]=\"1\"\n    (selected)=\"changeCurrentMonth($event)\">\n  </app-custom-select>\n\n  <br>\n\n  <app-custom-select\n    [current]=\"previousMonth\"\n    [options]=\"previousMonthesPeriod\"\n    [type]=\"2\"\n    (selected)=\"changePreviousMonth($event)\">\n  </app-custom-select>\n\n  <br>\n\n  <app-bar-chart [chartSettings]=\"chartSettings\" [data]=\"chartData\"></app-bar-chart>\n</mat-card>\n"
         },
         {
+            "name": "DialogBasicComponent",
+            "id": "component-DialogBasicComponent-e04003817373641c0c6f88aa444134220451c9d9933b0169d1d75751d36a63ea75e87fb69cbcbd9fc446ba99279b48bf15ae05ee740cb61db7acb88331c2929a",
+            "file": "src/app/library/components/dialog-basic/dialog-basic.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-dialog-basic",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./dialog-basic.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "data",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IDialogBasic",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 41,
+                    "decorators": [
+                        {
+                            "name": "Inject",
+                            "stringifiedArguments": "MAT_DIALOG_DATA"
+                        }
+                    ],
+                    "modifierKind": [
+                        170,
+                        125
+                    ]
+                },
+                {
+                    "name": "dialogData",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IDialogBasic",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 36,
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatDialogClose"
+                },
+                {
+                    "name": "MatDialogContent"
+                },
+                {
+                    "name": "MatDialogActions"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ButtonTextComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "ButtonFilledComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Inject, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule, MatIconRegistry } from '@angular/material/icon';\nimport { DomSanitizer } from '@angular/platform-browser';\nimport { MAT_DIALOG_DATA, MatDialogActions, MatDialogClose, MatDialogContent } from '@angular/material/dialog';\n\nimport { ButtonTextComponent } from '../buttons/button-text/button-text.component';\nimport { ButtonFilledComponent } from '../buttons/button-filled/button-filled.component';\n\n\nexport interface IDialogBasic {\n    title: string;\n    description: string;\n    actions: Array<{text: string}>;\n    icon?: string;\n    style?: string;\n}\n\n@Component({\n    standalone: true,\n    selector: 'app-dialog-basic',\n    templateUrl: './dialog-basic.component.html',\n    styleUrl: './dialog-basic.component.scss',\n    imports: [\n        MatButtonModule,\n        MatDialogClose,\n        MatDialogContent,\n        MatDialogActions,\n        MatIconModule,\n        ButtonTextComponent,\n        ButtonFilledComponent\n    ],\n})\nexport class DialogBasicComponent {\n\n    public dialogData: IDialogBasic;\n\n    constructor(\n        private _iconRegistry: MatIconRegistry,\n        private _sanitizer: DomSanitizer,\n        @Inject(MAT_DIALOG_DATA) public data: IDialogBasic,\n    ) {\n        this._iconRegistry.addSvgIconSet(this._sanitizer.bypassSecurityTrustResourceUrl('./assets/images/icons/set.svg'));\n        this.dialogData = this.data;\n    }\n}\n",
+            "styleUrl": "./dialog-basic.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "_iconRegistry",
+                        "type": "MatIconRegistry",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "_sanitizer",
+                        "type": "DomSanitizer",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "data",
+                        "type": "IDialogBasic",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 36,
+                "jsdoctags": [
+                    {
+                        "name": "_iconRegistry",
+                        "type": "MatIconRegistry",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "_sanitizer",
+                        "type": "DomSanitizer",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "data",
+                        "type": "IDialogBasic",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "templateData": "<div class=\"dialog-header\" [class.dialog-header__center]=\"dialogData.style === 'icon'\">\n  @if (dialogData.style === 'icon' && dialogData.icon) {\n    <mat-icon class=\"size-24 color-primary\" [svgIcon]=\"dialogData.icon\"></mat-icon>\n  }\n  <h2 class=\"mat-subtitle-1 color-primary\" [class.center]=\"dialogData.style === 'icon'\">\n    {{dialogData.title}}\n  </h2>\n\n  @if (dialogData.style === 'text') {\n    <button mat-icon-button mat-dialog-close>\n      <mat-icon class=\"size-24 color-primary\" svgIcon=\"cross\"></mat-icon>\n    </button>\n  }\n</div>\n\n<mat-dialog-content>\n  <div class=\"mat-body-2 color-secondary\">\n    {{dialogData.description}}\n  </div>\n</mat-dialog-content>\n\n<mat-dialog-actions>\n  <app-button-text mat-dialog-close>\n    <span class=\"\">{{dialogData.actions[0].text}}</span>\n  </app-button-text>\n  <app-button-filled>\n    <span class=\"\">{{dialogData.actions[1].text}}</span>\n  </app-button-filled>\n</mat-dialog-actions>\n"
+        },
+        {
+            "name": "DialogBasicDemoComponent",
+            "id": "component-DialogBasicDemoComponent-de12edbe7af61daa37f22935df64d4cf3362507f3fdc68e4b61ef230f7932569426255e4f1e0a10a45e8a5545ae2af00fbc6504093547cc2f075b0cf384a3517",
+            "file": "src/stories/components/dialogs/dialog-basic/dialog-basic-demo.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-dialog-basic-demo",
+            "styleUrls": [],
+            "styles": [
+                "\n        .demo-container {\n          padding: 16px;\n          text-align: center;\n        }\n        .result {\n          margin-top: 16px;\n          padding: 8px;\n          background: #f5f5f5;\n        }\n        pre {\n          background: #f5f5f5;\n          padding: 8px;\n          border-radius: 4px;\n        }\n    "
+            ],
+            "templateUrl": [
+                "./dialog-basic-demo.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "dialogData",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nData interface",
+                    "description": "<p>Data interface</p>\n",
+                    "line": 42,
+                    "type": "IDialogBasic",
+                    "decorators": []
+                },
+                {
+                    "name": "style",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nDialog style",
+                    "description": "<p>Dialog style</p>\n",
+                    "line": 47,
+                    "type": "\"text\" | \"icon\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "componentCode",
+                    "defaultValue": "`\n        openDialog() {\n            const dialogData: IDialogBasic = {\n                title: 'Editar nombre',\n                description: \"A dialog is a type of modal window that appears in front of app content to provide critical information, or prompt for a decision to be made.\",\n                actions: [{ text: 'Cancelar' }, { text: 'Guardar' }],\n                icon: 'info',\n                style: 'text'\n            };\n\n            this.dialog.open(DialogBasicComponent, {\n                width: '312px',\n                data: this.dialogData\n            });\n        }\n    `",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "<p>Example code for ts</p>\n",
+                    "line": 61,
+                    "rawdescription": "\nExample code for ts",
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "currentStyle",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"text\" | \"icon\"",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 44,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "dialog",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MatDialog",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 78,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "dialogResult",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 51
+                },
+                {
+                    "name": "templateCode",
+                    "defaultValue": "`\n        <app-button-filled (onClick)=\"openDialog()\">\n            Open dialog\n        </app-button-filled>\n    `",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "<p>Example code for html</p>\n",
+                    "line": 54,
+                    "rawdescription": "\nExample code for html",
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "openDialog",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 88,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "HttpClientModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatDialogModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatCardModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatTabsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "JsonPipe",
+                    "type": "pipe"
+                },
+                {
+                    "name": "ButtonFilledComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from \"@angular/core\";\nimport { MatDialog, MatDialogModule } from \"@angular/material/dialog\";\nimport { HttpClientModule } from \"@angular/common/http\";\nimport { MatCardModule } from \"@angular/material/card\";\nimport { MatTabsModule } from '@angular/material/tabs';\nimport { JsonPipe } from \"@angular/common\";\n\nimport { DialogBasicComponent, IDialogBasic } from \"src/app/library/components/dialog-basic/dialog-basic.component\";\nimport { ButtonFilledComponent } from \"src/app/library/components/buttons/button-filled/button-filled.component\";\n\n@Component({\n    standalone: true,\n    selector: 'app-dialog-basic-demo',\n    templateUrl: './dialog-basic-demo.component.html',\n    styles: [`\n        .demo-container {\n          padding: 16px;\n          text-align: center;\n        }\n        .result {\n          margin-top: 16px;\n          padding: 8px;\n          background: #f5f5f5;\n        }\n        pre {\n          background: #f5f5f5;\n          padding: 8px;\n          border-radius: 4px;\n        }\n    `],\n    imports: [\n        HttpClientModule,\n        MatDialogModule,\n        MatCardModule,\n        MatTabsModule,\n        JsonPipe,\n        ButtonFilledComponent\n    ],\n})\nexport class DialogBasicDemoComponent {\n    /** Data interface */\n    @Input() public dialogData: IDialogBasic;\n\n    public currentStyle: 'text' | 'icon' = 'text';\n\n    /** Dialog style */\n    @Input() public set style(value: 'text' | 'icon') {\n        this.currentStyle = value;\n    };\n\n    dialogResult: any;\n\n    /** Example code for html */\n    public templateCode = `\n        <app-button-filled (onClick)=\"openDialog()\">\n            Open dialog\n        </app-button-filled>\n    `;\n\n    /** Example code for ts */\n    public componentCode = `\n        openDialog() {\n            const dialogData: IDialogBasic = {\n                title: 'Editar nombre',\n                description: \"A dialog is a type of modal window that appears in front of app content to provide critical information, or prompt for a decision to be made.\",\n                actions: [{ text: 'Cancelar' }, { text: 'Guardar' }],\n                icon: 'info',\n                style: 'text'\n            };\n\n            this.dialog.open(DialogBasicComponent, {\n                width: '312px',\n                data: this.dialogData\n            });\n        }\n    `;\n\n    constructor(public dialog: MatDialog) {\n        this.dialogData = {\n            title: 'Test',\n            description: \"A dialog is a type of modal window that appears in front of app content to provide critical information, or prompt for a decision to be made.\",\n            actions: [{ text: 'Cancelar' }, { text: 'Guardar' }],\n            icon: 'info',\n            style: this.currentStyle\n        };\n    }\n\n    openDialog() {\n        this.dialogData.style = this.currentStyle;\n\n        this.dialog.open(DialogBasicComponent, {\n            width: '312px',\n            data: this.dialogData\n        });\n    }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n        .demo-container {\n          padding: 16px;\n          text-align: center;\n        }\n        .result {\n          margin-top: 16px;\n          padding: 8px;\n          background: #f5f5f5;\n        }\n        pre {\n          background: #f5f5f5;\n          padding: 8px;\n          border-radius: 4px;\n        }\n    \n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "dialog",
+                        "type": "MatDialog",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 76,
+                "jsdoctags": [
+                    {
+                        "name": "dialog",
+                        "type": "MatDialog",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "accessors": {
+                "style": {
+                    "name": "style",
+                    "setSignature": {
+                        "name": "style",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "\"text\" | \"icon\"",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 47,
+                        "rawdescription": "\nDialog style",
+                        "description": "<p>Dialog style</p>\n",
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "\"text\" | \"icon\"",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "templateData": "<mat-card>\n  <mat-card-header>\n    <h3 class=\"mat-headline-6\">Basic dialog</h3>\n  </mat-card-header>\n\n  <mat-card-content>\n    <mat-tab-group>\n      <mat-tab label=\"Demo\">\n        <div class=\"demo-container\">\n          <app-button-filled (onClick)=\"openDialog()\">\n            Open dialog\n          </app-button-filled>\n\n          @if (dialogResult) {\n            <div class=\"result\">\n              Dialog result: {{ dialogResult | json }}\n            </div>\n          }\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"html\">\n        <pre><code>{{ templateCode }}</code></pre>\n      </mat-tab>\n\n      <mat-tab label=\"ts\">\n        <pre><code>{{ componentCode }}</code></pre>\n      </mat-tab>\n    </mat-tab-group>\n  </mat-card-content>\n</mat-card>\n"
+        },
+        {
             "name": "DropdownMenuComponent",
             "id": "component-DropdownMenuComponent-09df6ee3eca3824e19ed08e09558927d177f8fefcaab78eae7881490996b39a67594c1df318e75b942d20a83f0370542a2f9a9c3f209e37dfb3b0c62ab92c793",
             "file": "src/app/common/web-header/header/dropdown-menu/dropdown-menu.component.ts",
@@ -2982,6 +4071,253 @@
                 "OnInit"
             ],
             "templateData": "<div #dropdown class=\"dropdownMenu\" (mouseleave)=\"closeMenu()\">\n\n  <button mat-icon-button (click)=\"closeMenu()\">\n    <mat-icon>close</mat-icon>\n  </button>\n\n  <p>\n    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam dolorum corporis architecto dolore! Vero assumenda tenetur id iusto, eligendi exercitationem!\n  </p>\n\n</div>\n"
+        },
+        {
+            "name": "FormFieldInputComponent",
+            "id": "component-FormFieldInputComponent-4338fbe340a2949bc5a79942c0efd7b4bb74b78e6c3ed6de8c64b26f5821a4c6b7f4c126a6ab6c78019afb196022a68e3d0b60b032e13ab69848a2636e747bfb",
+            "file": "src/app/library/components/form-field-input/form-field-input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-form-field-input",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./form-field-input.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "data",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 36,
+                    "type": "IFormFieldInput",
+                    "decorators": []
+                },
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 37,
+                    "type": "FormGroup",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "emitClick",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 38,
+                    "type": "EventEmitter<HTMLInputElement>"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatFormFieldModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatInputModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatInputModule } from '@angular/material/input';\n\nexport interface IFormFieldInput {\n    label?: string;\n    placeholder?: string;\n    suffix?: string;\n    btnSuffix?: string;\n    prefix?: string;\n    hint?: string;\n    error?: string;\n    value?: string;\n    controlName: string;\n    readonly?: boolean;\n    prefixPhone?: { img: string; code: string; };\n}\n\n@Component({\n    standalone: true,\n    selector: 'app-form-field-input',\n    templateUrl: './form-field-input.component.html',\n    imports: [\n        MatFormFieldModule,\n        MatInputModule,\n        FormsModule,\n        ReactiveFormsModule,\n        MatButtonModule,\n        MatIconModule\n    ],\n})\nexport class FormFieldInputComponent {\n    @Input() public data!: IFormFieldInput;\n    @Input() public form!: FormGroup;\n    @Output() public emitClick: EventEmitter<HTMLInputElement> = new EventEmitter();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<ng-container [formGroup]=\"form\">\n  <mat-form-field\n    appearance=\"outline\"\n    [floatLabel]=\"data.placeholder || data.prefixPhone ? 'always' : 'auto'\">\n    @if (data.label) {\n      <mat-label>{{data.label}}</mat-label>\n    }\n    <input\n      #inputEl\n      matInput\n      placeholder=\"{{data.placeholder ? data.placeholder : null}}\"\n      [formControlName]=\"data.controlName\"\n      [readonly]=\"data.readonly ? data.readonly : false\">\n      @if (data.suffix) {\n        <mat-icon matSuffix class=\"size-24\" [svgIcon]=\"data.suffix\"></mat-icon>\n      }\n      @if (data.btnSuffix) {\n        <button mat-icon-button matSuffix class=\"m-r-8\" (click)=\"emitClick.emit(inputEl)\">\n          <mat-icon matSuffix class=\"size-24 flex-center-center\" [svgIcon]=\"data.btnSuffix\"></mat-icon>\n        </button>\n      }\n      @if (data.prefix) {\n        <mat-icon matPrefix class=\"size-24\" [svgIcon]=\"data.prefix\"></mat-icon>\n      }\n      @if (data.prefixPhone) {\n        <span class=\"flex-align-center m-l-8\" matPrefix>\n          <img src=\"/assets/images/flags/{{data.prefixPhone.img}}.svg\" alt=\"flag\" width=\"24px\" class=\"m-r-8\">\n          <span class=\"mat-body-1 color-primary\">{{data.prefixPhone.code}}</span>\n        </span>\n      }\n      @if (data.hint) {\n        <mat-hint>{{data.hint}}</mat-hint>\n      }\n      @if (data.error && form.get(data.controlName)?.hasError) {\n        <mat-error>{{data.error}}</mat-error>\n      }\n  </mat-form-field>\n</ng-container>\n"
+        },
+        {
+            "name": "FormFieldInputDemoComponent",
+            "id": "component-FormFieldInputDemoComponent-302fe9eb66214436a58a6f74eccd2e833040a535613b9472269a419a928d05d63566965b609012ffa8654dc986dc1c5d8aec5795d6b56cb3bd33e5744231293d",
+            "file": "src/stories/components/form-field-input-demo/form-field-input-demo.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-form-field-input-demo",
+            "styleUrls": [],
+            "styles": [
+                "\n        .demo-container {\n          padding: 16px;\n        }\n        pre {\n          background: #f5f5f5;\n          padding: 8px;\n          border-radius: 4px;\n        }\n    "
+            ],
+            "templateUrl": [
+                "./form-field-input-demo.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "data",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "IFormFieldInput",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "componentCode",
+                    "defaultValue": "`\n        public form: FormGroup;\n\n        public dataInput: IFormFieldInput = {\n            label: 'Label text',\n            placeholder: '999 999 999',\n            prefixPhone: {\n                img: 'cl',\n                code: '+569'\n            },\n            btnSuffix: 'cross',\n            controlName: 'name',\n            hint: 'Hint text',\n            error: 'Error text',\n        };\n\n        constructor() {\n            this.form = new FormGroup({\n                name: new FormControl('', Validators.required),\n            });\n        }\n    `",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "<p>Example code for ts</p>\n",
+                    "line": 52,
+                    "rawdescription": "\nExample code for ts",
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "dataInput",
+                    "defaultValue": "{\n        label: 'Label text',\n        placeholder: '999 999 999',\n        prefixPhone: {\n            img: 'cl',\n            code: '+569'\n        },\n        btnSuffix: 'cross',\n        controlName: 'name',\n        hint: 'Hint text',\n        error: 'Error text',\n    }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IFormFieldInput",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 33,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 31,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "templateCode",
+                    "defaultValue": "`\n        <app-form-field-input [data]=\"dataInput\" [form]=\"form\"></app-form-field-input>\n    `",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "<p>Example code for html</p>\n",
+                    "line": 47,
+                    "rawdescription": "\nExample code for html",
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "clear",
+                    "args": [
+                        {
+                            "name": "input",
+                            "type": "HTMLInputElement",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 81,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        125
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "input",
+                            "type": "HTMLInputElement",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatCardModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatTabsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormFieldInputComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { FormControl, FormGroup, Validators } from '@angular/forms';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatTabsModule } from '@angular/material/tabs';\n\nimport { FormFieldInputComponent, IFormFieldInput } from 'src/app/library/components/form-field-input/form-field-input.component';\n\n@Component({\n    standalone: true,\n    selector: 'app-form-field-input-demo',\n    templateUrl: './form-field-input-demo.component.html',\n    styles: [`\n        .demo-container {\n          padding: 16px;\n        }\n        pre {\n          background: #f5f5f5;\n          padding: 8px;\n          border-radius: 4px;\n        }\n    `],\n    imports: [\n        MatCardModule,\n        MatTabsModule,\n        FormFieldInputComponent\n    ],\n})\nexport class FormFieldInputDemoComponent {\n    @Input() public data!: IFormFieldInput;\n\n    public form: FormGroup;\n\n    public dataInput: IFormFieldInput = {\n        label: 'Label text',\n        placeholder: '999 999 999',\n        prefixPhone: {\n            img: 'cl',\n            code: '+569'\n        },\n        btnSuffix: 'cross',\n        controlName: 'name',\n        hint: 'Hint text',\n        error: 'Error text',\n    };\n\n    /** Example code for html */\n    public templateCode = `\n        <app-form-field-input [data]=\"dataInput\" [form]=\"form\"></app-form-field-input>\n    `;\n\n    /** Example code for ts */\n    public componentCode = `\n        public form: FormGroup;\n\n        public dataInput: IFormFieldInput = {\n            label: 'Label text',\n            placeholder: '999 999 999',\n            prefixPhone: {\n                img: 'cl',\n                code: '+569'\n            },\n            btnSuffix: 'cross',\n            controlName: 'name',\n            hint: 'Hint text',\n            error: 'Error text',\n        };\n\n        constructor() {\n            this.form = new FormGroup({\n                name: new FormControl('', Validators.required),\n            });\n        }\n    `;\n\n    constructor() {\n        this.form = new FormGroup({\n            name: new FormControl('', Validators.required),\n        });\n    }\n\n    public clear(input: HTMLInputElement): void {\n        input.value = '';\n    }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n        .demo-container {\n          padding: 16px;\n        }\n        pre {\n          background: #f5f5f5;\n          padding: 8px;\n          border-radius: 4px;\n        }\n    \n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 73
+            },
+            "extends": [],
+            "templateData": "<mat-card>\n  <mat-card-content>\n    <mat-tab-group>\n      <mat-tab label=\"Demo\">\n        <div class=\"demo-container mat-typography\">\n          <app-form-field-input [data]=\"dataInput\" [form]=\"form\" (emitClick)=\"clear($event)\"></app-form-field-input>\n        </div>\n      </mat-tab>\n\n      <mat-tab label=\"html\">\n        <pre><code>{{ templateCode }}</code></pre>\n      </mat-tab>\n\n      <mat-tab label=\"ts\">\n        <pre><code>{{ componentCode }}</code></pre>\n      </mat-tab>\n    </mat-tab-group>\n  </mat-card-content>\n</mat-card>\n"
         },
         {
             "name": "HeaderComponent",
@@ -4097,7 +5433,7 @@
                     }
                 }
             },
-            "templateData": "<div class=\"sidenav\">\n  <div class=\"sidenav__top p-l-16\">\n    <div class=\"accessibility\">\n      <mat-slide-toggle\n        [(ngModel)]=\"isChecked\"\n        (toggleChange)=\"changeThemeMode()\"\n        labelPosition=\"before\"\n        color=\"primary\">\n        <span class=\"m-r-8\">{{isChecked ? 'Dark' : 'Light'}}</span>\n      </mat-slide-toggle>\n      <mat-icon>text_fields</mat-icon>\n      <button mat-icon-button class=\"size-32\" (click)=\"toScale(1)\" [disabled]=\"scale > 1\">\n        <mat-icon>add</mat-icon>\n      </button>\n      <button mat-icon-button class=\"size-32\" (click)=\"toScale(2)\" [disabled]=\"scale < -1\">\n        <mat-icon>remove</mat-icon>\n      </button>\n    </div>\n\n    <button mat-icon-button class=\"size-32\" (click)=\"toggle()\">\n      <span class=\"material-symbols-outlined\" *ngIf=\"currencyLang !== 'ar'\">chevron_right</span>\n      <span class=\"material-symbols-outlined\" *ngIf=\"currencyLang === 'ar'\">chevron_left</span>\n    </button>\n  </div>\n  <div class=\"sidenav__body\">\n    <mat-nav-list>\n      <a mat-list-item [routerLink]=\"['/typography']\" [routerLinkActive]=\"'active'\">Typography</a>\n      <a mat-list-item [routerLink]=\"['/colors-scheme']\" [routerLinkActive]=\"'active'\">Colors scheme</a>\n      <a mat-list-item [routerLink]=\"['/components']\" [routerLinkActive]=\"'active'\">Components</a>\n      <a mat-list-item [routerLink]=\"['/web-header']\" [routerLinkActive]=\"'active'\">Website header</a>\n      <a mat-list-item [routerLink]=\"['/dashboard']\" [routerLinkActive]=\"'active'\">Dashboard</a>\n      <a mat-list-item [routerLink]=\"['/icons']\" [routerLinkActive]=\"'active'\">SVG icons</a>\n      <a mat-list-item [routerLink]=\"['/slider']\" [routerLinkActive]=\"'active'\">Slider</a>\n    </mat-nav-list>\n  </div>\n</div>\n"
+            "templateData": "<div class=\"sidenav\">\n  <div class=\"sidenav__top p-l-16\">\n    <div class=\"accessibility\">\n      <mat-slide-toggle\n        [(ngModel)]=\"isChecked\"\n        (toggleChange)=\"changeThemeMode()\"\n        labelPosition=\"before\"\n        color=\"primary\">\n        <span class=\"m-r-8\">{{isChecked ? 'Dark' : 'Light'}}</span>\n      </mat-slide-toggle>\n      <mat-icon>text_fields</mat-icon>\n      <button mat-icon-button class=\"size-32\" (click)=\"toScale(1)\" [disabled]=\"scale > 1\">\n        <mat-icon>add</mat-icon>\n      </button>\n      <button mat-icon-button class=\"size-32\" (click)=\"toScale(2)\" [disabled]=\"scale < -1\">\n        <mat-icon>remove</mat-icon>\n      </button>\n    </div>\n\n    <button mat-icon-button class=\"size-32\" (click)=\"toggle()\">\n      <span class=\"material-symbols-outlined\" *ngIf=\"currencyLang !== 'ar'\">chevron_right</span>\n      <span class=\"material-symbols-outlined\" *ngIf=\"currencyLang === 'ar'\">chevron_left</span>\n    </button>\n  </div>\n  <div class=\"sidenav__body\">\n    <mat-nav-list>\n      <a mat-list-item [routerLink]=\"['/typography']\" [routerLinkActive]=\"'active'\">Typography</a>\n      <a mat-list-item [routerLink]=\"['/colors-scheme']\" [routerLinkActive]=\"'active'\">Colors scheme</a>\n      <a mat-list-item [routerLink]=\"['/components']\" [routerLinkActive]=\"'active'\">Components</a>\n      <a mat-list-item [routerLink]=\"['/web-header']\" [routerLinkActive]=\"'active'\">Website header</a>\n      <a mat-list-item [routerLink]=\"['/dashboard']\" [routerLinkActive]=\"'active'\">Dashboard</a>\n      <a mat-list-item [routerLink]=\"['/icons']\" [routerLinkActive]=\"'active'\">SVG icons</a>\n      <a mat-list-item [routerLink]=\"['/slider']\" [routerLinkActive]=\"'active'\">Slider</a>\n      <a mat-list-item [routerLink]=\"['/storybook']\" [routerLinkActive]=\"'active'\">Storybook library</a>\n    </mat-nav-list>\n  </div>\n</div>\n"
         },
         {
             "name": "SliderComponent",
@@ -4446,6 +5782,218 @@
                 "OnDestroy"
             ],
             "templateData": "<div class=\"p-y-32\">\n\n  <section class=\"p-l-24\">\n    <div #carousel class=\"carousel\">\n      <div class=\"carousel--inner\">\n        <div\n          class=\"carousel--item\"\n          *ngFor=\"let card of sliderData; let i = index\">\n          <div class=\"carousel__card bg-primary\">\n            <div class=\"carousel__card--title mat-subtitle-1\" *ngIf=\"card.title\">\n              <b>{{card.title}}</b>\n            </div>\n            <div class=\"carousel__card--suptitle mat-body-2\" *ngIf=\"card.suptitle\">\n              {{card.suptitle}}\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"carousel__nav\">\n      <button mat-icon-button [disabled]=\"isPrevDisabled\" (click)=\"moveSlider('prev')\">\n        <span class=\"material-symbols-outlined\">chevron_left</span>\n      </button>\n      <button mat-icon-button [disabled]=\"isNextDisabled\" (click)=\"moveSlider('next')\">\n        <span class=\"material-symbols-outlined\">chevron_right</span>\n      </button>\n    </div>\n  </section>\n\n</div>\n"
+        },
+        {
+            "name": "StorybookLibraryComponent",
+            "id": "component-StorybookLibraryComponent-a85f8eb22b1b602059ac14781ddde3c94643b3ea9f548933b6c1d7bf2c5897432883b5ccb6d86acecf81f43285d4aace758d032af297fe2262cfadc800f6ddcc",
+            "file": "src/app/common/storybook-library/storybook-library.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-storybook-library",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./storybook-library.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "dataInput",
+                    "defaultValue": "{\n        label: 'Label text',\n        placeholder: '999 999 999',\n        prefixPhone: {\n            img: 'cl',\n            code: '+569'\n        },\n        btnSuffix: 'cross',\n        controlName: 'name',\n        hint: 'Hint text',\n        error: 'Error text',\n    }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IFormFieldInput",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 34,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "dialog",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MatDialog",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 48,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 32,
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onClick",
+                    "args": [
+                        {
+                            "name": "ev",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 59,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        125
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "ev",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "openModal",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 63,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "MatDialogModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ButtonTextComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "ButtonFilledComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "ButtonOutlinedComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "BannerComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormFieldInputComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { MatButtonModule } from '@angular/material/button';\nimport { Component } from '@angular/core';\nimport { MatDialog, MatDialogModule } from '@angular/material/dialog';\nimport { MatIconModule, MatIconRegistry } from '@angular/material/icon';\nimport { DomSanitizer } from '@angular/platform-browser';\n\nimport { ButtonTextComponent } from 'src/app/library/components/buttons/button-text/button-text.component';\nimport { ButtonFilledComponent } from 'src/app/library/components/buttons/button-filled/button-filled.component';\nimport { ButtonOutlinedComponent } from 'src/app/library/components/buttons/button-outlined/button-outlined.component';\nimport { BannerComponent } from 'src/app/library/components/banner/banner.component';\nimport { DialogBasicComponent, IDialogBasic } from 'src/app/library/components/dialog-basic/dialog-basic.component';\nimport { FormFieldInputComponent, IFormFieldInput } from 'src/app/library/components/form-field-input/form-field-input.component';\nimport { FormControl, FormGroup, Validators } from '@angular/forms';\n\n@Component({\n    standalone: true,\n    selector: 'app-storybook-library',\n    templateUrl: './storybook-library.component.html',\n    imports: [\n        MatDialogModule,\n        ButtonTextComponent,\n        ButtonFilledComponent,\n        ButtonOutlinedComponent,\n        BannerComponent,\n        MatIconModule,\n        MatButtonModule,\n        FormFieldInputComponent\n    ],\n})\nexport class StorybookLibraryComponent {\n\n    public form: FormGroup;\n\n    public dataInput: IFormFieldInput = {\n        label: 'Label text',\n        placeholder: '999 999 999',\n        prefixPhone: {\n            img: 'cl',\n            code: '+569'\n        },\n        btnSuffix: 'cross',\n        controlName: 'name',\n        hint: 'Hint text',\n        error: 'Error text',\n    };\n\n    constructor(\n        public dialog: MatDialog,\n        private _iconRegistry: MatIconRegistry,\n        private _sanitizer: DomSanitizer,\n    ) {\n        this._iconRegistry.addSvgIconSet(this._sanitizer.bypassSecurityTrustResourceUrl('./assets/images/icons/set.svg'));\n\n        this.form = new FormGroup({\n            name: new FormControl('', Validators.required),\n        });\n    }\n\n    public onClick(ev: Event): void {\n        console.log('click btn storybook: ', ev);\n    }\n\n    public openModal(): void {\n        const dialogData: IDialogBasic = {\n            title: 'Title',\n            description: 'A dialog is a type of modal window that appears in front of app content to provide critical information, or prompt for a decision to be made.',\n            actions: [\n                { text: 'Cancelar'},\n                { text: 'Guardar'}\n            ],\n            icon: 'info',\n            style: 'icon'\n        };\n        this.dialog.open(DialogBasicComponent, {\n            width: '312px',\n            panelClass: 'dialogBasic',\n            data: dialogData\n        });\n    }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "dialog",
+                        "type": "MatDialog",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "_iconRegistry",
+                        "type": "MatIconRegistry",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "_sanitizer",
+                        "type": "DomSanitizer",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 45,
+                "jsdoctags": [
+                    {
+                        "name": "dialog",
+                        "type": "MatDialog",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "_iconRegistry",
+                        "type": "MatIconRegistry",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "_sanitizer",
+                        "type": "DomSanitizer",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "templateData": "<div class=\"p-x-24 p-y-32\">\n  <app-button-text (onClick)=\"openModal()\" class=\"m-l-8\">\n    <span class=\"mat-body-2\">Button text</span>\n  </app-button-text>\n\n  <app-button-filled (onClick)=\"openModal()\" class=\"m-l-8\">\n    <span class=\"mat-body-2\">Button filled</span>\n  </app-button-filled>\n\n  <app-button-outlined (onClick)=\"openModal()\" class=\"m-l-8\">\n    <span class=\"mat-body-2\">Button outlined</span>\n  </app-button-outlined>\n\n  <br>\n  <br>\n\n  <app-banner [style]=\"'info'\">\n    <mat-icon class=\"size-24\" [svgIcon]=\"'info'\" bannerIcon>info</mat-icon>\n    <span class=\"mat-body-1\" bannerTitle>Title</span>\n    <span class=\"mat-body-2\" bannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>\n\n    <button mat-icon-button bannerClose>\n      <mat-icon class=\"size-24 color-primary flex-center-center\" svgIcon=\"cross\"></mat-icon>\n    </button>\n\n    <app-button-text class=\"m-l-8\" bannerButton>\n      <span class=\"mat-body-2\">Button</span>\n    </app-button-text>\n    <app-button-text class=\"m-l-8\" bannerButton>\n      <span class=\"mat-body-2\">Button</span>\n    </app-button-text>\n  </app-banner>\n\n  <br>\n  <br>\n\n  <app-form-field-input [data]=\"dataInput\" [form]=\"form\"></app-form-field-input>\n</div>\n"
         },
         {
             "name": "SvgBarComponent",
@@ -5105,13 +6653,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-bec93079ae19f655174b17f3cbe451e635722b3df923e3d290e3540e944d88af81be954ff06a7fda5c964905479b9dd75e5ed36e7bc6a1755063b27278db769e",
+            "id": "module-AppRoutingModule-e59a6fd68ac924ff3980071683d807e464d13e40a7e388e08b961200e3a9e8fdc37983cc73caddb330283814a1e81f6acf75b65d5ecffd9ad526a29da64d99a3",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nimport { TypographyComponent } from './common/typography/typography.component';\nimport { ColorHelpersComponent } from './common/color-helpers/color-helpers.component';\nimport { WebHeaderComponent } from './common/web-header/web-header.component';\nimport { ComponentsComponent } from './components/components.component';\nimport { DashboardComponent } from './components/dashboard/dashboard.component';\nimport { SvgIconsComponent } from './common/sidenav/svg-icons/svg-icons.component';\nimport { SliderComponent } from './common/slider/slider.component';\n\nconst routes: Routes = [\n    {\n        path: '',\n        component: TypographyComponent,\n        pathMatch: 'full'\n    },\n    {\n        path: 'typography',\n        component: TypographyComponent\n    },\n    {\n        path: 'colors-scheme',\n        component: ColorHelpersComponent\n    },\n    {\n        path: 'components',\n        component: ComponentsComponent\n    },\n    {\n        path: 'web-header',\n        component: WebHeaderComponent\n    },\n    {\n        path: 'dashboard',\n        component: DashboardComponent\n    },\n    {\n        path: 'icons',\n        component: SvgIconsComponent\n    },\n    {\n        path: 'slider',\n        component: SliderComponent\n    }\n];\n\n@NgModule({\n    imports: [RouterModule.forRoot(routes)],\n    exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nimport { TypographyComponent } from './common/typography/typography.component';\nimport { ColorHelpersComponent } from './common/color-helpers/color-helpers.component';\nimport { WebHeaderComponent } from './common/web-header/web-header.component';\nimport { ComponentsComponent } from './components/components.component';\nimport { DashboardComponent } from './components/dashboard/dashboard.component';\nimport { SvgIconsComponent } from './common/sidenav/svg-icons/svg-icons.component';\nimport { SliderComponent } from './common/slider/slider.component';\nimport { StorybookLibraryComponent } from './common/storybook-library/storybook-library.component';\n\nconst routes: Routes = [\n    {\n        path: '',\n        component: TypographyComponent,\n        pathMatch: 'full'\n    },\n    {\n        path: 'typography',\n        component: TypographyComponent\n    },\n    {\n        path: 'colors-scheme',\n        component: ColorHelpersComponent\n    },\n    {\n        path: 'components',\n        component: ComponentsComponent\n    },\n    {\n        path: 'web-header',\n        component: WebHeaderComponent\n    },\n    {\n        path: 'dashboard',\n        component: DashboardComponent\n    },\n    {\n        path: 'icons',\n        component: SvgIconsComponent\n    },\n    {\n        path: 'slider',\n        component: SliderComponent\n    },\n    {\n        path: 'storybook',\n        component: StorybookLibraryComponent\n    }\n];\n\n@NgModule({\n    imports: [RouterModule.forRoot(routes)],\n    exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -5310,6 +6858,10 @@
                     {
                         "path": "slider",
                         "component": "SliderComponent"
+                    },
+                    {
+                        "path": "storybook",
+                        "component": "StorybookLibraryComponent"
                     }
                 ],
                 "kind": "module"
@@ -5317,7 +6869,7 @@
         ]
     },
     "coverage": {
-        "count": 1,
+        "count": 7,
         "status": "low",
         "files": [
             {
@@ -5408,6 +6960,15 @@
                 "name": "ISliderProps",
                 "coveragePercent": 0,
                 "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/common/storybook-library/storybook-library.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "StorybookLibraryComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
@@ -5683,6 +7244,78 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/library/components/banner/banner.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BannerComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/library/components/buttons/button-filled/button-filled.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonFilledComponent",
+                "coveragePercent": 75,
+                "coverageCount": "3/4",
+                "status": "good"
+            },
+            {
+                "filePath": "src/app/library/components/buttons/button-outlined/button-outlined.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonOutlinedComponent",
+                "coveragePercent": 75,
+                "coverageCount": "3/4",
+                "status": "good"
+            },
+            {
+                "filePath": "src/app/library/components/buttons/button-text/button-text.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonTextComponent",
+                "coveragePercent": 75,
+                "coverageCount": "3/4",
+                "status": "good"
+            },
+            {
+                "filePath": "src/app/library/components/dialog-basic/dialog-basic.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DialogBasicComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/library/components/dialog-basic/dialog-basic.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "IDialogBasic",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/library/components/form-field-input/form-field-input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormFieldInputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/library/components/form-field-input/form-field-input.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "IFormFieldInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/12",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/transloco-loader.ts",
                 "type": "injectable",
                 "linktype": "injectable",
@@ -5699,6 +7332,33 @@
                 "coveragePercent": 83,
                 "coverageCount": "5/6",
                 "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/components/banner/banner-demo.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BannerDemoComponent",
+                "coveragePercent": 40,
+                "coverageCount": "2/5",
+                "status": "medium"
+            },
+            {
+                "filePath": "src/stories/components/dialogs/dialog-basic/dialog-basic-demo.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DialogBasicDemoComponent",
+                "coveragePercent": 40,
+                "coverageCount": "4/10",
+                "status": "medium"
+            },
+            {
+                "filePath": "src/stories/components/form-field-input-demo/form-field-input-demo.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormFieldInputDemoComponent",
+                "coveragePercent": 25,
+                "coverageCount": "2/8",
+                "status": "low"
             },
             {
                 "filePath": "src/stories/header.component.ts",

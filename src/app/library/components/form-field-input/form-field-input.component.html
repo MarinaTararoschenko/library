@@ -1,0 +1,38 @@
+<ng-container [formGroup]="form">
+  <mat-form-field
+    appearance="outline"
+    [floatLabel]="data.placeholder || data.prefixPhone ? 'always' : 'auto'">
+    @if (data.label) {
+      <mat-label>{{data.label}}</mat-label>
+    }
+    <input
+      #inputEl
+      matInput
+      placeholder="{{data.placeholder ? data.placeholder : null}}"
+      [formControlName]="data.controlName"
+      [readonly]="data.readonly ? data.readonly : false">
+      @if (data.suffix) {
+        <mat-icon matSuffix class="size-24" [svgIcon]="data.suffix"></mat-icon>
+      }
+      @if (data.btnSuffix) {
+        <button mat-icon-button matSuffix class="m-r-8" (click)="emitClick.emit(inputEl)">
+          <mat-icon matSuffix class="size-24 flex-center-center" [svgIcon]="data.btnSuffix"></mat-icon>
+        </button>
+      }
+      @if (data.prefix) {
+        <mat-icon matPrefix class="size-24" [svgIcon]="data.prefix"></mat-icon>
+      }
+      @if (data.prefixPhone) {
+        <span class="flex-align-center m-l-8" matPrefix>
+          <img src="/assets/images/flags/{{data.prefixPhone.img}}.svg" alt="flag" width="24px" class="m-r-8">
+          <span class="mat-body-1 color-primary">{{data.prefixPhone.code}}</span>
+        </span>
+      }
+      @if (data.hint) {
+        <mat-hint>{{data.hint}}</mat-hint>
+      }
+      @if (data.error && form.get(data.controlName)?.hasError) {
+        <mat-error>{{data.error}}</mat-error>
+      }
+  </mat-form-field>
+</ng-container>

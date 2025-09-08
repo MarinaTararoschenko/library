@@ -1,0 +1,38 @@
+<div class="p-x-24 p-y-32">
+  <app-button-text (onClick)="openModal()" class="m-l-8">
+    <span class="mat-body-2">Button text</span>
+  </app-button-text>
+
+  <app-button-filled (onClick)="openModal()" class="m-l-8">
+    <span class="mat-body-2">Button filled</span>
+  </app-button-filled>
+
+  <app-button-outlined (onClick)="openModal()" class="m-l-8">
+    <span class="mat-body-2">Button outlined</span>
+  </app-button-outlined>
+
+  <br>
+  <br>
+
+  <app-banner [style]="'info'">
+    <mat-icon class="size-24" [svgIcon]="'info'" bannerIcon>info</mat-icon>
+    <span class="mat-body-1" bannerTitle>Title</span>
+    <span class="mat-body-2" bannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+
+    <button mat-icon-button bannerClose>
+      <mat-icon class="size-24 color-primary flex-center-center" svgIcon="cross"></mat-icon>
+    </button>
+
+    <app-button-text class="m-l-8" bannerButton>
+      <span class="mat-body-2">Button</span>
+    </app-button-text>
+    <app-button-text class="m-l-8" bannerButton>
+      <span class="mat-body-2">Button</span>
+    </app-button-text>
+  </app-banner>
+
+  <br>
+  <br>
+
+  <app-form-field-input [data]="dataInput" [form]="form"></app-form-field-input>
+</div>

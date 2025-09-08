@@ -1,0 +1,21 @@
+:host {
+  display: inline-flex;
+}
+
+button[mat-stroked-button] {
+  border-radius: 100px;
+
+  &.button-outlined {
+    &--sm {
+      height: 40px;
+    }
+
+    &--md {
+      height: 48px;
+    }
+
+    &--lg {
+      height: 64px;
+    }
+  }
+}

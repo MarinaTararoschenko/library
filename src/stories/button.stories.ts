@@ -5,16 +5,16 @@ import { ButtonComponent } from './button.component';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta: Meta<ButtonComponent> = {
-  title: 'Example/Button',
-  component: ButtonComponent,
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: {
-      control: 'color',
+    title: 'Example/Button',
+    component: ButtonComponent,
+    tags: ['autodocs'],
+    argTypes: {
+        backgroundColor: {
+            control: 'color',
+        },
     },
-  },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
+    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
+    args: { onClick: (event: Event) => console.log('Clicked!', event) },
 };
 
 export default meta;

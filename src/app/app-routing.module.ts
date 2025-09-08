@@ -8,6 +8,7 @@ import { ComponentsComponent } from './components/components.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SvgIconsComponent } from './common/sidenav/svg-icons/svg-icons.component';
 import { SliderComponent } from './common/slider/slider.component';
+import { StorybookLibraryComponent } from './common/storybook-library/storybook-library.component';
 
 const routes: Routes = [
     {
@@ -42,6 +43,10 @@ const routes: Routes = [
     {
         path: 'slider',
         component: SliderComponent
+    },
+    {
+        path: 'storybook',
+        component: StorybookLibraryComponent
     }
 ];
 
