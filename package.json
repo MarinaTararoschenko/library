@@ -1,6 +1,7 @@
 {
   "name": "library",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,7 +11,10 @@
     "i18n:extract": "transloco-keys-manager extract",
     "i18n:find": "transloco-keys-manager find",
     "storybook": "ng run library:storybook",
-    "build-storybook": "ng run library:build-storybook"
+    "build-storybook": "ng run library:build-storybook",
+    "build:tokens": "node style-dictionary.config.js",
+    "clean:tokens": "rm -rf build/",
+    "watch:tokens": "style-dictionary build --watch"
   },
   "private": true,
   "dependencies": {
@@ -54,6 +58,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "storybook": "8.6.14",
+    "style-dictionary": "^4.4.0",
     "typescript": "~5.4.5",
     "webpack": "5.89.0"
   }

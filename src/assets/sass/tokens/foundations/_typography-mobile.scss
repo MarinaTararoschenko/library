@@ -1,0 +1,19 @@
+:root {
+  --mobile-display-large: var(--font-size-12xl)/var(--line-height-medium) var(--typography-font-family-display);
+  --mobile-display-medium: var(--font-size-11xl)/var(--line-height-medium) var(--typography-font-family-display);
+  --mobile-display-small: var(--font-size-10xl)/var(--line-height-medium) var(--typography-font-family-display);
+  --mobile-headlines-h1: var(--font-size-7xl)/var(--line-height-medium) var(--typography-font-family-headlines);
+  --mobile-headlines-h2: var(--font-size-6xl)/var(--line-height-medium) var(--typography-font-family-headlines);
+  --mobile-headlines-h3: var(--font-size-5xl)/var(--line-height-medium) var(--typography-font-family-headlines);
+  --mobile-headlines-h4: var(--font-size-4xl)/var(--line-height-medium) var(--typography-font-family-headlines);
+  --mobile-headlines-h5: var(--font-size-3xl)/var(--line-height-medium) var(--typography-font-family-headlines);
+  --mobile-titles-xl: var(--font-size-4xl)/var(--line-height-medium) var(--typography-font-family-titles);
+  --mobile-titles-l: var(--font-size-3xl)/var(--line-height-medium) var(--typography-font-family-titles);
+  --mobile-titles-m: var(--font-size-xxl)/var(--line-height-medium) var(--typography-font-family-titles);
+  --mobile-titles-s: var(--font-size-xl)/var(--line-height-medium) var(--typography-font-family-titles);
+  --mobile-text-xl: var(--font-size-lg)/var(--line-height-high) var(--typography-font-family-text);
+  --mobile-text-l: var(--font-size-md)/var(--line-height-high) var(--typography-font-family-text);
+  --mobile-text-m: var(--font-size-sm)/var(--line-height-high) var(--typography-font-family-text);
+  --mobile-text-s: var(--font-size-xs)/var(--line-height-high) var(--typography-font-family-text);
+  --mobile-text-xs: var(--font-size-xxs)/var(--line-height-high) var(--typography-font-family-text);
+}

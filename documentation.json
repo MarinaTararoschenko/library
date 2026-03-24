@@ -5785,7 +5785,7 @@
         },
         {
             "name": "StorybookLibraryComponent",
-            "id": "component-StorybookLibraryComponent-a85f8eb22b1b602059ac14781ddde3c94643b3ea9f548933b6c1d7bf2c5897432883b5ccb6d86acecf81f43285d4aace758d032af297fe2262cfadc800f6ddcc",
+            "id": "component-StorybookLibraryComponent-2e4193582bd9f75c75202ffc390529704fd6f2aed9c74f2fae8c331b9ad93c1d9c00c52ed918194f4e4b2d7f3d22a6a0f7af72880ae634517f26b00d21a7eefe",
             "file": "src/app/common/storybook-library/storybook-library.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -5794,7 +5794,9 @@
             "providers": [],
             "selector": "app-storybook-library",
             "styleUrls": [],
-            "styles": [],
+            "styles": [
+                "\n        .headline-h1 {\n            font: var(--headline-h1);\n        }\n        .headline-h2 {\n            font: var(--headline-h2);\n        }\n        .headline-h3 {\n            font: var(--headline-h3);\n        }\n    "
+            ],
             "templateUrl": [
                 "./storybook-library.component.html"
             ],
@@ -5812,7 +5814,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 34,
+                    "line": 45,
                     "modifierKind": [
                         125
                     ]
@@ -5825,7 +5827,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 48,
+                    "line": 59,
                     "modifierKind": [
                         125
                     ]
@@ -5838,7 +5840,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 32,
+                    "line": 43,
                     "modifierKind": [
                         125
                     ]
@@ -5858,7 +5860,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 59,
+                    "line": 70,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -5882,7 +5884,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 63,
+                    "line": 74,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -5932,10 +5934,10 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { MatButtonModule } from '@angular/material/button';\nimport { Component } from '@angular/core';\nimport { MatDialog, MatDialogModule } from '@angular/material/dialog';\nimport { MatIconModule, MatIconRegistry } from '@angular/material/icon';\nimport { DomSanitizer } from '@angular/platform-browser';\n\nimport { ButtonTextComponent } from 'src/app/library/components/buttons/button-text/button-text.component';\nimport { ButtonFilledComponent } from 'src/app/library/components/buttons/button-filled/button-filled.component';\nimport { ButtonOutlinedComponent } from 'src/app/library/components/buttons/button-outlined/button-outlined.component';\nimport { BannerComponent } from 'src/app/library/components/banner/banner.component';\nimport { DialogBasicComponent, IDialogBasic } from 'src/app/library/components/dialog-basic/dialog-basic.component';\nimport { FormFieldInputComponent, IFormFieldInput } from 'src/app/library/components/form-field-input/form-field-input.component';\nimport { FormControl, FormGroup, Validators } from '@angular/forms';\n\n@Component({\n    standalone: true,\n    selector: 'app-storybook-library',\n    templateUrl: './storybook-library.component.html',\n    imports: [\n        MatDialogModule,\n        ButtonTextComponent,\n        ButtonFilledComponent,\n        ButtonOutlinedComponent,\n        BannerComponent,\n        MatIconModule,\n        MatButtonModule,\n        FormFieldInputComponent\n    ],\n})\nexport class StorybookLibraryComponent {\n\n    public form: FormGroup;\n\n    public dataInput: IFormFieldInput = {\n        label: 'Label text',\n        placeholder: '999 999 999',\n        prefixPhone: {\n            img: 'cl',\n            code: '+569'\n        },\n        btnSuffix: 'cross',\n        controlName: 'name',\n        hint: 'Hint text',\n        error: 'Error text',\n    };\n\n    constructor(\n        public dialog: MatDialog,\n        private _iconRegistry: MatIconRegistry,\n        private _sanitizer: DomSanitizer,\n    ) {\n        this._iconRegistry.addSvgIconSet(this._sanitizer.bypassSecurityTrustResourceUrl('./assets/images/icons/set.svg'));\n\n        this.form = new FormGroup({\n            name: new FormControl('', Validators.required),\n        });\n    }\n\n    public onClick(ev: Event): void {\n        console.log('click btn storybook: ', ev);\n    }\n\n    public openModal(): void {\n        const dialogData: IDialogBasic = {\n            title: 'Title',\n            description: 'A dialog is a type of modal window that appears in front of app content to provide critical information, or prompt for a decision to be made.',\n            actions: [\n                { text: 'Cancelar'},\n                { text: 'Guardar'}\n            ],\n            icon: 'info',\n            style: 'icon'\n        };\n        this.dialog.open(DialogBasicComponent, {\n            width: '312px',\n            panelClass: 'dialogBasic',\n            data: dialogData\n        });\n    }\n}\n",
+            "sourceCode": "import { MatButtonModule } from '@angular/material/button';\nimport { Component } from '@angular/core';\nimport { MatDialog, MatDialogModule } from '@angular/material/dialog';\nimport { MatIconModule, MatIconRegistry } from '@angular/material/icon';\nimport { DomSanitizer } from '@angular/platform-browser';\n\nimport { ButtonTextComponent } from 'src/app/library/components/buttons/button-text/button-text.component';\nimport { ButtonFilledComponent } from 'src/app/library/components/buttons/button-filled/button-filled.component';\nimport { ButtonOutlinedComponent } from 'src/app/library/components/buttons/button-outlined/button-outlined.component';\nimport { BannerComponent } from 'src/app/library/components/banner/banner.component';\nimport { DialogBasicComponent, IDialogBasic } from 'src/app/library/components/dialog-basic/dialog-basic.component';\nimport { FormFieldInputComponent, IFormFieldInput } from 'src/app/library/components/form-field-input/form-field-input.component';\nimport { FormControl, FormGroup, Validators } from '@angular/forms';\n\n@Component({\n    standalone: true,\n    selector: 'app-storybook-library',\n    templateUrl: './storybook-library.component.html',\n    styles: `\n        .headline-h1 {\n            font: var(--headline-h1);\n        }\n        .headline-h2 {\n            font: var(--headline-h2);\n        }\n        .headline-h3 {\n            font: var(--headline-h3);\n        }\n    `,\n    imports: [\n        MatDialogModule,\n        ButtonTextComponent,\n        ButtonFilledComponent,\n        ButtonOutlinedComponent,\n        BannerComponent,\n        MatIconModule,\n        MatButtonModule,\n        FormFieldInputComponent\n    ],\n})\nexport class StorybookLibraryComponent {\n\n    public form: FormGroup;\n\n    public dataInput: IFormFieldInput = {\n        label: 'Label text',\n        placeholder: '999 999 999',\n        prefixPhone: {\n            img: 'cl',\n            code: '+569'\n        },\n        btnSuffix: 'cross',\n        controlName: 'name',\n        hint: 'Hint text',\n        error: 'Error text',\n    };\n\n    constructor(\n        public dialog: MatDialog,\n        private _iconRegistry: MatIconRegistry,\n        private _sanitizer: DomSanitizer,\n    ) {\n        this._iconRegistry.addSvgIconSet(this._sanitizer.bypassSecurityTrustResourceUrl('./assets/images/icons/set.svg'));\n\n        this.form = new FormGroup({\n            name: new FormControl('', Validators.required),\n        });\n    }\n\n    public onClick(ev: Event): void {\n        console.log('click btn storybook: ', ev);\n    }\n\n    public openModal(): void {\n        const dialogData: IDialogBasic = {\n            title: 'Title',\n            description: 'A dialog is a type of modal window that appears in front of app content to provide critical information, or prompt for a decision to be made.',\n            actions: [\n                { text: 'Cancelar'},\n                { text: 'Guardar'}\n            ],\n            icon: 'info',\n            style: 'icon'\n        };\n        this.dialog.open(DialogBasicComponent, {\n            width: '312px',\n            panelClass: 'dialogBasic',\n            data: dialogData\n        });\n    }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "",
+            "stylesData": "\n        .headline-h1 {\n            font: var(--headline-h1);\n        }\n        .headline-h2 {\n            font: var(--headline-h2);\n        }\n        .headline-h3 {\n            font: var(--headline-h3);\n        }\n    \n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -5961,7 +5963,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 45,
+                "line": 56,
                 "jsdoctags": [
                     {
                         "name": "dialog",
@@ -5993,7 +5995,7 @@
                 ]
             },
             "extends": [],
-            "templateData": "<div class=\"p-x-24 p-y-32\">\n  <app-button-text (onClick)=\"openModal()\" class=\"m-l-8\">\n    <span class=\"mat-body-2\">Button text</span>\n  </app-button-text>\n\n  <app-button-filled (onClick)=\"openModal()\" class=\"m-l-8\">\n    <span class=\"mat-body-2\">Button filled</span>\n  </app-button-filled>\n\n  <app-button-outlined (onClick)=\"openModal()\" class=\"m-l-8\">\n    <span class=\"mat-body-2\">Button outlined</span>\n  </app-button-outlined>\n\n  <br>\n  <br>\n\n  <app-banner [style]=\"'info'\">\n    <mat-icon class=\"size-24\" [svgIcon]=\"'info'\" bannerIcon>info</mat-icon>\n    <span class=\"mat-body-1\" bannerTitle>Title</span>\n    <span class=\"mat-body-2\" bannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>\n\n    <button mat-icon-button bannerClose>\n      <mat-icon class=\"size-24 color-primary flex-center-center\" svgIcon=\"cross\"></mat-icon>\n    </button>\n\n    <app-button-text class=\"m-l-8\" bannerButton>\n      <span class=\"mat-body-2\">Button</span>\n    </app-button-text>\n    <app-button-text class=\"m-l-8\" bannerButton>\n      <span class=\"mat-body-2\">Button</span>\n    </app-button-text>\n  </app-banner>\n\n  <br>\n  <br>\n\n  <app-form-field-input [data]=\"dataInput\" [form]=\"form\"></app-form-field-input>\n</div>\n"
+            "templateData": "<div class=\"p-x-24 p-y-32\">\n  <app-button-text (onClick)=\"openModal()\" class=\"m-l-8\">\n    <span class=\"mat-body-2\">Button text</span>\n  </app-button-text>\n\n  <app-button-filled (onClick)=\"openModal()\" class=\"m-l-8\">\n    <span class=\"mat-body-2\">Button filled</span>\n  </app-button-filled>\n\n  <app-button-outlined (onClick)=\"openModal()\" class=\"m-l-8\">\n    <span class=\"mat-body-2\">Button outlined</span>\n  </app-button-outlined>\n\n  <br>\n  <br>\n\n  <app-banner [style]=\"'info'\">\n    <mat-icon class=\"size-24\" [svgIcon]=\"'info'\" bannerIcon>info</mat-icon>\n    <span class=\"mat-body-1\" bannerTitle>Title</span>\n    <span class=\"mat-body-2\" bannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>\n\n    <button mat-icon-button bannerClose>\n      <mat-icon class=\"size-24 color-primary flex-center-center\" svgIcon=\"cross\"></mat-icon>\n    </button>\n\n    <app-button-text class=\"m-l-8\" bannerButton>\n      <span class=\"mat-body-2\">Button</span>\n    </app-button-text>\n    <app-button-text class=\"m-l-8\" bannerButton>\n      <span class=\"mat-body-2\">Button</span>\n    </app-button-text>\n  </app-banner>\n\n  <br>\n  <br>\n\n  <app-form-field-input [data]=\"dataInput\" [form]=\"form\"></app-form-field-input>\n\n  <h1 class=\"headline-h1\"><b>Headline-h1</b></h1>\n  <h2 class=\"headline-h2\"><b>Headline-h2</b></h2>\n  <h3 class=\"headline-h3\"><b>Headline-h3</b></h3>\n</div>\n"
         },
         {
             "name": "SvgBarComponent",

@@ -1,0 +1,1000 @@
+{
+  "Color": {
+    "Theme": {
+      "Background": {
+        "Primary": {
+          "$type": "color",
+          "$value": "{Color.TUU.600}"
+        },
+        "Hover": {
+          "$type": "color",
+          "$value": "{Color.TUU.700}"
+        },
+        "Pressed": {
+          "$type": "color",
+          "$value": "{Color.TUU.800}"
+        },
+        "Soft": {
+          "$type": "color",
+          "$value": "{Color.TUU.100}"
+        },
+        "Softest": {
+          "$type": "color",
+          "$value": "{Color.TUU.50}"
+        },
+        "Accent": {
+          "$type": "color",
+          "$value": "{Color.TUU.600}"
+        },
+        "Low": {
+          "$type": "color",
+          "$value": "{Color.TUU.200}"
+        },
+        "Mid": {
+          "$type": "color",
+          "$value": "{Color.TUU.300}"
+        },
+        "High": {
+          "$type": "color",
+          "$value": "{Color.TUU.400}"
+        }
+      },
+      "Icon": {
+        "Primary": {
+          "$type": "color",
+          "$value": "{Color.TUU.600}"
+        },
+        "Hover": {
+          "$type": "color",
+          "$value": "{Color.TUU.700}"
+        },
+        "Pressed": {
+          "$type": "color",
+          "$value": "{Color.TUU.800}"
+        },
+        "Accent": {
+          "$type": "color",
+          "$value": "{Color.TUU.600}"
+        },
+        "Mid": {
+          "$type": "color",
+          "$value": "{Color.TUU.300}"
+        },
+        "Low": {
+          "$type": "color",
+          "$value": "{Color.TUU.200}"
+        },
+        "Soft": {
+          "$type": "color",
+          "$value": "{Color.TUU.100}"
+        },
+        "Softest": {
+          "$type": "color",
+          "$value": "{Color.TUU.50}"
+        },
+        "High": {
+          "$type": "color",
+          "$value": "{Color.TUU.400}"
+        }
+      },
+      "Text": {
+        "Primary": {
+          "$type": "color",
+          "$value": "{Color.TUU.600}"
+        },
+        "Hover": {
+          "$type": "color",
+          "$value": "{Color.TUU.700}"
+        },
+        "Pressed": {
+          "$type": "color",
+          "$value": "{Color.TUU.800}"
+        },
+        "Accent": {
+          "$type": "color",
+          "$value": "{Color.TUU.600}"
+        },
+        "Mid": {
+          "$type": "color",
+          "$value": "{Color.TUU.300}"
+        },
+        "Low": {
+          "$type": "color",
+          "$value": "{Color.TUU.200}"
+        },
+        "Soft": {
+          "$type": "color",
+          "$value": "{Color.TUU.100}"
+        },
+        "Softest": {
+          "$type": "color",
+          "$value": "{Color.TUU.50}"
+        },
+        "High": {
+          "$type": "color",
+          "$value": "{Color.TUU.400}"
+        }
+      },
+      "Border": {
+        "Primary": {
+          "$type": "color",
+          "$value": "{Color.TUU.600}"
+        },
+        "Hover": {
+          "$type": "color",
+          "$value": "{Color.TUU.700}"
+        },
+        "Pressed": {
+          "$type": "color",
+          "$value": "{Color.TUU.800}"
+        },
+        "Accent": {
+          "$type": "color",
+          "$value": "{Color.TUU.600}"
+        },
+        "Mid": {
+          "$type": "color",
+          "$value": "{Color.TUU.300}"
+        },
+        "Low": {
+          "$type": "color",
+          "$value": "{Color.TUU.200}"
+        },
+        "Soft": {
+          "$type": "color",
+          "$value": "{Color.TUU.100}"
+        },
+        "Softest": {
+          "$type": "color",
+          "$value": "{Color.TUU.50}"
+        },
+        "High": {
+          "$type": "color",
+          "$value": "{Color.TUU.400}"
+        }
+      }
+    },
+    "Global": {
+      "Neutral": {
+        "Text": {
+          "Contrast": {
+            "$type": "color",
+            "$value": "{Color.Lynch.White}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Lynch.600}"
+          },
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Lynch.700}"
+          },
+          "Lower": {
+            "$type": "color",
+            "$value": "{Color.Lynch.400}"
+          },
+          "Action": {
+            "Hover": {
+              "$type": "color",
+              "$value": "{Color.Lynch.800}"
+            },
+            "Pressed": {
+              "$type": "color",
+              "$value": "{Color.Lynch.900}"
+            },
+            "Disabled": {
+              "$type": "color",
+              "$value": "{Color.Lynch.400}"
+            },
+            "Filled": {
+              "$type": "color",
+              "$value": "{Color.Lynch.800}"
+            }
+          },
+          "Accent": {
+            "$type": "color",
+            "$value": "{Color.Lynch.White}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Lynch.Black}"
+          }
+        },
+        "Icon": {
+          "Contrast": {
+            "$type": "color",
+            "$value": "{Color.Lynch.White}"
+          },
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Lynch.700}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Lynch.600}"
+          },
+          "Lower": {
+            "$type": "color",
+            "$value": "{Color.Lynch.400}"
+          },
+          "Action": {
+            "Hover": {
+              "$type": "color",
+              "$value": "{Color.Lynch.800}"
+            },
+            "Pressed": {
+              "$type": "color",
+              "$value": "{Color.Lynch.900}"
+            },
+            "Disabled": {
+              "$type": "color",
+              "$value": "{Color.Lynch.400}"
+            },
+            "Filled": {
+              "$type": "color",
+              "$value": "{Color.Lynch.800}"
+            }
+          },
+          "Accent": {
+            "$type": "color",
+            "$value": "{Color.Lynch.White}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Lynch.Black}"
+          }
+        },
+        "Background": {
+          "Action": {
+            "Disabled": {
+              "$type": "color",
+              "$value": "{Color.Lynch.200}"
+            },
+            "Hover": {
+              "$type": "color",
+              "$value": "{Color.Lynch.800}"
+            },
+            "Pressed": {
+              "$type": "color",
+              "$value": "{Color.Lynch.900}"
+            },
+            "Filled": {
+              "$type": "color",
+              "$value": "{Color.Lynch.700}"
+            }
+          },
+          "Clear": {
+            "$type": "color",
+            "$value": "{Color.Lynch.White}"
+          },
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Lynch.700}"
+          },
+          "Soft": {
+            "$type": "color",
+            "$value": "{Color.Lynch.300}"
+          },
+          "Softest": {
+            "$type": "color",
+            "$value": "{Color.Lynch.100}"
+          },
+          "Ghost": {
+            "$type": "color",
+            "$value": "{Color.Lynch.White}"
+          }
+        },
+        "Border": {
+          "Action": {
+            "Disabled": {
+              "$type": "color",
+              "$value": "{Color.Lynch.300}"
+            },
+            "Hover": {
+              "$type": "color",
+              "$value": "{Color.Lynch.800}"
+            },
+            "Pressed": {
+              "$type": "color",
+              "$value": "{Color.Lynch.900}"
+            },
+            "Filled": {
+              "$type": "color",
+              "$value": "{Color.Lynch.700}"
+            }
+          },
+          "Contrast": {
+            "$type": "color",
+            "$value": "{Color.Lynch.White}"
+          },
+          "Softest": {
+            "$type": "color",
+            "$value": "{Color.Lynch.100}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Lynch.300}"
+          },
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Lynch.700}"
+          },
+          "Accent": {
+            "$type": "color",
+            "$value": "{Color.Lynch.White}"
+          }
+        }
+      },
+      "Info": {
+        "Background": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.800}"
+          },
+          "Softest": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.50}"
+          },
+          "Soft": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.100}"
+          }
+        },
+        "Border": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.800}"
+          }
+        },
+        "Text": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.800}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.800}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.400}"
+          }
+        },
+        "Icon": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.800}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.900}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Blue Ribbon.400}"
+          }
+        }
+      },
+      "Success": {
+        "Background": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Green.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Green.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Green.800}"
+          },
+          "Softest": {
+            "$type": "color",
+            "$value": "{Color.Green.50}"
+          },
+          "Soft": {
+            "$type": "color",
+            "$value": "{Color.Green.100}"
+          }
+        },
+        "Border": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Green.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Green.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Green.800}"
+          }
+        },
+        "Icon": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Green.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Green.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Green.800}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Green.900}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Green.400}"
+          }
+        },
+        "Text": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Green.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Green.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Green.800}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Green.900}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Green.400}"
+          }
+        }
+      },
+      "Warning": {
+        "Background": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Yellow.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Yellow.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Yellow.800}"
+          },
+          "Softest": {
+            "$type": "color",
+            "$value": "{Color.Yellow.50}"
+          },
+          "Soft": {
+            "$type": "color",
+            "$value": "{Color.Yellow.100}"
+          }
+        },
+        "Border": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Yellow.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Yellow.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Yellow.800}"
+          }
+        },
+        "Icon": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Yellow.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Yellow.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Yellow.800}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Yellow.900}"
+          },
+          "Soft": {
+            "$type": "color",
+            "$value": "{Color.Yellow.400}"
+          }
+        },
+        "Text": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Yellow.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Yellow.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Yellow.800}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Yellow.900}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Yellow.400}"
+          }
+        }
+      },
+      "Error": {
+        "Background": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Red.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Red.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Red.800}"
+          },
+          "Softest": {
+            "$type": "color",
+            "$value": "{Color.Red.50}"
+          },
+          "Soft": {
+            "$type": "color",
+            "$value": "{Color.Red.100}"
+          }
+        },
+        "Border": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Red.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Red.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Red.800}"
+          }
+        },
+        "Text": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Red.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Red.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Red.800}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Red.900}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Red.400}"
+          }
+        },
+        "Icon": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Red.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Red.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Red.800}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Red.900}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Red.400}"
+          }
+        }
+      },
+      "Accent": {
+        "Background": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Purple.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Purple.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Purple.800}"
+          },
+          "Soft": {
+            "$type": "color",
+            "$value": "{Color.Purple.100}"
+          },
+          "Softest": {
+            "$type": "color",
+            "$value": "{Color.Purple.50}"
+          }
+        },
+        "Border": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Purple.500}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Purple.600}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Purple.700}"
+          }
+        },
+        "Text": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Purple.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Purple.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Purple.800}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Purple.900}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Purple.400}"
+          }
+        },
+        "Icon": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Purple.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Purple.600}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Purple.700}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Purple.900}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Purple.400}"
+          }
+        }
+      },
+      "Alert": {
+        "Background": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Orange.600}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Orange.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Orange.800}"
+          },
+          "Soft": {
+            "$type": "color",
+            "$value": "{Color.Orange.100}"
+          },
+          "Softest": {
+            "$type": "color",
+            "$value": "{Color.Orange.50}"
+          }
+        },
+        "Border": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Orange.500}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Orange.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Orange.800}"
+          }
+        },
+        "Text": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Orange.600}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Orange.900}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Orange.700}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Orange.800}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Orange.400}"
+          }
+        },
+        "Icon": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Orange.600}"
+          },
+          "High": {
+            "$type": "color",
+            "$value": "{Color.Orange.900}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Orange.600}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Orange.700}"
+          },
+          "Low": {
+            "$type": "color",
+            "$value": "{Color.Orange.400}"
+          }
+        }
+      },
+      "Tonal": {
+        "Background": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Lynch.100}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Lynch.200}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Lynch.300}"
+          }
+        },
+        "Border": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Lynch.100}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Lynch.200}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Lynch.300}"
+          }
+        },
+        "Text": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Lynch.100}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Lynch.200}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Lynch.300}"
+          }
+        },
+        "Icon": {
+          "Default": {
+            "$type": "color",
+            "$value": "{Color.Lynch.100}"
+          },
+          "Hover": {
+            "$type": "color",
+            "$value": "{Color.Lynch.200}"
+          },
+          "Pressed": {
+            "$type": "color",
+            "$value": "{Color.Lynch.300}"
+          }
+        }
+      }
+    },
+    "Screen": {
+      "White": {
+        "$type": "color",
+        "$value": "{Color.Lynch.White}"
+      },
+      "Soft": {
+        "$type": "color",
+        "$value": "{Color.Lynch.100}"
+      },
+      "Softest": {
+        "$type": "color",
+        "$value": "{Color.Lynch.50}"
+      },
+      "Opacity": {
+        "Soft": {
+          "$type": "color",
+          "$value": "{Color.Transparent.Lynch.200}"
+        },
+        "Medium": {
+          "$type": "color",
+          "$value": "{Color.Transparent.Lynch.400}"
+        },
+        "Strong": {
+          "$type": "color",
+          "$value": "{Color.Transparent.Lynch.600}"
+        },
+        "Strongest": {
+          "$type": "color",
+          "$value": "{Color.Transparent.Lynch.800}"
+        }
+      },
+      "Transparency": {
+        "Soft": {
+          "$type": "color",
+          "$value": "{Color.Transparent.White.200}"
+        },
+        "Medium": {
+          "$type": "color",
+          "$value": "{Color.Transparent.White.400}"
+        },
+        "Strong": {
+          "$type": "color",
+          "$value": "{Color.Transparent.White.600}"
+        },
+        "Strongest": {
+          "$type": "color",
+          "$value": "{Color.Transparent.White.800}"
+        }
+      },
+      "Base": {
+        "$type": "color",
+        "$value": "{Color.Lynch.White}"
+      }
+    },
+    "Shadows": {
+      "Soft": {
+        "$type": "color",
+        "$value": "{Color.Transparent.Lynch.200}"
+      },
+      "Medium": {
+        "$type": "color",
+        "$value": "{Color.Transparent.Lynch.400}"
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": "{Color.Transparent.Lynch.600}"
+      }
+    }
+  },
+  "Typography": {
+    "Font Family": {
+      "Text": {
+        "$type": "typography",
+        "$value": "{Font Family.Primary}"
+      },
+      "Titles": {
+        "$type": "typography",
+        "$value": "{Font Family.Primary}"
+      },
+      "Headlines": {
+        "$type": "typography",
+        "$value": "{Font Family.Secondary}"
+      },
+      "Display": {
+        "$type": "typography",
+        "$value": "{Font Family.Secondary}"
+      }
+    }
+  },
+  "Radius": {
+    "Button": {
+      "$type": "borderRadius",
+      "$value": "{Radius.complete}"
+    },
+    "Input": {
+      "$type": "borderRadius",
+      "$value": "{Radius.md}"
+    },
+    "Full": {
+      "$type": "borderRadius",
+      "$value": "{Radius.complete}"
+    },
+    "Box": {
+      "$type": "borderRadius",
+      "$value": "{Radius.lg}"
+    },
+    "Tab": {
+      "$type": "borderRadius",
+      "$value": "{Radius.complete}"
+    }
+  },
+  "Stroke": {
+    "Input": {
+      "$type": "strokeWidth",
+      "$value": "{Stroke.sm}"
+    },
+    "Box": {
+      "$type": "strokeWidth",
+      "$value": "{Stroke.sm}"
+    }
+  }
+}

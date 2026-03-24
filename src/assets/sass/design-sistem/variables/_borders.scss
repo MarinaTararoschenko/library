@@ -1,0 +1,12 @@
+:root {
+  // border-radius varibales
+  --ds-border-radius-button: var(--radius-button, 100px);
+  --ds-border-radius-full: var(--radius-full, 100px);
+  --ds-border-radius-input: var(--radius-input, 12px);
+  --ds-border-radius-box: var(--radius-box, 16px);
+
+  // border-width variables
+  --ds-border-width-box: var(--stroke-box, 1px);
+  --ds-border-width-input: var(--stroke-input, 1px);
+  --ds-border-stroke-md: var(--stroke-md, 1.5px);
+}

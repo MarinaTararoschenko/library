@@ -1,0 +1,19 @@
+:root {
+  --desktop-display-large: var(--font-size-12xl)/var(--line-height-medium) var(--typography-font-family-display);
+  --desktop-display-medium: var(--font-size-11xl)/var(--line-height-medium) var(--typography-font-family-display);
+  --desktop-display-small: var(--font-size-10xl)/var(--line-height-medium) var(--typography-font-family-display);
+  --desktop-headlines-h1: var(--font-size-9xl)/var(--line-height-medium) var(--typography-font-family-headlines);
+  --desktop-headlines-h2: var(--font-size-8xl)/var(--line-height-medium) var(--typography-font-family-headlines);
+  --desktop-headlines-h3: var(--font-size-7xl)/var(--line-height-medium) var(--typography-font-family-headlines);
+  --desktop-headlines-h4: var(--font-size-6xl)/var(--line-height-medium) var(--typography-font-family-headlines);
+  --desktop-headlines-h5: var(--font-size-5xl)/var(--line-height-medium) var(--typography-font-family-headlines);
+  --desktop-titles-xl: var(--font-size-4xl)/var(--line-height-medium) var(--typography-font-family-titles);
+  --desktop-titles-l: var(--font-size-3xl)/var(--line-height-medium) var(--typography-font-family-titles);
+  --desktop-titles-m: var(--font-size-xxl)/var(--line-height-medium) var(--typography-font-family-titles);
+  --desktop-titles-s: var(--font-size-xl)/var(--line-height-medium) var(--typography-font-family-titles);
+  --desktop-text-xl: var(--font-size-lg)/var(--line-height-high) var(--typography-font-family-text);
+  --desktop-text-l: var(--font-size-md)/var(--line-height-high) var(--typography-font-family-text);
+  --desktop-text-m: var(--font-size-sm)/var(--line-height-high) var(--typography-font-family-text);
+  --desktop-text-s: var(--font-size-xs)/var(--line-height-high) var(--typography-font-family-text);
+  --desktop-text-xs: var(--font-size-xxs)/var(--line-height-high) var(--typography-font-family-text);
+}

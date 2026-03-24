@@ -27,3 +27,57 @@
   font-weight: 500;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'DM Sans';
+  font-display: swap;
+  src: url('dm-sans/dm-sans-regular/DMSans-Regular.woff') format('woff'),
+      url('dm-sans/dm-sans-regular/DMSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-display: swap;
+  src: url('dm-sans/dm-sans-medium/DMSans-Medium.woff') format('woff'),
+      url('dm-sans/dm-sans-medium/DMSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-display: swap;
+  src: url('dm-sans/dm-sans-bold/DMSans-Bold.woff') format('woff'),
+      url('dm-sans/dm-sans-bold/DMSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-display: swap;
+  src: url('rajdhani/rajdhani-regular/Rajdhani-Regular.woff') format('woff'),
+    url('rajdhani/rajdhani-regular/Rajdhani-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-display: swap;
+  src: url('rajdhani/rajdhani-medium/Rajdhani-Medium.woff') format('woff'),
+    url('rajdhani/rajdhani-medium/Rajdhani-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-display: swap;
+  src: url('rajdhani/rajdhani-bold/Rajdhani-Bold.woff') format('woff'),
+    url('rajdhani/rajdhani-bold/Rajdhani-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}

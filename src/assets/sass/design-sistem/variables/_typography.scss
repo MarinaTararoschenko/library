@@ -1,0 +1,42 @@
+/**
+  * IMPORTANT! A mandatory "nds" prefix denoting the use of the new design system.
+  * It will distinguish variables from others, clearly indicating that the new design system is being applied.
+*/
+:root {
+  --ds-font-headlines-h1: var(--desktop-headlines-h1);
+  --ds-font-headlines-h2: var(--desktop-headlines-h2);
+  --ds-font-headlines-h3: var(--desktop-headlines-h3);
+  --ds-font-titles-m: var(--desktop-titles-m);
+  --ds-font-titles-s: var(--desktop-titles-s);
+  --ds-font-text-xl: var(--desktop-text-xl);
+  --ds-font-text-l: var(--desktop-text-l);
+  --ds-font-text-m: var(--desktop-text-m);
+  --ds-font-text-s: var(--desktop-text-s);
+  --ds-font-text-xs: var(--desktop-text-xs);
+
+  --ds-font-weight-light: var(--font-weight-light);
+  --ds-font-weight-regular: var(--font-weight-regular);
+  --ds-font-weight-medium: var(--font-weight-medium);
+  --ds-font-weight-semibold: var(--font-weight-semibold);
+  --ds-font-weight-bold: var(--font-weight-bold);
+
+  --ds-line-height-medium: var(--line-height-medium);
+  --ds-line-height-high: var(--line-height-high);
+
+  --ds-letter-spacing-none: var(--letter-spacing-none);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --ds-font-headlines-h1: var(--mobile-headlines-h1);
+    --ds-font-headlines-h2: var(--mobile-headlines-h2);
+    --ds-font-headlines-h3: var(--mobile-headlines-h3);
+    --ds-font-titles-m: var(--mobile-titles-m);
+    --ds-font-titles-s: var(--mobile-titles-s);
+    --ds-font-text-xl: var(--mobile-text-xl);
+    --ds-font-text-l: var(--mobile-text-l);
+    --ds-font-text-m: var(--mobile-text-m);
+    --ds-font-text-s: var(--mobile-text-s);
+    --ds-font-text-xs: var(--mobile-text-xs);
+  }
+}
