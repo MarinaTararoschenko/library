@@ -3,14 +3,12 @@ import { Component } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { ButtonTextComponent } from 'src/app/library/components/buttons/button-text/button-text.component';
-import { ButtonFilledComponent } from 'src/app/library/components/buttons/button-filled/button-filled.component';
-import { ButtonOutlinedComponent } from 'src/app/library/components/buttons/button-outlined/button-outlined.component';
 import { BannerComponent } from 'src/app/library/components/banner/banner.component';
 import { DialogBasicComponent, IDialogBasic } from 'src/app/library/components/dialog-basic/dialog-basic.component';
 import { FormFieldInputComponent, IFormFieldInput } from 'src/app/library/components/form-field-input/form-field-input.component';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ButtonComponent } from 'src/app/library/components/buttons/button/button.component';
 
 @Component({
     standalone: true,
@@ -18,13 +16,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
     templateUrl: './storybook-library.component.html',
     imports: [
         MatDialogModule,
-        ButtonTextComponent,
-        ButtonFilledComponent,
-        ButtonOutlinedComponent,
         BannerComponent,
         MatIconModule,
         MatButtonModule,
-        FormFieldInputComponent
+        FormFieldInputComponent,
+        ButtonComponent,
     ],
 })
 export class StorybookLibraryComponent {
@@ -42,6 +38,12 @@ export class StorybookLibraryComponent {
         controlName: 'name',
         hint: 'Hint text',
         error: 'Error text',
+    };
+
+    public icons = {
+        chevronRight: 'angle-right',
+        chevronLeft: 'angle-left',
+        layers: 'layers'
     };
 
     constructor(

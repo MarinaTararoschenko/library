@@ -5,7 +5,7 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { DomSanitizer } from "@angular/platform-browser";
 
 import { BannerComponent } from "src/app/library/components/banner/banner.component";
-import { ButtonTextComponent } from "src/app/library/components/buttons/button-text/button-text.component";
+import { ButtonComponent } from "src/app/library/components/buttons/button/button.component";
 
 @Component({
     standalone: true,
@@ -22,10 +22,9 @@ import { ButtonTextComponent } from "src/app/library/components/buttons/button-t
         }
     `],
     imports: [
-
         BannerComponent,
         MatIconModule,
-        ButtonTextComponent,
+        ButtonComponent,
         MatCardModule,
         MatTabsModule,
     ],
@@ -40,12 +39,21 @@ export class BannerDemoComponent {
             <span class="mat-body-1" bannerTitle>Title</span>
             <span class="mat-body-2" bannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
 
-            <app-button-text class="m-l-8" bannerButton>
-                <span class="mat-body-2">Button</span>
-            </app-button-text>
-            <app-button-text class="m-l-8" bannerButton>
-                <span class="mat-body-2">Button</span>
-            </app-button-text>
+            <app-button
+              [theme]="'primary'"
+              [type]="'tertiary'"
+              [size]="'small'"
+              [data]="{ text: 'Button' }"
+              bannerButton>
+            </app-button>
+
+            <app-button
+              [theme]="'primary'"
+              [type]="'tertiary'"
+              [size]="'small'"
+              [data]="{ text: 'Button' }"
+              bannerButton>
+            </app-button>
         </app-banner>
     `;
 

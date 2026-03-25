@@ -50,6 +50,9 @@ importers:
       '@jsverse/transloco-persist-lang':
         specifier: ^7.0.1
         version: 7.0.2(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(@jsverse/transloco@7.6.1(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(typescript@5.4.5))
+      ng-svg-icon-sprite:
+        specifier: ^1.14.0
+        version: 1.14.0(@angular/common@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))
       rxjs:
         specifier: ~7.8.0
         version: 7.8.2
@@ -4205,6 +4208,12 @@ packages:
   neotraverse@0.6.18:
     resolution: {integrity: sha512-Z4SmBUweYa09+o6pG+eASabEpP6QkQ70yHj351pQoEXIs8uHbaU2DWVmzBANKgflPa47A50PtB2+NgRpQvr7vA==}
     engines: {node: '>= 10'}
+
+  ng-svg-icon-sprite@1.14.0:
+    resolution: {integrity: sha512-ofNbNzcqS+m1ZeCzrZA6gOS+N2dtGsf7p+ouYESLsjGvPbJDcbi9UL/KpNeDAn3jHKQrSjTnE4rIgt83qaNp7g==}
+    peerDependencies:
+      '@angular/common': 17.x || 18.x
+      '@angular/core': 17.x || 18.x
 
   nice-napi@1.0.2:
     resolution: {integrity: sha512-px/KnJAJZf5RuBGcfD+Sp2pAKq0ytz8j+1NehvgIGFkvtvFrDM3T8E4x/JJODXK9WZow8RRGrbA9QQ3hs+pDhA==}
@@ -11353,6 +11362,12 @@ snapshots:
   neo-async@2.6.2: {}
 
   neotraverse@0.6.18: {}
+
+  ng-svg-icon-sprite@1.14.0(@angular/common@17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10)):
+    dependencies:
+      '@angular/common': 17.3.12(@angular/core@17.3.12(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2)
+      '@angular/core': 17.3.12(rxjs@7.8.2)(zone.js@0.14.10)
+      tslib: 2.8.1
 
   nice-napi@1.0.2:
     dependencies:

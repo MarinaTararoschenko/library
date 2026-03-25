@@ -1,8 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ButtonComponent } from './button.component';
 import type { User } from './user';
+import { ButtonComponent } from 'src/app/library/components/buttons/button/button.component';
 
 @Component({
   selector: 'storybook-header',
@@ -32,29 +32,29 @@ import type { User } from './user';
           Welcome, <b>{{ user.name }}</b
           >!
         </span>
-        <storybook-button
+        <app-button
           *ngIf="user"
-          size="small"
-          (onClick)="onLogout.emit($event)"
-          label="Log out"
-        ></storybook-button>
+          [size]="'medium'"
+          [data]="{text: 'Log out'}"
+          (buttonClick)="onLogout.emit($event)"
+        ></app-button>
       </div>
       <div *ngIf="!user">
-        <storybook-button
+        <app-button
           *ngIf="!user"
-          size="small"
+          [type]="'secondary'"
+          [size]="'medium'"
+          [data]="{text: 'Log in'}"
           class="margin-left"
-          (onClick)="onLogin.emit($event)"
-          label="Log in"
-        ></storybook-button>
-        <storybook-button
+          (buttonClick)="onLogin.emit($event)"
+        ></app-button>
+        <app-button
           *ngIf="!user"
-          size="small"
-          [primary]="true"
+          [size]="'medium'"
+          [data]="{text: 'Sign up'}"
           class="margin-left"
-          (onClick)="onCreateAccount.emit($event)"
-          label="Sign up"
-        ></storybook-button>
+          (buttonClick)="onCreateAccount.emit($event)"
+        ></app-button>
       </div>
     </div>
   </div>

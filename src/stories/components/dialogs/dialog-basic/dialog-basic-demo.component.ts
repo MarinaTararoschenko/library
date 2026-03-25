@@ -6,7 +6,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { JsonPipe } from "@angular/common";
 
 import { DialogBasicComponent, IDialogBasic } from "src/app/library/components/dialog-basic/dialog-basic.component";
-import { ButtonFilledComponent } from "src/app/library/components/buttons/button-filled/button-filled.component";
+import { ButtonComponent } from "src/app/library/components/buttons/button/button.component";
 
 @Component({
     standalone: true,
@@ -34,7 +34,7 @@ import { ButtonFilledComponent } from "src/app/library/components/buttons/button
         MatCardModule,
         MatTabsModule,
         JsonPipe,
-        ButtonFilledComponent
+        ButtonComponent
     ],
 })
 export class DialogBasicDemoComponent {
@@ -52,9 +52,13 @@ export class DialogBasicDemoComponent {
 
     /** Example code for html */
     public templateCode = `
-        <app-button-filled (onClick)="openDialog()">
-            Open dialog
-        </app-button-filled>
+        <app-button
+            [theme]="'primary'"
+            [type]="'primary'"
+            [size]="'medium'"
+            [data]="{ text: 'Open dialog' }"
+            (buttonClick)="openDialog()">
+        </app-button>
     `;
 
     /** Example code for ts */

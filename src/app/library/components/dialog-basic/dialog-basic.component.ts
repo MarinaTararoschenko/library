@@ -2,10 +2,9 @@ import { Component, Inject, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { MAT_DIALOG_DATA, MatDialogActions, MatDialogClose, MatDialogContent } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogActions, MatDialogClose, MatDialogContent, MatDialog } from '@angular/material/dialog';
 
-import { ButtonTextComponent } from '../buttons/button-text/button-text.component';
-import { ButtonFilledComponent } from '../buttons/button-filled/button-filled.component';
+import { ButtonComponent } from '../buttons/button/button.component';
 
 
 export interface IDialogBasic {
@@ -27,8 +26,7 @@ export interface IDialogBasic {
         MatDialogContent,
         MatDialogActions,
         MatIconModule,
-        ButtonTextComponent,
-        ButtonFilledComponent
+        ButtonComponent,
     ],
 })
 export class DialogBasicComponent {
@@ -38,6 +36,7 @@ export class DialogBasicComponent {
     constructor(
         private _iconRegistry: MatIconRegistry,
         private _sanitizer: DomSanitizer,
+        public dialog: MatDialog,
         @Inject(MAT_DIALOG_DATA) public data: IDialogBasic,
     ) {
         this._iconRegistry.addSvgIconSet(this._sanitizer.bypassSecurityTrustResourceUrl('./assets/images/icons/set.svg'));

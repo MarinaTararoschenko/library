@@ -1,0 +1,411 @@
+<div class="docs-container">
+  <!-- HEADER -->
+  <header class="docs-header">
+    <div class="docs-header-content">
+      <div class="docs-badge">AIR DesignSystem</div>
+      <div class="docs-title-wrapper">
+        <h1 class="docs-title">Button</h1>
+        <span class="docs-version">v1.0</span>
+      </div>
+      <p class="docs-description">
+        Elemento de acción principal del AIR Design System. Permite a los usuarios ejecutar
+        acciones dentro de una interfaz — confirmar, cancelar, navegar o ejecutar operaciones.
+        Disponible en 6 tipos visuales, 2 temas (primary/neutral), 2 modos (light/dark) y 6 tamaños.
+      </p>
+      <div class="docs-copyright">2026 HAULMER · All rights reserved</div>
+    </div>
+    <div class="docs-header-bg">
+      <svg width="600" height="600" viewBox="0 0 610 610" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="180.5" y="180.5" width="249" height="249" rx="124.5" stroke="#ADBBCF" />
+        <path
+          d="M379.231 346.681C379.231 347.918 379.14 349.109 378.958 350.3C378.958 350.346 378.958 350.346 378.913 350.391C378.14 355.75 375.638 360.605 372 364.315L371.954 364.361C367.452 368.896 361.221 371.689 354.399 371.689C347.577 371.689 341.346 368.896 336.889 364.361L308.6 334.727L308.145 334.223C307.099 332.941 305.962 331.75 304.78 330.605C295.866 321.902 283.722 316.544 270.306 316.544C259.481 316.544 249.521 320.07 241.335 325.979C240.652 326.437 240.016 326.941 239.424 327.445C237.605 328.91 236.059 330.605 234.74 332.529L235.968 330.376L282.995 250.817L283.04 250.726C284.586 247.84 286.724 245.275 289.225 243.26C293.455 239.779 298.867 237.718 304.78 237.718C310.692 237.718 316.104 239.779 320.334 243.26C322.881 245.275 325.018 247.84 326.565 250.726L326.61 250.817L373.591 330.422L374.728 332.345L374.774 332.391L374.819 332.483L374.91 332.666C377.639 336.651 379.231 341.506 379.231 346.681Z"
+          fill="url(#paint0_linear_doc)" />
+        <path
+          d="M304.78 330.605C303.597 331.75 302.506 332.941 301.414 334.224L272.898 364.133L272.398 364.682C267.986 369.033 261.937 371.69 255.206 371.69C248.339 371.69 242.153 368.896 237.651 364.362L237.605 364.316C233.967 360.606 231.465 355.751 230.692 350.392C230.647 350.346 230.647 350.346 230.647 350.3C230.465 349.109 230.374 347.919 230.374 346.682C230.374 341.506 231.966 336.651 234.649 332.667L234.695 332.621L234.74 332.529C236.059 330.605 237.605 328.911 239.424 327.445C240.016 326.941 240.652 326.437 241.335 325.979C249.521 320.071 259.481 316.544 270.306 316.544C283.722 316.544 295.866 321.903 304.78 330.605Z"
+          fill="url(#paint1_linear_doc)" />
+        <ellipse cx="343.397" cy="261.379" rx="23.7091" ry="23.6613" fill="#4C607B" />
+        <circle cx="305" cy="305" r="203.5" stroke="#ADBBCF" />
+        <circle cx="305" cy="305" r="304.5" stroke="#ADBBCF" />
+        <defs>
+          <linearGradient id="paint0_linear_doc" x1="388.599" y1="371.689" x2="259.569" y2="288.285"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#334155" />
+            <stop offset="1" stop-color="#4C607B" />
+          </linearGradient>
+          <linearGradient id="paint1_linear_doc" x1="296.016" y1="316.796" x2="250.901" y2="351.631"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#1E2D42" />
+            <stop offset="1" stop-color="#4C607B" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </header>
+
+  <!-- 01 OVERVIEW -->
+  <section class="docs-section">
+    <h2 class="docs-section-title">01 Overview</h2>
+    <div class="docs-grid-2">
+      <div class="docs-card">
+        <strong class="docs-card-title">Cuándo usarlo</strong>
+        <ul class="docs-list">
+          <li>Usar <strong>primary</strong> para la acción principal de una vista — máximo uno por sección visual.</li>
+          <li>Usar <strong>secondary</strong> o <strong>tertiary</strong> para acciones complementarias o de navegación.
+          </li>
+          <li>Elegir el tamaño según el contexto: XS/S para espacios densos, L/XL/2XL para call-to-action prominentes.
+          </li>
+          <li>Usar <code>type="danger"</code> o <code>type="danger-text"</code> únicamente para acciones destructivas.
+          </li>
+          <li>Usar <code>mode="dark"</code> cuando el botón aparece sobre fondos oscuros o con imagen de fondo.</li>
+        </ul>
+      </div>
+      <div class="docs-card">
+        <strong class="docs-card-title">Cuándo no usarlo</strong>
+        <ul class="docs-list">
+          <li>No colocar más de un botón <strong>primary</strong> en la misma sección visual.</li>
+          <li>No usar <code>danger</code> para acciones neutras o de navegación — genera alarma innecesaria.</li>
+          <li>No combinar 3 o más botones del mismo tipo visual en una misma línea.</li>
+          <li>No usar el estado <code>loading</code> sin manejar el retorno al estado anterior cuando termina la
+            operación.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 ANATOMY -->
+  <section class="docs-section">
+    <h2 class="docs-section-title">02 Anatomy</h2>
+    <div class="docs-card docs-card-no-padding">
+      <div class="anatomy-container">
+        <div class="anatomy-top">
+          <div class="anatomy-pill-container">
+            <span class="anatomy-pill">air-button &lt;button&gt;</span>
+            <div class="anatomy-line-vertical"></div>
+            <div class="anatomy-dot"></div>
+          </div>
+        </div>
+        <div class="anatomy-dashed-box">
+          <div class="anatomy-content">
+            <div class="anatomy-icons-row">
+              <span class="anatomy-pill">iconLeft</span>
+              <div class="anatomy-line-horizontal"></div>
+              <app-button
+                theme="primary"
+                type="primary"
+                size="medium"
+                [data]="{text: 'Body text', iconStart: icons.layers, iconEnd: icons.chevronRight }">
+              </app-button>
+              <div class="anatomy-line-horizontal"></div>
+              <span class="anatomy-pill">iconRight</span>
+            </div>
+            <div class="anatomy-label-row">
+              <span class="anatomy-pill">label</span>
+            </div>
+          </div>
+        </div>
+        <div class="anatomy-sizes">
+          <span>XS: <strong>24px</strong></span>
+          <span>S: <strong>32px</strong></span>
+          <span>M: <strong>40px</strong></span>
+          <span>L: <strong>48px</strong></span>
+          <span>XL: <strong>56px</strong></span>
+          <span>2XL: <strong>64px</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 PROPERTIES - Variantes visuales -->
+  <section class="docs-section">
+    <h2 class="docs-section-title">03 Properties</h2>
+
+    <div class="docs-subsection">
+      <div class="docs-subtitle">Variantes visuales</div>
+      <div class="docs-card docs-card-padding-lg">
+        <div class="variants-container">
+          <!-- Tema Primary Light -->
+          <div class="variant-group">
+            <div class="variant-label">Tema Primary — Light</div>
+            <div class="light-box">
+              <div class="button-row">
+                <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
+                <app-button theme="primary" type="secondary" [data]="{text: 'Secondary'}"></app-button>
+                <app-button theme="primary" type="tertiary" [data]="{text: 'Tertiary'}"></app-button>
+                <app-button theme="primary" type="tonal" [data]="{text: 'Tonal'}"></app-button>
+                <app-button theme="primary" type="danger" [data]="{text: 'Danger'}"></app-button>
+                <app-button theme="primary" type="dangerText" [data]="{text: 'Danger Text'}"></app-button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tema Primary Dark -->
+          <div class="variant-group">
+            <div class="variant-label">Tema Primary — Dark</div>
+            <div class="dark-box">
+              <div class="button-row">
+                <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
+                <app-button theme="primary" type="secondary" [data]="{text: 'Secondary'}"></app-button>
+                <app-button theme="primary" type="tertiary" [data]="{text: 'Tertiary'}"></app-button>
+                <app-button theme="primary" type="tonal" [data]="{text: 'Tonal'}"></app-button>
+                <app-button theme="primary" type="danger" [data]="{text: 'Danger'}"></app-button>
+                <app-button theme="primary" type="dangerText" [data]="{text: 'Danger Text'}"></app-button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tema Neutral Light -->
+          <div class="variant-group">
+            <div class="variant-label">Tema Neutral — Light</div>
+            <div class="light-box">
+              <div class="button-row">
+                <app-button theme="neutral" type="primary" [data]="{text: 'Primary'}"></app-button>
+                <app-button theme="neutral" type="secondary" [data]="{text: 'Secondary'}"></app-button>
+                <app-button theme="neutral" type="tertiary" [data]="{text: 'Tertiary'}"></app-button>
+                <app-button theme="neutral" type="tonal" [data]="{text: 'Tonal'}"></app-button>
+                <app-button theme="neutral" type="danger" [data]="{text: 'Danger'}"></app-button>
+                <app-button theme="neutral" type="dangerText" [data]="{text: 'Danger Text'}"></app-button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tema Neutral Dark -->
+          <div class="variant-group">
+            <div class="variant-label">Tema Neutral — Dark</div>
+            <div class="dark-box">
+              <div class="button-row">
+                <app-button theme="neutral" type="primary" [data]="{text: 'Primary'}"></app-button>
+                <app-button theme="neutral" type="secondary" [data]="{text: 'Secondary'}"></app-button>
+                <app-button theme="neutral" type="tertiary" [data]="{text: 'Tertiary'}"></app-button>
+                <app-button theme="neutral" type="tonal" [data]="{text: 'Tonal'}"></app-button>
+                <app-button theme="neutral" type="danger" [data]="{text: 'Danger'}"></app-button>
+                <app-button theme="neutral" type="dangerText" [data]="{text: 'Danger Text'}"></app-button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Estados -->
+          <div class="variant-group">
+            <div class="variant-label">Estados</div>
+            <div class="light-box">
+              <div class="button-row">
+                <app-button theme="primary" type="primary" [data]="{text: 'Default'}"></app-button>
+                <app-button theme="primary" type="primary" [data]="{text: 'Disabled'}" [disabled]="true"></app-button>
+                <app-button theme="primary" type="primary" [data]="{text: 'Loading'}" [isLoading]="true"></app-button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Con íconos -->
+          <div class="variant-group">
+            <div class="variant-label">Con íconos</div>
+            <div class="light-box">
+              <div class="button-row">
+                <app-button theme="primary" type="primary"
+                  [data]="{text: 'Continuar', iconEnd: icons.chevronRight}"></app-button>
+                <app-button theme="primary" type="secondary"
+                  [data]="{text: 'Volver', iconStart: icons.chevronLeft}"></app-button>
+                <app-button theme="primary" type="tonal" [data]="{text: 'Capas', iconStart: icons.layers}"></app-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tamaños -->
+    <div class="docs-subsection">
+      <div class="docs-subtitle">Tamaños</div>
+      <div class="docs-card docs-card-padding-lg">
+        <div class="sizes-container">
+          <div class="size-item">
+            <div class="size-label">XS — 24px</div>
+            <app-button theme="primary" type="primary" size="small" [data]="{text: 'Body text'}"></app-button>
+          </div>
+          <div class="size-item">
+            <div class="size-label">S — 32px</div>
+            <app-button theme="primary" type="primary" size="small" [data]="{text: 'Body text'}"></app-button>
+          </div>
+          <div class="size-item">
+            <div class="size-label">M — 40px</div>
+            <app-button theme="primary" type="primary" size="medium" [data]="{text: 'Body text'}"></app-button>
+          </div>
+          <div class="size-item">
+            <div class="size-label">L — 48px</div>
+            <app-button theme="primary" type="primary" size="large" [data]="{text: 'Body text'}"></app-button>
+          </div>
+          <div class="size-item">
+            <div class="size-label">XL — 56px</div>
+            <app-button theme="primary" type="primary" size="large" [data]="{text: 'Body text'}"></app-button>
+          </div>
+          <div class="size-item">
+            <div class="size-label">2XL — 64px</div>
+            <app-button theme="primary" type="primary" size="large" [data]="{text: 'Body text'}"></app-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 BEHAVIOR -->
+  <section class="docs-section">
+    <h2 class="docs-section-title">04 Behavior</h2>
+
+    <div class="docs-subsection">
+      <div class="docs-subtitle">Interacciones y transiciones</div>
+      <div class="docs-card docs-card-padding-lg">
+        <p class="docs-text">
+          El botón responde a <strong>hover</strong>, <strong>active/pressed</strong> y <strong>focus</strong>
+          con transiciones de 150ms. En estado <code>loading</code> muestra un spinner y bloquea la interacción.
+          En <code>disabled</code> reduce opacidad al 40%.
+        </p>
+        <div class="light-box">
+          <div class="button-row">
+            <app-button theme="primary" type="primary" [data]="{text: 'Default'}"></app-button>
+            <app-button theme="primary" type="secondary" [data]="{text: 'Default'}"></app-button>
+            <app-button theme="primary" type="tertiary" [data]="{text: 'Default'}"></app-button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="docs-subsection">
+      <div class="docs-subtitle">Responsividad</div>
+      <div class="docs-card docs-card-padding-lg">
+        <div class="responsive-container">
+          <div class="responsive-item">
+            <div class="responsive-header">
+              <span class="responsive-label">← Desktop</span>
+              <span class="responsive-badge">Body text</span>
+            </div>
+            <div class="responsive-frame">
+              <app-button theme="primary" type="primary" size="large"
+                [data]="{text: 'Continuar', iconEnd: icons.chevronRight}"></app-button>
+            </div>
+          </div>
+          <div class="responsive-item responsive-tablet">
+            <div class="responsive-header">
+              <span class="responsive-label">← Tablet</span>
+              <span class="responsive-badge">Body text</span>
+            </div>
+            <div class="responsive-frame">
+              <app-button theme="primary" type="primary" size="medium"
+                [data]="{text: 'Continuar', iconEnd: icons.chevronRight}"></app-button>
+            </div>
+          </div>
+          <div class="responsive-item responsive-mobile">
+            <div class="responsive-header">
+              <span class="responsive-label">← Mobile</span>
+              <span class="responsive-badge">Body text</span>
+            </div>
+            <div class="responsive-frame">
+              <app-button theme="primary" type="primary" size="small"
+                [data]="{text: 'Continuar', iconEnd: icons.chevronRight}"></app-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 ACCESSIBILITY -->
+  <section class="docs-section">
+    <h2 class="docs-section-title">05 Accessibility</h2>
+
+    <div class="docs-subsection">
+      <div class="docs-subtitle">Criterios base</div>
+      <div class="docs-card docs-card-padding-lg">
+        <p class="docs-text">
+          El componente <strong>Button</strong> renderiza un elemento <code>&lt;button&gt;</code> nativo,
+          garantizando foco por teclado, activación con Enter/Space y soporte nativo de lectores de pantalla.
+          El estado <code>disabled</code> deshabilita completamente la interacción.
+        </p>
+      </div>
+    </div>
+
+    <div class="docs-subsection">
+      <div class="docs-subtitle">Especificación técnica</div>
+      <div class="docs-card docs-card-padding-lg">
+        <ul class="docs-list">
+          <li><strong>Teclado:</strong> Tab para enfocar, Enter o Space para activar.</li>
+          <li><strong>Foco visible:</strong> anillo de 3px con color del tema
+            (<code>--air-color-theme-background-a50</code>).</li>
+          <li><strong>disabled:</strong> usa atributo nativo <code>disabled</code> — no recibe foco ni puede ser
+            activado.</li>
+          <li><strong>loading:</strong> bloquea interacción con <code>pointer-events:none</code> — considerar
+            <code>aria-busy="true"</code> en el contenedor.</li>
+          <li><strong>iconLeft / iconRight:</strong> son decorativos (<code>aria-hidden="true"</code>) — el label del
+            botón es suficiente.</li>
+          <li><strong>Contraste:</strong> todos los tipos cumplen WCAG AA (4.5:1) en ambos modos.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 USER GUIDELINES -->
+  <section class="docs-section">
+    <h2 class="docs-section-title">06 User Guidelines</h2>
+    <div class="docs-grid-2">
+      <div class="docs-card-do">
+        <div class="do-header">
+          <span class="do-icon">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M1.5 5l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+          <strong>Do</strong>
+        </div>
+        <div class="guide-content">
+          <div>
+            <p class="guide-text-do">Usar un solo botón primary como CTA principal, acompañado de acciones secundarias.
+            </p>
+            <div class="button-row">
+              <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
+              <app-button theme="primary" type="secondary" [data]="{text: 'Secondary'}"></app-button>
+              <app-button theme="primary" type="tertiary" [data]="{text: 'Tertiary'}"></app-button>
+            </div>
+          </div>
+          <div>
+            <p class="guide-text-do">Usar danger únicamente para acciones destructivas, con confirmación previa.</p>
+            <app-button theme="primary" type="danger" [data]="{text: 'Eliminar cuenta'}"></app-button>
+          </div>
+          <div>
+            <p class="guide-text-do">En mobile, adaptar el tamaño del botón al contenedor para mejorar el área táctil.
+            </p>
+            <div class="mobile-example">
+              <app-button theme="primary" type="primary" size="small"
+                [data]="{text: 'Confirmar', iconStart: icons.layers}"></app-button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="docs-card-dont">
+        <div class="dont-header">
+          <span class="dont-icon">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M2 2l6 6M8 2L2 8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </span>
+          <strong>Don't</strong>
+        </div>
+        <div class="guide-content">
+          <div>
+            <p class="guide-text-dont">No usar múltiples botones primary en la misma sección — compiten por la atención
+              del usuario.</p>
+            <div class="button-row">
+              <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
+              <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
+              <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
+            </div>
+          </div>
+          <div>
+            <p class="guide-text-dont">No usar danger para acciones neutras — reservar el color rojo para acciones
+              realmente destructivas.</p>
+            <app-button theme="primary" type="danger" [data]="{text: 'Configuración'}"></app-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

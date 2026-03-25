@@ -1,15 +1,125 @@
 <div class="p-x-24 p-y-32">
-  <app-button-text (onClick)="openModal()" class="m-l-8">
-    <span class="mat-body-2">Button text</span>
-  </app-button-text>
+  <app-button
+    class="m-l-8"
+    [theme]="'primary'"
+    [type]="'primary'"
+    [size]="'large'"
+    [data]="{ text: 'Primary button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
 
-  <app-button-filled (onClick)="openModal()" class="m-l-8">
-    <span class="mat-body-2">Button filled</span>
-  </app-button-filled>
+  <app-button
+    class="m-l-8"
+    [theme]="'primary'"
+    [type]="'primary'"
+    [size]="'medium'"
+    [data]="{ text: 'Primary button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
 
-  <app-button-outlined (onClick)="openModal()" class="m-l-8">
-    <span class="mat-body-2">Button outlined</span>
-  </app-button-outlined>
+  <app-button
+    class="m-l-8"
+    [theme]="'primary'"
+    [type]="'primary'"
+    [size]="'small'"
+    [data]="{ text: 'Primary button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
+
+  <app-button
+    class="m-l-8"
+    [theme]="'neutral'"
+    [type]="'primary'"
+    [size]="'small'"
+    [data]="{ text: 'Neutral button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
+
+  <br>
+  <br>
+
+  <app-button
+    [theme]="'primary'"
+    [type]="'secondary'"
+    [size]="'medium'"
+    [data]="{ text: 'Primary button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
+
+  <app-button
+    class="m-l-8"
+    [theme]="'neutral'"
+    [type]="'secondary'"
+    [size]="'medium'"
+    [data]="{ text: 'Neutral button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
+
+  <br>
+  <br>
+
+  <app-button
+    [theme]="'primary'"
+    [type]="'tertiary'"
+    [size]="'medium'"
+    [data]="{ text: 'Primary button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
+
+  <app-button
+    class="m-l-8"
+    [theme]="'neutral'"
+    [type]="'tertiary'"
+    [size]="'medium'"
+    [data]="{ text: 'Neutral button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
+
+  <br>
+  <br>
+
+  <app-button
+    [theme]="'primary'"
+    [type]="'tonal'"
+    [size]="'medium'"
+    [data]="{ text: 'Primary button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
+
+  <app-button
+    class="m-l-8"
+    [theme]="'neutral'"
+    [type]="'tonal'"
+    [size]="'medium'"
+    [data]="{ text: 'Neutral button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
+
+  <br>
+  <br>
+
+  <app-button
+    [theme]="'primary'"
+    [type]="'danger'"
+    [size]="'medium'"
+    [data]="{ text: 'Danger button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
+
+  <app-button
+    class="m-l-8"
+    [theme]="'neutral'"
+    [type]="'danger'"
+    [size]="'medium'"
+    [data]="{ text: 'Danger button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
+
+  <br>
+  <br>
+
+  <app-button
+    [theme]="'primary'"
+    [type]="'dangerText'"
+    [size]="'medium'"
+    [data]="{ text: 'DangerText button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
+
+  <app-button
+    class="m-l-8"
+    [theme]="'neutral'"
+    [type]="'dangerText'"
+    [size]="'medium'"
+    [data]="{ text: 'DangerText button', iconStart: icons.layers, iconEnd: icons.chevronRight }" (buttonClick)="openModal()">
+  </app-button>
 
   <br>
   <br>
@@ -23,12 +133,21 @@
       <mat-icon class="size-24 color-primary flex-center-center" svgIcon="cross"></mat-icon>
     </button>
 
-    <app-button-text class="m-l-8" bannerButton>
-      <span class="mat-body-2">Button</span>
-    </app-button-text>
-    <app-button-text class="m-l-8" bannerButton>
-      <span class="mat-body-2">Button</span>
-    </app-button-text>
+    <app-button
+      [theme]="'primary'"
+      [type]="'tertiary'"
+      [size]="'medium'"
+      [data]="{ text: 'Button', iconStart: icons.layers, iconEnd: icons.chevronRight }"
+      bannerButton>
+    </app-button>
+
+    <app-button
+      [theme]="'primary'"
+      [type]="'tertiary'"
+      [size]="'medium'"
+      [data]="{ text: 'Button', iconStart: icons.layers, iconEnd: icons.chevronRight }"
+      bannerButton>
+    </app-button>
   </app-banner>
 
   <br>

@@ -20,10 +20,18 @@
 </mat-dialog-content>
 
 <mat-dialog-actions>
-  <app-button-text mat-dialog-close>
-    <span class="">{{dialogData.actions[0].text}}</span>
-  </app-button-text>
-  <app-button-filled>
-    <span class="">{{dialogData.actions[1].text}}</span>
-  </app-button-filled>
+  <app-button
+    [theme]="'primary'"
+    [type]="'secondary'"
+    [size]="'medium'"
+    [data]="{ text: dialogData.actions[0].text }"
+    (buttonClick)="dialog.closeAll()">
+  </app-button>
+
+  <app-button
+    [theme]="'primary'"
+    [type]="'primary'"
+    [size]="'medium'"
+    [data]="{ text: dialogData.actions[1].text }">
+  </app-button>
 </mat-dialog-actions>

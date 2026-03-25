@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
 
 import { TranslocoRootModule } from './transoloco-root.module';
 
@@ -43,6 +44,8 @@ import { DropdownService } from './common/services/dropdown.service';
 import { SvgTooltipDirective } from './components/dashboard/bar-chart/svg-tooltip.directive';
 import { TooltipDirective } from './common/directives/tooltip.directive';
 
+import { provideIcons } from '../app/library/services/icons-initializer';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -77,11 +80,13 @@ import { TooltipDirective } from './common/directives/tooltip.directive';
         BrowserAnimationsModule,
         CustomMaterialModule,
         HttpClientModule,
-        TranslocoRootModule
+        TranslocoRootModule,
+        MatIconModule
     ],
     providers: [
         ThemeService,
-        DropdownService
+        DropdownService,
+        provideIcons()
     ],
     bootstrap: [AppComponent]
 })

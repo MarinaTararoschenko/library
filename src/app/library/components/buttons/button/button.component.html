@@ -1,0 +1,51 @@
+<ng-container [ngSwitch]="matAppearance">
+  <button
+    *ngSwitchCase="'flat'"
+    mat-flat-button
+    [id]="data.id ? data.id : null"
+    [ngClass]="'size-' + currentSize + ' type-' + currentType + ' theme-' + currentTheme"
+    [disabled]="disabled || isLoading"
+    (click)="buttonClick.emit()">
+    <ng-container *ngTemplateOutlet="buttonContent"></ng-container>
+  </button>
+
+  <button
+    *ngSwitchCase="'stroked'"
+    mat-stroked-button
+    [id]="data.id ? data.id : null"
+    [ngClass]="'size-' + currentSize + ' type-' + currentType + ' theme-' + currentTheme"
+    [disabled]="disabled || isLoading"
+    (click)="buttonClick.emit()">
+    <ng-container *ngTemplateOutlet="buttonContent"></ng-container>
+  </button>
+
+  <button
+    *ngSwitchDefault
+    mat-button
+    [id]="data.id ? data.id : null"
+    [ngClass]="'size-' + currentSize + ' type-' + currentType + ' theme-' + currentTheme"
+    [disabled]="disabled || isLoading"
+    (click)="buttonClick.emit()">
+    <ng-container *ngTemplateOutlet="buttonContent"></ng-container>
+  </button>
+</ng-container>
+
+<ng-template #buttonContent>
+  @if (isLoading) {
+    <mat-spinner
+      [diameter]="iconSize"
+      [color]="currentType === 'dangerText' ? 'warn' : 'custom-theme'"
+      [class.mat-custom-theme]="currentType !== 'danger' && currentType !== 'dangerText'">
+    </mat-spinner>
+  } @else {
+    @if (data.iconStart) {
+      <mat-icon [svgIcon]="data.iconStart" [ngClass]="'size-' + iconSize"></mat-icon>
+    }
+    @if (data.text) {
+      <span class="button__text">{{data.text}}</span>
+    }
+    @if (data.iconEnd) {
+      <mat-icon [svgIcon]="data.iconEnd" [ngClass]="'size-' + iconSize"></mat-icon>
+    }
+  }
+</ng-template>
