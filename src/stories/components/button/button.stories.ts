@@ -37,7 +37,7 @@ const meta: Meta<ButtonComponent> = {
         theme: 'primary',
         type: 'primary',
         size: 'medium',
-        data: { text: 'Button' },
+        data: { text: 'Button', iconStart: 'layers', iconEnd: 'angle-right' },
         disabled: false,
         isLoading: false,
     },
@@ -45,13 +45,13 @@ const meta: Meta<ButtonComponent> = {
         props: args,
         template: `
             <app-button
-            [theme]="theme"
-            [type]="type"
-            [size]="size"
-            [disabled]="disabled"
-            [isLoading]="isLoading"
-            [data]="data"
-            (buttonClick)="buttonClick($event)">
+                [theme]="theme"
+                [type]="type"
+                [size]="size"
+                [disabled]="disabled"
+                [isLoading]="isLoading"
+                [data]="data"
+                (buttonClick)="buttonClick($event)">
             </app-button>
         `,
     }),
@@ -65,20 +65,11 @@ const meta: Meta<ButtonComponent> = {
                 'iconSize',
                 '_setIconSize',
                 'clicked',
+                'onClick',
+                'backgroundColor',
+                'label',
+                'primary'
             ],
-        },
-        docs: {
-            controls: {
-                // Exclude all unnecessary parameters
-                exclude: [
-                    'currentType',
-                    'currentTheme',
-                    'currentSize',
-                    'iconSize',
-                    '_setIconSize',
-                    'clicked',
-                ],
-            },
         },
     },
 };
