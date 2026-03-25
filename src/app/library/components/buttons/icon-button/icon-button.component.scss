@@ -1,0 +1,299 @@
+button[mat-icon-button] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: -webkit-fill-available;
+  max-height: -webkit-fill-available;
+  padding: 0;
+
+  &.size-extrasmall {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+  }
+
+  &.size-small {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+  }
+
+  &.size-medium {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  &.size-large {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+  }
+
+  &.size-xlarge {
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+  }
+
+  &.size-2xl {
+    width: 72px;
+    height: 72px;
+    line-height: 72px;
+  }
+
+  &.type-tonal {
+    background-color: var(--ds-background-color-neutral-softest);
+
+    mat-icon {
+      color: var(--ds-icon-color-neutral-default);
+    }
+
+    &:hover {
+      background-color: var(--ds-background-color-tonal-hover);
+    }
+
+    &:active {
+      background-color: var(--ds-background-color-tonal-pressed);
+    }
+  }
+
+  &.type-dangerText {
+    background-color: transparent;
+
+    mat-icon {
+      color: var(--ds-icon-color-error-default);
+    }
+
+    &:hover {
+      mat-icon {
+        color: var(--ds-icon-color-error-hover);
+      }
+    }
+
+    &:active {
+      mat-icon {
+        color: var(--ds-icon-color-error-pressed);
+      }
+    }
+  }
+
+  &.type-danger {
+    background-color: var(--ds-background-color-error-default);
+
+
+    mat-icon {
+      color: var(--ds-icon-color-neutral-accent);
+    }
+
+    &:hover {
+      background-color: var(--ds-background-color-error-hover);
+    }
+
+    &:active {
+      background-color: var(--ds-background-color-error-pressed);
+    }
+  }
+
+  mat-icon,
+  mat-spinner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+mat-spinner[color="warn"] {
+  --mdc-circular-progress-active-indicator-color: var(--ds-border-color-error-default);
+}
+
+:host {
+  &.theme-neutral {
+    button[mat-icon-button] {
+      &.type-primary {
+        background-color: var(--ds-background-color-neutral-default);
+
+        mat-icon {
+          color: var(--ds-icon-color-neutral-accent);
+        }
+
+        &:hover {
+          background-color: var(--ds-background-color-neutral-action-hover);
+        }
+
+        &:active {
+          background-color: var(--ds-background-color-neutral-action-pressed);
+        }
+      }
+
+      &.type-secondary {
+        border: var(--ds-border-width-box) solid var(--ds-border-color-neutral-default);
+        background-color: transparent;
+
+        mat-icon {
+          color: var(--ds-icon-color-neutral-default);
+        }
+
+        &:hover {
+          border-color: var(--ds-border-color-neutral-action-hover);
+          background-color: var(--ds-background-color-neutral-soft);
+
+          mat-icon {
+            color: var(--ds-icon-color-neutral-action-hover);
+          }
+        }
+
+        &:active {
+          border-color: var(--ds-border-color-neutral-action-pressed);
+          background-color: var(--ds-background-color-neutral-softest);
+
+          mat-icon {
+            color: var(--ds-icon-color-neutral-action-pressed);
+          }
+        }
+
+        &:disabled {
+          border-color: var(--ds-border-color-neutral-action-disabled);
+          background-color: var(--ds-background-color-neutral-ghost);
+
+          mat-icon {
+            color: var(--ds-icon-color-neutral-action-disabled);
+          }
+        }
+      }
+
+      &.type-tertiary {
+        background-color: var(--ds-background-color-screen-base);
+
+        mat-icon {
+          color: var(--ds-icon-color-neutral-default);
+        }
+
+        &:hover {
+          mat-icon {
+            color: var(--ds-icon-color-neutral-action-hover);
+          }
+        }
+
+        &:active {
+          mat-icon {
+            color: var(--ds-icon-color-neutral-action-pressed);
+          }
+        }
+      }
+    }
+
+    mat-spinner.mat-custom-theme {
+      --mdc-circular-progress-active-indicator-color: var(--ds-border-color-neutral-default);
+    }
+  }
+
+  &.theme-primary {
+    button[mat-icon-button] {
+      &.type-primary {
+        background-color: var(--ds-background-color-theme-primary);
+
+        mat-icon {
+          color: var(--ds-icon-color-neutral-accent);
+        }
+
+        &:hover {
+          background-color: var(--ds-background-color-theme-hover);
+        }
+
+        &:active {
+          background-color: var(--ds-background-color-theme-pressed);
+        }
+      }
+
+      &.type-secondary {
+        border: var(--ds-border-width-box) solid var(--ds-border-color-theme-primary);
+        background-color: transparent;
+
+        mat-icon {
+          color: var(--ds-icon-color-theme-primary);
+        }
+
+        &:hover {
+          border-color: var(--ds-border-color-theme-hover);
+          background-color: var(--ds-background-color-theme-soft);
+
+          mat-icon {
+            color: var(--ds-icon-color-theme-hover);
+          }
+        }
+
+        &:active {
+          border-color: var(--ds-border-color-theme-pressed);
+          background-color: var(--ds-background-color-theme-softest);
+
+          mat-icon {
+            color: var(--ds-icon-color-theme-pressed);
+          }
+        }
+
+        &:disabled {
+          border-color: var(--ds-border-color-neutral-action-disabled);
+          background-color: var(--ds-background-color-neutral-ghost);
+
+          mat-icon {
+            color: var(--ds-icon-color-neutral-action-disabled);
+          }
+        }
+      }
+
+      &.type-tertiary {
+        background-color: var(--ds-background-color-screen-base);
+
+        mat-icon {
+          color: var(--ds-icon-color-theme-primary);
+        }
+
+        &:hover {
+          mat-icon {
+            color: var(--ds-icon-color-theme-hover);
+          }
+        }
+
+        &:active {
+          mat-icon {
+            color: var(--ds-icon-color-theme-pressed);
+          }
+        }
+      }
+    }
+
+    mat-spinner.mat-custom-theme {
+      --mdc-circular-progress-active-indicator-color: var(--ds-border-color-theme-primary);
+    }
+  }
+
+  &.theme-neutral button[mat-icon-button],
+  &.theme-primary button[mat-icon-button] {
+
+    &.type-primary,
+    &.type-tonal,
+    &.type-danger {
+      &:disabled {
+        background-color: var(--ds-background-color-neutral-action-disabled);
+
+        mat-icon {
+          color: var(--ds-icon-color-neutral-action-disabled);
+        }
+      }
+    }
+
+    &.type-tertiary,
+    &.type-dangerText {
+      &:disabled {
+        .button__text {
+          color: var(--ds-text-color-neutral-action-disabled);
+        }
+
+        mat-icon {
+          color: var(--ds-icon-color-neutral-action-disabled);
+        }
+      }
+    }
+  }
+}

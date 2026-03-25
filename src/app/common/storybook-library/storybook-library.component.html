@@ -124,14 +124,113 @@
   <br>
   <br>
 
+  <app-icon-button
+    [theme]="'primary'"
+    [type]="'primary'"
+    [size]="'large'"
+    [icon]="icons.layers"
+    [isLoading]="true">
+  </app-icon-button>
+
+  <app-icon-button
+    class="m-l-8"
+    [theme]="'primary'"
+    [type]="'primary'"
+    [size]="'medium'"
+    [icon]="icons.layers">
+  </app-icon-button>
+
+  <app-icon-button
+    class="m-l-8"
+    [theme]="'primary'"
+    [type]="'primary'"
+    [size]="'small'"
+    [icon]="icons.layers">
+  </app-icon-button>
+
+  <br>
+  <br>
+
+  <app-icon-button
+    [theme]="'primary'"
+    [type]="'secondary'"
+    [size]="'large'"
+    [icon]="icons.layers">
+  </app-icon-button>
+
+  <app-icon-button
+    class="m-l-8"
+    [theme]="'primary'"
+    [type]="'tertiary'"
+    [size]="'large'"
+    [icon]="icons.layers">
+  </app-icon-button>
+
+  <app-icon-button
+    class="m-l-8"
+    [theme]="'primary'"
+    [type]="'danger'"
+    [size]="'large'"
+    [icon]="icons.layers">
+  </app-icon-button>
+
+  <app-icon-button
+    class="m-l-8"
+    [theme]="'primary'"
+    [type]="'dangerText'"
+    [size]="'large'"
+    [icon]="icons.layers">
+  </app-icon-button>
+
+  <br>
+  <br>
+
+  <app-icon-button
+    [theme]="'neutral'"
+    [type]="'secondary'"
+    [size]="'large'"
+    [icon]="icons.layers">
+  </app-icon-button>
+
+  <app-icon-button
+    class="m-l-8"
+    [theme]="'neutral'"
+    [type]="'tertiary'"
+    [size]="'large'"
+    [icon]="icons.layers">
+  </app-icon-button>
+
+  <app-icon-button
+    class="m-l-8"
+    [theme]="'neutral'"
+    [type]="'danger'"
+    [size]="'large'"
+    [icon]="icons.layers">
+  </app-icon-button>
+
+  <app-icon-button
+    class="m-l-8"
+    [theme]="'neutral'"
+    [type]="'dangerText'"
+    [size]="'large'"
+    [icon]="icons.layers">
+  </app-icon-button>
+
+  <br>
+  <br>
+
   <app-banner [style]="'info'">
     <mat-icon class="size-24" [svgIcon]="'info'" bannerIcon>info</mat-icon>
     <span class="mat-body-1" bannerTitle>Title</span>
     <span class="mat-body-2" bannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
 
-    <button mat-icon-button bannerClose>
-      <mat-icon class="size-24 color-primary flex-center-center" svgIcon="cross"></mat-icon>
-    </button>
+    <app-icon-button
+      [theme]="'primary'"
+      [type]="'tertiary'"
+      [size]="'small'"
+      [icon]="'cross'"
+      bannerClose>
+    </app-icon-button>
 
     <app-button
       [theme]="'primary'"

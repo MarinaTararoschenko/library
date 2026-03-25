@@ -9,6 +9,7 @@ import { BannerComponent } from 'src/app/library/components/banner/banner.compon
 import { DialogBasicComponent, IDialogBasic } from 'src/app/library/components/dialog-basic/dialog-basic.component';
 import { FormFieldInputComponent, IFormFieldInput } from 'src/app/library/components/form-field-input/form-field-input.component';
 import { ButtonComponent } from 'src/app/library/components/buttons/button/button.component';
+import { IconButtonComponent } from 'src/app/library/components/buttons/icon-button/icon-button.component';
 
 @Component({
     standalone: true,
@@ -21,6 +22,7 @@ import { ButtonComponent } from 'src/app/library/components/buttons/button/butto
         MatButtonModule,
         FormFieldInputComponent,
         ButtonComponent,
+        IconButtonComponent
     ],
 })
 export class StorybookLibraryComponent {

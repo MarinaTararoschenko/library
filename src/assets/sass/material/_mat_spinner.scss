@@ -1,0 +1,13 @@
+mat-spinner svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@for $i from 16 through 32 {
+  @if $i % 4==0 {
+    mat-spinner.size-#{$i} svg {
+      width: #{calc($i/16)}rem;
+      height: #{calc($i/16)}rem;
+    }
+  }
+}
