@@ -1,0 +1,30 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/lib",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "types": [],
+    "paths": {
+      "@library/*": [
+        "./src/app/library/*"
+      ]
+    }
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.stories.ts",
+    "**/*.stories.js",
+    "**/stories/**",
+    "**/button-docs/**",
+    "**/icon-button-docs/**",
+    "src/test.ts",
+    "**/*.test.ts",
+    "**/docs/**"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts"
+  ]
+}

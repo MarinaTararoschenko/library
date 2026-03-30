@@ -1,0 +1,46 @@
+# Source files
+src/
+.storybook/
+stories/
+*.ts
+!*.d.ts
+
+# Config files
+angular.json
+.editorconfig
+.gitignore
+.prettierrc
+tsconfig*.json
+karma.conf.js
+.stylelintrc
+.eslintrc.json
+
+# CI/CD
+.github/
+.gitlab/
+.husky/
+
+# Documentation
+storybook-static/
+compodoc/
+
+# Test files
+**/*.spec.ts
+**/*.test.ts
+
+# Storybook files
+**/*.stories.ts
+**/*.stories.js
+**/*.stories.js.map
+**/button-docs/
+**/icon-button-docs/
+**/docs/
+
+# Development files
+node_modules/
+dist/out-tsc/
+tmp/
+
+# IDE files
+.vscode/
+.idea/
