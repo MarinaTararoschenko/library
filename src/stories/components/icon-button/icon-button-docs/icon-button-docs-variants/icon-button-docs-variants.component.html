@@ -1,0 +1,106 @@
+<div class="variantsHeader">
+  <span class="variantsHeader__label">Primary</span>
+  <span class="variantsHeader__label">Secondary</span>
+  <span class="variantsHeader__label">Tertiary</span>
+  <span class="variantsHeader__label">Tonal</span>
+  <span class="variantsHeader__label">Danger</span>
+</div>
+
+<div class="variantsContainer">
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Tema Primary — Light'"></app-docs-card-label>
+
+    <app-docs-card-box class="light">
+      <div class="variantGroup__button-row">
+        <app-icon-button theme="primary" type="primary" size="medium" [icon]="icons.plus"
+        ></app-icon-button>
+        <app-icon-button theme="primary" type="secondary" size="medium" [icon]="icons.edit"
+        ></app-icon-button>
+        <app-icon-button theme="primary" type="tertiary" size="medium" [icon]="icons.search"
+        ></app-icon-button>
+        <app-icon-button theme="primary" type="tonal" size="medium" [icon]="icons.star"
+        ></app-icon-button>
+        <app-icon-button theme="primary" type="danger" size="medium" [icon]="icons.trash"
+        ></app-icon-button>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Tema Primary — Dark'"></app-docs-card-label>
+
+    <app-docs-card-box class="dark">
+      <div class="variantGroup__button-row">
+        <app-icon-button theme="primary" type="primary" size="medium" [icon]="icons.plus"
+        ></app-icon-button>
+        <app-icon-button theme="primary" type="secondary" size="medium" [icon]="icons.edit"
+        ></app-icon-button>
+        <app-icon-button theme="primary" type="tertiary" size="medium" [icon]="icons.search"
+        ></app-icon-button>
+        <app-icon-button theme="primary" type="tonal" size="medium" [icon]="icons.star"
+        ></app-icon-button>
+        <app-icon-button theme="primary" type="danger" size="medium" [icon]="icons.trash"
+        ></app-icon-button>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Tema Neutral — Light'"></app-docs-card-label>
+
+    <app-docs-card-box class="light">
+      <div class="variantGroup__button-row">
+        <app-icon-button theme="neutral" type="primary" size="medium" [icon]="icons.plus"
+        ></app-icon-button>
+        <app-icon-button theme="neutral" type="secondary" size="medium" [icon]="icons.edit"
+        ></app-icon-button>
+        <app-icon-button theme="neutral" type="tertiary" size="medium" [icon]="icons.search"
+        ></app-icon-button>
+        <app-icon-button theme="neutral" type="tonal" size="medium" [icon]="icons.star"
+        ></app-icon-button>
+        <app-icon-button theme="neutral" type="danger" size="medium" [icon]="icons.trash"
+        ></app-icon-button>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Tema Neutral — Dark'"></app-docs-card-label>
+
+    <app-docs-card-box class="dark">
+      <div class="variantGroup__button-row">
+        <app-icon-button theme="neutral" type="primary" size="medium" [icon]="icons.plus"
+        ></app-icon-button>
+        <app-icon-button theme="neutral" type="secondary" size="medium" [icon]="icons.edit"
+        ></app-icon-button>
+        <app-icon-button theme="neutral" type="tertiary" size="medium" [icon]="icons.search"
+        ></app-icon-button>
+        <app-icon-button theme="neutral" type="tonal" size="medium" [icon]="icons.star"
+        ></app-icon-button>
+        <app-icon-button theme="neutral" type="danger" size="medium" [icon]="icons.trash"
+        ></app-icon-button>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Estados'"></app-docs-card-label>
+
+    <app-docs-card-box class="light">
+      <div class="variantGroup__states-container">
+        <div class="variantGroup__state-item">
+          <app-icon-button type="primary" size="medium" [icon]="icons.plus"></app-icon-button>
+          <span class="variantGroup__state-label">Default</span>
+        </div>
+        <div class="variantGroup__state-item">
+          <app-icon-button type="primary" size="medium" [icon]="icons.plus" [disabled]="true"></app-icon-button>
+          <span class="variantGroup__state-label">Disabled</span>
+        </div>
+        <div class="variantGroup__state-item">
+          <app-icon-button type="primary" size="medium" [icon]="icons.plus" [isLoading]="true"></app-icon-button>
+          <span class="variantGroup__state-label">Loading</span>
+        </div>
+      </div>
+    </app-docs-card-box>
+  </div>
+</div>

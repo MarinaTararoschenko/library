@@ -1,0 +1,18 @@
+.button-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mobile-md {
+  max-width: 480px;
+}
+
+.mobile-xs {
+  max-width: 320px;
+}
+
+.mobile-xxs {
+  max-width: 280px;
+}

@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { moduleMetadata } from '@storybook/angular';
 
 import { IconButtonComponent } from 'src/app/library/components/buttons/icon-button/icon-button.component';
-import { IconButtonDocumentationComponent } from './icon-button-documentation/icon-button-documentation.component';
+import { IconButtonDocsComponent } from './icon-button-docs/icon-button-docs.component';
 
 const meta: Meta<IconButtonComponent> = {
-    title: 'Action/IconButton',
+    title: 'Action/Icon Button',
     component: IconButtonComponent,
     argTypes: {
         theme: {
@@ -78,11 +78,11 @@ export default meta;
 export const Documentation: StoryObj = {
     name: 'Documentation',
     render: () => ({
-        template: '<app-icon-button-documentation></app-icon-button-documentation>',
+        template: '<app-icon-button-docs></app-icon-button-docs>',
     }),
     decorators: [
         moduleMetadata({
-            imports: [IconButtonDocumentationComponent],
+            imports: [IconButtonDocsComponent],
         }),
     ],
     parameters: {

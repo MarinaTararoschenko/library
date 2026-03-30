@@ -1,0 +1,19 @@
+.variantsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.variantGroup {
+  app-docs-card-label {
+    display: block;
+    margin-bottom: .75rem;
+  }
+
+  &__button-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}

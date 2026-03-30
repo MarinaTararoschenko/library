@@ -1,0 +1,52 @@
+.variantsHeader {
+  display: flex;
+  gap: 8px;
+  margin-bottom: .25rem;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+
+  &__label {
+    font-size: 10px;
+    color: #9ca3af;
+    width: 40px;
+    text-align: center;
+  }
+}
+
+.variantsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.variantGroup {
+  app-docs-card-label {
+    display: block;
+    margin-bottom: .75rem;
+  }
+
+  &__button-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__states-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__state-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__state-label {
+    font-size: 10px;
+    color: #9ca3af;
+  }
+}

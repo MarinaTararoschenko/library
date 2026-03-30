@@ -1,0 +1,90 @@
+.anatomy {
+  &__top {
+    padding: 2.5rem 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__pill-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  &__pill {
+    background: #f3e8ff;
+    border: 1px solid #d8b4fe;
+    color: #7c3aed;
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  &__line-vertical {
+    width: 1px;
+    height: 14px;
+    background: #d8b4fe;
+  }
+
+  &__dot {
+    width: 6px;
+    height: 6px;
+    background: #d8b4fe;
+    border-radius: 50%;
+    margin: 4px 0;
+  }
+
+  &__dashed-box {
+    border: 2px dashed #d8b4fe;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__icons-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__line-horizontal {
+    width: 1.5rem;
+    height: 1px;
+    background: #d8b4fe;
+  }
+
+  &__label-row {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__sizes {
+    border-top: 1px solid var(--c-border);
+    padding: 1rem 2rem;
+    background: #fafbfd;
+    border-radius: 0 0 var(--r-card) var(--r-card);
+    font-size: 12px;
+    color: #6b7280;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+
+    span {
+      margin: 0;
+    }
+  }
+}

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { moduleMetadata } from '@storybook/angular';
 
 import { ButtonComponent } from 'src/app/library/components/buttons/button/button.component';
-import { ButtonDocumentationComponent } from './button-documentation/button-documentation.component';
+import { ButtonDocsComponent } from './button-docs/button-docs.component';
 
 const meta: Meta<ButtonComponent> = {
     title: 'Action/Button',
@@ -79,11 +79,11 @@ export default meta;
 export const Documentation: StoryObj = {
     name: 'Documentation',
     render: () => ({
-        template: '<app-button-documentation></app-button-documentation>',
+        template: '<app-button-docs></app-button-docs>',
     }),
     decorators: [
         moduleMetadata({
-            imports: [ButtonDocumentationComponent],
+            imports: [ButtonDocsComponent],
         }),
     ],
     parameters: {

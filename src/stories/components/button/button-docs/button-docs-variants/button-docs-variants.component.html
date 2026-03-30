@@ -1,0 +1,99 @@
+<div class="variantsContainer">
+  <!-- Tema Primary Light -->
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Tema Primary — Light'"></app-docs-card-label>
+
+    <app-docs-card-box class="light">
+      <div class="variantGroup__button-row">
+        <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
+        <app-button theme="primary" type="secondary" [data]="{text: 'Secondary'}"></app-button>
+        <app-button theme="primary" type="tertiary" [data]="{text: 'Tertiary'}"></app-button>
+        <app-button theme="primary" type="tonal" [data]="{text: 'Tonal'}"></app-button>
+        <app-button theme="primary" type="danger" [data]="{text: 'Danger'}"></app-button>
+        <app-button theme="primary" type="dangerText" [data]="{text: 'Danger Text'}"></app-button>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <!-- Tema Primary Dark -->
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Tema Primary — Dark'"></app-docs-card-label>
+
+    <app-docs-card-box class="dark">
+      <div class="variantGroup__button-row">
+        <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
+        <app-button theme="primary" type="secondary" [data]="{text: 'Secondary'}"></app-button>
+        <app-button theme="primary" type="tertiary" [data]="{text: 'Tertiary'}"></app-button>
+        <app-button theme="primary" type="tonal" [data]="{text: 'Tonal'}"></app-button>
+        <app-button theme="primary" type="danger" [data]="{text: 'Danger'}"></app-button>
+        <app-button theme="primary" type="dangerText" [data]="{text: 'Danger Text'}"></app-button>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <!-- Tema Neutral Light -->
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Tema Neutral — Light'"></app-docs-card-label>
+
+    <app-docs-card-box class="light">
+      <div class="variantGroup__button-row">
+        <app-button theme="neutral" type="primary" [data]="{text: 'Primary'}"></app-button>
+        <app-button theme="neutral" type="secondary" [data]="{text: 'Secondary'}"></app-button>
+        <app-button theme="neutral" type="tertiary" [data]="{text: 'Tertiary'}"></app-button>
+        <app-button theme="neutral" type="tonal" [data]="{text: 'Tonal'}"></app-button>
+        <app-button theme="neutral" type="danger" [data]="{text: 'Danger'}"></app-button>
+        <app-button theme="neutral" type="dangerText" [data]="{text: 'Danger Text'}"></app-button>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <!-- Tema Neutral Dark -->
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Tema Neutral — Dark'"></app-docs-card-label>
+
+    <app-docs-card-box class="dark">
+      <div class="variantGroup__button-row">
+        <app-button theme="neutral" type="primary" [data]="{text: 'Primary'}"></app-button>
+        <app-button theme="neutral" type="secondary" [data]="{text: 'Secondary'}"></app-button>
+        <app-button theme="neutral" type="tertiary" [data]="{text: 'Tertiary'}"></app-button>
+        <app-button theme="neutral" type="tonal" [data]="{text: 'Tonal'}"></app-button>
+        <app-button theme="neutral" type="danger" [data]="{text: 'Danger'}"></app-button>
+        <app-button theme="neutral" type="dangerText" [data]="{text: 'Danger Text'}"></app-button>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <!-- Estados -->
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Estados'"></app-docs-card-label>
+
+    <app-docs-card-box class="light">
+      <div class="variantGroup__button-row">
+        <app-button theme="primary" type="primary" [data]="{text: 'Default'}"></app-button>
+        <app-button theme="primary" type="primary" [data]="{text: 'Disabled'}" [disabled]="true"></app-button>
+        <app-button theme="primary" type="primary" [data]="{text: 'Loading'}" [isLoading]="true"></app-button>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <!-- Con íconos -->
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Con íconos'"></app-docs-card-label>
+
+    <app-docs-card-box class="light">
+      <div class="variantGroup__button-row">
+        <app-button
+          theme="primary"
+          type="primary"
+          [data]="{text: 'Continuar', iconEnd: 'angle-right'}">
+        </app-button>
+        <app-button
+          theme="primary"
+          type="secondary"
+          [data]="{text: 'Volver', iconStart: 'angle-left'}">
+        </app-button>
+        <app-button theme="primary" type="tonal" [data]="{text: 'Capas', iconStart: 'layers'}"></app-button>
+      </div>
+    </app-docs-card-box>
+  </div>
+</div>
