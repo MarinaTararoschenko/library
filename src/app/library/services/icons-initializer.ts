@@ -6,13 +6,13 @@ import { DomSanitizer } from '@angular/platform-browser';
  * Initializes the icon set for the component library
  * @param iconRegistry - Material icon registry service
  * @param sanitizer - Service for safely handling URLs
- * @param iconSetPath - Path to the SVG icon set file (defaults to './assets/icons/set.svg')
+//  * @param iconSetPath - Path to the SVG icon set file (defaults to './assets/images/icons/set.svg')
  * @returns A factory function that registers the icon set
  */
 export function initializeIcons(
     iconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer,
-    iconSetPath: string = './assets/icons/set.svg'
+    iconSetPath: string = './assets/images/icons/set.svg'
 ) {
     return () => {
         iconRegistry.addSvgIconSet(
@@ -35,7 +35,7 @@ export function initializeIcons(
  * @example
  * // Example 2: Use library icons with custom path
  * bootstrapApplication(AppComponent, {
- *   providers: [provideIcons('/assets/custom-icons/set.svg')]
+ *   providers: [provideIcons('/assets/images/custom-icons/set.svg')]
  * });
  *
  * @example
@@ -47,14 +47,14 @@ export function initializeIcons(
  * export function initializeCustomIcons(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
  *   return () => {
  *     iconRegistry.addSvgIconSet(
- *       sanitizer.bypassSecurityTrustResourceUrl('/assets/icons/custom-set.svg')
+ *       sanitizer.bypassSecurityTrustResourceUrl('/assets/images/icons/custom-set.svg')
  *     );
  *   };
  * }
  *
  * @NgModule({
  *   providers: [
- *     provideIcons('/assets/icons/set.svg'),
+ *     provideIcons('/assets/images/icons/set.svg'),
  *     {
  *       provide: APP_INITIALIZER,
  *       useFactory: initializeCustomIcons,

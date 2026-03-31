@@ -1,0 +1,25 @@
+@import "./reset";
+
+/**
+  * Token variables must be included at the beginning of the file.
+  * These files are generated automatically and cannot be edited manually.
+*/
+@import "./tokens/foundations/blur";
+@import "./tokens/foundations/borders";
+@import "./tokens/foundations/typography-base";
+@import "./tokens/foundations/typography-desktop";
+@import "./tokens/foundations/typography-mobile";
+@import "./tokens/themes/borders";
+@import "./tokens/themes/colors";
+@import "./tokens/themes/typography";
+
+/**
+  * All variables declared in the files below must use variable tokens as values.
+  * Variable names must be prefixed with --ds (design system) to distinguish them from old variables.
+  * And then the name of the entity to which they apply.
+  * For example: '--ds-font-...', '--ds-text-color-...', '--ds-border-color-...', , '--ds-background-color-...'
+*/
+@import "./variables/index";
+
+// Material styles
+@import "./material/index";

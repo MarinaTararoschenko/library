@@ -2,14 +2,14 @@
   * Token variables must be included at the beginning of the file.
   * These files are generated automatically and cannot be edited manually.
 */
-@import "./tokens/foundations/blur";
-@import "./tokens/foundations/borders";
-@import "./tokens/foundations/typography-base";
-@import "./tokens/foundations/typography-desktop";
-@import "./tokens/foundations/typography-mobile";
-@import "./tokens/themes/borders";
-@import "./tokens/themes/colors";
-@import "./tokens/themes/typography";
+@import "./library/tokens/foundations/blur";
+@import "./library/tokens/foundations/borders";
+@import "./library/tokens/foundations/typography-base";
+@import "./library/tokens/foundations/typography-desktop";
+@import "./library/tokens/foundations/typography-mobile";
+@import "./library/tokens/themes/borders";
+@import "./library/tokens/themes/colors";
+@import "./library/tokens/themes/typography";
 
 /**
   * All variables declared in the files below must use variable tokens as values.
@@ -17,10 +17,16 @@
   * And then the name of the entity to which they apply.
   * For example: '--ds-font-...', '--ds-text-color-...', '--ds-border-color-...', , '--ds-background-color-...'
 */
-@import "./design-sistem/variables/index";
-@import "./design-sistem/helpers/index";
+@import "./library/variables/index";
 
-@import "./vars";
+// Base styles of the project
+@import "./base/index";
+
+// Material styles of the project
 @import "./material/index";
-@import "./default_style";
-@import "./helpers";
+
+// Material Styles Design System Library
+@import "./library/material/index";
+
+// Helpers styles of the project
+@import "./helpers/index";

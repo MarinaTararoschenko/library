@@ -5,13 +5,10 @@
     "entryFile": "src/public-api.ts"
   },
   "allowedNonPeerDependencies": [
-    "@angular/cdk",
-    "@angular/material",
-    "@jsverse/transloco",
     "zone.js"
   ],
   "assets": [
-    "./src/assets/sass/**/*.scss",
+    "./src/assets/sass/library/**/*.scss",
     "./src/assets/images/icons/set.svg"
   ]
 }

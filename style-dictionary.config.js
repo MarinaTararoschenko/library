@@ -64,7 +64,7 @@ const config = {
     platforms: {
         scss: {
             transformGroup: 'custom/scss',
-            buildPath: 'src/assets/sass/tokens/',
+            buildPath: 'src/assets/sass/library/tokens/',
             files: [
                 {
                     destination: 'foundations/_colors.scss',
