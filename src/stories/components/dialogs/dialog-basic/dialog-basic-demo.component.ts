@@ -52,13 +52,13 @@ export class DialogBasicDemoComponent {
 
     /** Example code for html */
     public templateCode = `
-        <app-button
-            [theme]="'primary'"
-            [type]="'primary'"
-            [size]="'medium'"
+        <air-button
+            theme="primary"
+            type="primary"
+            size="m"
             [data]="{ text: 'Open dialog' }"
             (buttonClick)="openDialog()">
-        </app-button>
+        </air-button>
     `;
 
     /** Example code for ts */

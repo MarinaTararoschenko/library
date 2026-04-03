@@ -1,0 +1,55 @@
+<div class="sizes">
+  <div class="sizes__item">
+    <app-docs-card-tag-bracket [text]="'State: Default'" [position]="'top'"></app-docs-card-tag-bracket>
+    <air-button
+      theme="primary"
+      type="primary"
+      size="2xl"
+      [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'angle-right'}">
+    </air-button>
+  </div>
+
+  <div class="sizes__item">
+    <app-docs-card-tag-bracket [text]="'State: Hover'" [position]="'top'"></app-docs-card-tag-bracket>
+    <air-button
+      theme="primary"
+      type="primary"
+      size="2xl"
+      [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'angle-right'}"
+      class="hover">
+    </air-button>
+  </div>
+
+  <div class="sizes__item">
+    <app-docs-card-tag-bracket [text]="'State: Pressed'" [position]="'top'"></app-docs-card-tag-bracket>
+    <air-button
+      theme="primary"
+      type="primary"
+      size="2xl"
+      [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'angle-right'}"
+      class="pressed">
+    </air-button>
+  </div>
+
+  <div class="sizes__item">
+    <app-docs-card-tag-bracket [text]="'State: Disabled'" [position]="'top'"></app-docs-card-tag-bracket>
+    <air-button
+      theme="primary"
+      type="primary"
+      size="2xl"
+      [disabled]="true"
+      [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'angle-right'}">
+    </air-button>
+  </div>
+
+  <div class="sizes__item">
+    <app-docs-card-tag-bracket [text]="'State: Loading'" [position]="'top'"></app-docs-card-tag-bracket>
+    <air-button
+      theme="primary"
+      type="primary"
+      size="2xl"
+      [isLoading]="true"
+      [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'angle-right'}">
+    </air-button>
+  </div>
+</div>

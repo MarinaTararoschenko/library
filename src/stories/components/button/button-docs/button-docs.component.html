@@ -1,9 +1,15 @@
 <app-docs>
   <!-- HEADER -->
-  <app-docs-header [data]="headerData"></app-docs-header>
+  <app-docs-header [data]="headerData" docsHeader></app-docs-header>
+
+  <app-docs-section class="first">
+    <app-docs-card>
+      <app-button-docs-code></app-button-docs-code>
+    </app-docs-card>
+  </app-docs-section>
 
   <!-- 01 OVERVIEW -->
-  <app-docs-section [title]="'01 Overview'" class="first columns">
+  <app-docs-section [title]="'01 Overview'" class="columns">
     @if (cardsOverview; as cards) {
       @for (card of cards; track $index) {
         <app-docs-card [title]="card.title">
@@ -20,73 +26,80 @@
 
   <!-- 02 ANATOMY -->
   <app-docs-section [title]="'02 Anatomy'">
-    <app-docs-card class="no-padding">
+    <app-docs-card>
       <app-button-docs-anatomy></app-button-docs-anatomy>
     </app-docs-card>
   </app-docs-section>
 
   <!-- 03 PROPERTIES - Variantes visuales -->
   <app-docs-section [title]="'03 Properties'">
-    <app-docs-section-subtitle [text]="'Variantes visuales'"></app-docs-section-subtitle>
-    <app-docs-card>
+    <app-docs-card [title]="'Variantes visuales'">
+      <mat-divider></mat-divider>
       <app-button-docs-variants></app-button-docs-variants>
     </app-docs-card>
 
-    <app-docs-section-subtitle [text]="'Tamaños'"></app-docs-section-subtitle>
-    <app-docs-card>
+    <app-docs-card [title]="'Tamaños'">
+      <mat-divider></mat-divider>
       <app-button-docs-sizes></app-button-docs-sizes>
+    </app-docs-card>
+
+    <app-docs-card [title]="'Estados'">
+      <mat-divider></mat-divider>
+      <app-button-docs-states></app-button-docs-states>
     </app-docs-card>
   </app-docs-section>
 
   <!-- 04 BEHAVIOR -->
   <app-docs-section [title]="'04 Behavior'">
-    <app-docs-section-subtitle [text]="'Interacciones y transiciones'"></app-docs-section-subtitle>
-    <app-docs-card>
-      <app-docs-card-text [text]="behaviorIteractionsText"></app-docs-card-text>
+    <app-docs-card [title]="'Interacciones'">
+      <mat-divider></mat-divider>
 
-      <app-docs-card-box class="light">
-        <div class="button-row">
-          <app-button theme="primary" type="primary" [data]="{text: 'Default'}"></app-button>
-          <app-button theme="primary" type="secondary" [data]="{text: 'Default'}"></app-button>
-          <app-button theme="primary" type="tertiary" [data]="{text: 'Default'}"></app-button>
-        </div>
-      </app-docs-card-box>
+      <div class="container-column">
+        <air-button
+          theme="primary"
+          type="primary"
+          size="2xl"
+          [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'angle-right'}">
+        </air-button>
+        <app-docs-card-tag [text]="'Hover/ Pressed IconButton'" class="bottom"></app-docs-card-tag>
+      </div>
     </app-docs-card>
 
-    <app-docs-section-subtitle [text]="'Responsividad'"></app-docs-section-subtitle>
-    <app-docs-card>
+    <app-docs-card [title]="'Responsividad'">
+      <mat-divider></mat-divider>
+
       <div class="">
         <app-docs-card-header [data]="{label: '← Desktop', badge: 'Body text'}"></app-docs-card-header>
         <app-docs-card-box class="light dashed">
-          <app-button
+          <air-button
             theme="primary"
             type="primary"
-            size="large"
+            size="l"
             [data]="{text: 'Continuar', iconEnd: icons.chevronRight}">
-          </app-button>
+          </air-button>
         </app-docs-card-box>
       </div>
 
       <div class="mobile-md">
         <app-docs-card-header [data]="{label: '← Tablet', badge: 'Body text'}"></app-docs-card-header>
         <app-docs-card-box class="light dashed">
-          <app-button
+          <air-button
             theme="primary"
             type="primary"
-            size="medium"
+            size="m"
             [data]="{text: 'Continuar', iconEnd: icons.chevronRight}">
-          </app-button>
+          </air-button>
         </app-docs-card-box>
       </div>
       <div class="mobile-xs">
         <app-docs-card-header [data]="{label: '← Mobile', badge: 'Body text'}"></app-docs-card-header>
         <app-docs-card-box class="light dashed">
-          <app-button
+          <air-button
             theme="primary"
             type="primary"
-            size="small"
+            size="s"
             [data]="{text: 'Continuar', iconEnd: icons.chevronRight}">
-          </app-button>
+          </air-button>
           </app-docs-card-box>
       </div>
     </app-docs-card>
@@ -94,72 +107,150 @@
 
   <!-- 05 ACCESSIBILITY -->
   <app-docs-section [title]="'05 Accessibility'">
-    <app-docs-section-subtitle [text]="'Criterios base'"></app-docs-section-subtitle>
-    <app-docs-card>
+    <app-docs-card [title]="'Criterios base'">
       <app-docs-card-text [text]="accessibilityText"></app-docs-card-text>
     </app-docs-card>
 
-    <app-docs-section-subtitle [text]="'Especificación técnica'"></app-docs-section-subtitle>
-    <app-docs-card>
+    <app-docs-card [title]="'Específico de este componente'">
       <app-docs-card-list [data]="accessibilityList"></app-docs-card-list>
     </app-docs-card>
   </app-docs-section>
 
   <!-- 06 USER GUIDELINES -->
-  <app-docs-section [title]="'06 User Guidelines'" class="columns">
+  <app-docs-section [title]="'06 User guidelines'" class="columns">
     <app-docs-card class="success">
       <app-docs-card-guideline-status [status]="'success'" [text]="'Do'"></app-docs-card-guideline-status>
 
-      <div>
+      <app-docs-card>
         <app-docs-card-text
-          [text]="'Usar un solo botón primary como CTA principal, acompañado de acciones secundarias.'">
+          [text]="'Respetar la jerarquía visual entre variantes usando primary para la acción más importante.'">
         </app-docs-card-text>
-        <div class="button-row">
-          <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
-          <app-button theme="primary" type="secondary" [data]="{text: 'Secondary'}"></app-button>
-          <app-button theme="primary" type="tertiary" [data]="{text: 'Tertiary'}"></app-button>
-        </div>
-      </div>
+        <mat-divider></mat-divider>
 
-      <div>
-        <app-docs-card-text
-          [text]="'Usar danger únicamente para acciones destructivas, con confirmación previa.'">
-        </app-docs-card-text>
-        <app-button theme="primary" type="danger" [data]="{text: 'Eliminar cuenta'}"></app-button>
-      </div>
-
-      <div>
-        <app-docs-card-text
-          [text]="'En mobile, adaptar el tamaño del botón al contenedor para mejorar el área táctil.'">
-        </app-docs-card-text>
-        <div class="mobile-xxs">
-          <app-button theme="primary" type="primary" size="small"
-            [data]="{text: 'Confirmar', iconStart: icons.layers}"></app-button>
+        <div class="container-row">
+          <air-button
+            theme="primary"
+            type="primary"
+            size="2xl"
+            [data]="{text: 'Primary', iconStart: 'layers', iconEnd: 'angle-right'}">
+          </air-button>
+          <air-button
+            theme="primary"
+            type="secondary"
+            size="2xl"
+            [data]="{text: 'Secondary', iconStart: 'layers', iconEnd: 'angle-right'}">
+          </air-button>
+          <air-button
+            theme="primary"
+            type="tertiary"
+            size="2xl"
+            [data]="{text: 'Tertiary', iconStart: 'layers', iconEnd: 'angle-right'}">
+          </air-button>
         </div>
-      </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'Usar la variante danger para acciones irreversibles que requieren advertir al usuario'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-button
+            theme="primary"
+            type="danger"
+            size="2xl"
+            [data]="{text: 'Danger', iconStart: 'layers', iconEnd: 'angle-right'}">
+          </air-button>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'En mobile el botón ocupa el ancho completo disponible adaptándose al breakpoint'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="mobile-md">
+          <air-button
+            theme="primary"
+            type="primary"
+            size="s"
+            [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'angle-right'}">
+          </air-button>
+        </div>
+      </app-docs-card>
     </app-docs-card>
 
     <app-docs-card class="error">
       <app-docs-card-guideline-status [status]="'error'" [text]="'Don\'t'"></app-docs-card-guideline-status>
 
-      <div>
+      <app-docs-card>
         <app-docs-card-text
-          [text]="'No usar múltiples botones primary en la misma sección — compiten por la atención del usuario.'">
+          [text]="'No usar más de un botón primary en la misma zona de acciones.'">
         </app-docs-card-text>
+        <mat-divider></mat-divider>
 
-        <div class="button-row">
-          <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
-          <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
-          <app-button theme="primary" type="primary" [data]="{text: 'Primary'}"></app-button>
+        <div class="container-row">
+          <air-button
+            theme="primary"
+            type="primary"
+            size="2xl"
+            [data]="{text: 'Primary', iconStart: 'layers', iconEnd: 'angle-right'}">
+          </air-button>
+          <air-button
+            theme="primary"
+            type="primary"
+            size="2xl"
+            [data]="{text: 'Primary', iconStart: 'layers', iconEnd: 'angle-right'}">
+          </air-button>
+          <air-button
+            theme="primary"
+            type="primary"
+            size="2xl"
+            [data]="{text: 'Primary', iconStart: 'layers', iconEnd: 'angle-right'}">
+          </air-button>
         </div>
-      </div>
+      </app-docs-card>
 
-      <div>
+      <app-docs-card>
         <app-docs-card-text
-          [text]="'No usar danger para acciones neutras — reservar el color rojo para acciones realmente destructivas.'">
+          [text]="'No usar botones de distinto tamaño en una misma zona de acciones sin que el contexto lo justifique'">
         </app-docs-card-text>
-        <app-button theme="primary" type="danger" [data]="{text: 'Configuración'}"></app-button>
-      </div>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-button
+            theme="primary"
+            type="primary"
+            size="2xl"
+            [data]="{text: 'Aceptar', iconStart: 'layers', iconEnd: 'angle-right'}">
+          </air-button>
+          <air-button
+            theme="primary"
+            type="secondary"
+            size="s"
+            [data]="{text: 'Cancelar', iconStart: 'layers', iconEnd: 'angle-right'}">
+          </air-button>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'No dejar un botón en estado loading indefinidamente sin comunicar el resultado de la acción.'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-button
+            theme="primary"
+            type="primary"
+            size="2xl"
+            [data]="{text: 'Configuración'}"
+            [isLoading]="true">
+          </air-button>
+        </div>
+      </app-docs-card>
     </app-docs-card>
   </app-docs-section>
 </app-docs>

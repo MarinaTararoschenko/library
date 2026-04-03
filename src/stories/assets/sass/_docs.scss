@@ -1,0 +1,207 @@
+app-docs {
+  air-button {
+    &.theme-primary {
+      &.hover {
+        // mat-flat-button
+        button[mat-flat-button].type-primary {
+          background-color: var(--ds-background-color-theme-hover) !important;
+        }
+
+        button[mat-flat-button].type-tonal {
+          background-color: var(--ds-background-color-tonal-hover) !important;
+        }
+
+        button[mat-flat-button].type-danger {
+          background-color: var(--ds-background-color-error-hover) !important;
+        }
+
+        // mat-stroked-button
+        button[mat-stroked-button].type-secondary {
+          border-color: var(--ds-border-color-theme-hover) !important;
+          background-color: var(--ds-background-color-theme-soft) !important;
+
+          .button__text {
+            color: var(--ds-text-color-theme-hover) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-theme-hover) !important;
+          }
+        }
+
+        // mat-button
+        button[mat-button].type-tertiary {
+          .button__text {
+            color: var(--ds-text-color-theme-hover) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-theme-hover) !important;
+          }
+        }
+
+        button[mat-button].type-dangerText {
+          .button__text {
+            color: var(--ds-text-color-error-hover) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-error-hover) !important;
+          }
+        }
+      }
+
+      &.pressed {
+        // mat-flat-button
+        button[mat-flat-button].type-primary {
+          background-color: var(--ds-background-color-theme-pressed) !important;
+        }
+
+        button[mat-flat-button].type-tonal {
+          background-color: var(--ds-background-color-tonal-pressed) !important;
+        }
+
+        button[mat-flat-button].type-danger {
+          background-color: var(--ds-background-color-error-pressed) !important;
+        }
+
+        // mat-stroked-button
+        button[mat-stroked-button].type-secondary {
+          border-color: var(--ds-border-color-theme-pressed) !important;
+          background-color: var(--ds-background-color-theme-softest) !important;
+
+          .button__text {
+            color: var(--ds-text-color-theme-pressed) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-theme-pressed) !important;
+          }
+        }
+
+        // mat-button
+        button[mat-button].type-tertiary {
+          .button__text {
+            color: var(--ds-text-color-theme-pressed) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-theme-pressed) !important;
+          }
+        }
+
+        button[mat-button].type-dangerText {
+          .button__text {
+            color: var(--ds-text-color-error-pressed) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-error-pressed) !important;
+          }
+        }
+      }
+    }
+
+    &.theme-neutral {
+      &.hover {
+        // mat-flat-button
+        button[mat-flat-button].type-primary {
+          background-color: var(--ds-background-color-neutral-action-hover) !important;
+        }
+
+        button[mat-flat-button].type-tonal {
+          background-color: var(--ds-background-color-tonal-hover) !important;
+        }
+
+        button[mat-flat-button].type-danger {
+          background-color: var(--ds-background-color-error-hover) !important;
+        }
+
+        // mat-stroked-button
+        button[mat-stroked-button].type-secondary {
+          border-color: var(--ds-border-color-neutral-action-hover) !important;
+          background-color: var(--ds-background-color-neutral-soft) !important;
+
+          .button__text {
+            color: var(--ds-text-color-neutral-action-hover) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-neutral-action-hover) !important;
+          }
+        }
+
+        // mat-button
+        button[mat-button].type-tertiary {
+          .button__text {
+            color: var(--ds-text-color-neutral-action-hover) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-neutral-action-hover) !important;
+          }
+        }
+
+        button[mat-button].type-dangerText {
+          .button__text {
+            color: var(--ds-text-color-error-hover) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-error-hover) !important;
+          }
+        }
+      }
+
+      &.pressed {
+        // mat-flat-button
+        button[mat-flat-button].type-primary {
+          background-color: var(--ds-background-color-neutral-action-pressed) !important;
+        }
+
+        button[mat-flat-button].type-tonal {
+          background-color: var(--ds-background-color-tonal-pressed) !important;
+        }
+
+        button[mat-flat-button].type-danger {
+          background-color: var(--ds-background-color-error-pressed) !important;
+        }
+
+        // mat-stroked-button
+        button[mat-stroked-button].type-secondary {
+          border-color: var(--ds-border-color-neutral-action-pressed) !important;
+          background-color: var(--ds-background-color-neutral-softest) !important;
+
+          .button__text {
+            color: var(--ds-text-color-neutral-action-pressed) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-neutral-action-pressed) !important;
+          }
+        }
+
+        // mat-button
+        button[mat-button].type-tertiary {
+          .button__text {
+            color: var(--ds-text-color-neutral-action-pressed) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-neutral-action-pressed) !important;
+          }
+        }
+
+        button[mat-button].type-dangerText {
+          .button__text {
+            color: var(--ds-text-color-error-pressed) !important;
+          }
+
+          mat-icon {
+            color: var(--ds-icon-color-error-pressed) !important;
+          }
+        }
+      }
+    }
+  }
+}

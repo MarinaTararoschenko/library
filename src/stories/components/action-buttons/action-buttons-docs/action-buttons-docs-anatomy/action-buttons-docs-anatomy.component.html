@@ -1,0 +1,15 @@
+<div class="anatomy">
+  <div class="anatomy__content">
+    <app-docs-card-tag-bracket [text]="'Contenedor'" [position]="'top'"></app-docs-card-tag-bracket>
+    <app-docs-card-tag [text]="'Button'" class="end"></app-docs-card-tag>
+
+    <air-action-buttons
+      size="m"
+      type="hugged"
+      [data]="{
+        primary: { text: 'Button text' },
+        secondary: { text: 'Button text' },
+      }">
+    </air-action-buttons>
+  </div>
+</div>

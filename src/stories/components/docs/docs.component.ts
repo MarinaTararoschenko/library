@@ -4,15 +4,24 @@ import { Component } from '@angular/core';
     standalone: true,
     selector: 'app-docs',
     template: `
-        <ng-content></ng-content>
+        <ng-content select="[docsHeader]"></ng-content>
+        <div class="docs__content">
+            <ng-content></ng-content>
+        </div>
+
     `,
     styles: `
         :host {
             display: block;
-            font-family: 'DM Sans', sans-serif;
-            background: var(--c-bg, #f7f8fc);
+            background: var(--ds-background-color-screen-base);
             min-height: 100vh;
-            color: var(--c-navy, #1a1d2e);
+        }
+
+        .docs__content {
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+            padding: 48px;
         }
     `,
 })

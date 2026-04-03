@@ -20,7 +20,7 @@ const meta: Meta<IconButtonComponent> = {
         },
         size: {
             control: 'select',
-            options: ['extrasmall', 'small', 'medium', 'large', 'xlarge', '2xl'],
+            options: ['xs', 's', 'm', 'l', 'xl', '2xl'],
             description: 'Button size',
         },
         disabled: {
@@ -36,7 +36,7 @@ const meta: Meta<IconButtonComponent> = {
     args: {
         theme: 'primary',
         type: 'primary',
-        size: 'medium',
+        size: 'm',
         icon: 'layers',
         disabled: false,
         isLoading: false,
@@ -44,7 +44,7 @@ const meta: Meta<IconButtonComponent> = {
     render: (args) => ({
         props: args,
         template: `
-            <app-icon-button
+            <air-icon-button
                 [theme]="theme"
                 [type]="type"
                 [size]="size"
@@ -52,7 +52,7 @@ const meta: Meta<IconButtonComponent> = {
                 [isLoading]="isLoading"
                 [icon]="icon"
                 (buttonClick)="buttonClick($event)">
-            </app-icon-button>
+            </air-icon-button>
         `,
     }),
     parameters: {

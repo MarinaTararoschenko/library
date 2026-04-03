@@ -32,29 +32,29 @@ import { ButtonComponent } from 'src/app/library/components/buttons/button/butto
           Welcome, <b>{{ user.name }}</b
           >!
         </span>
-        <app-button
+        <air-button
           *ngIf="user"
-          [size]="'medium'"
+          size="m"
           [data]="{text: 'Log out'}"
-          (buttonClick)="onLogout.emit($event)"
-        ></app-button>
+          (buttonClick)="onLogout.emit()"
+        ></air-button>
       </div>
       <div *ngIf="!user">
-        <app-button
+        <air-button
           *ngIf="!user"
-          [type]="'secondary'"
-          [size]="'medium'"
+          type="secondary"
+          size="m"
           [data]="{text: 'Log in'}"
           class="margin-left"
-          (buttonClick)="onLogin.emit($event)"
-        ></app-button>
-        <app-button
+          (buttonClick)="onLogin.emit()"
+        ></air-button>
+        <air-button
           *ngIf="!user"
-          [size]="'medium'"
+          size="m"
           [data]="{text: 'Sign up'}"
           class="margin-left"
-          (buttonClick)="onCreateAccount.emit($event)"
-        ></app-button>
+          (buttonClick)="onCreateAccount.emit()"
+        ></air-button>
       </div>
     </div>
   </div>

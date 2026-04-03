@@ -13,11 +13,11 @@ export interface IButton {
 
 export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'tonal' | 'danger' | 'dangerText';
 export type ButtonTheme = 'primary' | 'neutral';
-export type ButtonSize = 'small' | 'medium' | 'large';
+export type ButtonSize = 's' | 'm' | 'l' | 'xl' | '2xl';
 
 @Component({
     standalone: true,
-    selector: 'app-button',
+    selector: 'air-button',
     templateUrl: './button.component.html',
     styleUrls: ['./button.component.scss'],
     imports: [
@@ -38,7 +38,7 @@ export class ButtonComponent {
 
     public currentType: ButtonType = 'primary';
     public currentTheme: ButtonTheme = 'primary';
-    public currentSize: ButtonSize = 'medium';
+    public currentSize: ButtonSize = 'm';
     public iconSize = 16;
 
     @Input() public set type(value: ButtonType | null) {
@@ -65,7 +65,7 @@ export class ButtonComponent {
         return 'theme-' + this.currentTheme;
     }
 
-    @Output() public buttonClick: EventEmitter<any> = new EventEmitter();
+    @Output() public buttonClick: EventEmitter<void> = new EventEmitter();
 
     public get matAppearance(): 'flat' | 'stroked' | 'basic' {
         switch (this.currentType) {
@@ -83,9 +83,11 @@ export class ButtonComponent {
 
     private _setIconSize() {
         const iconSizeMap = {
-            'small': 16,
-            'medium': 16,
-            'large': 20,
+            's': 16,
+            'm': 16,
+            'l': 20,
+            'xl': 20,
+            '2xl': 20,
         };
 
         this.iconSize = iconSizeMap[this.currentSize];

@@ -82,7 +82,7 @@ button {
     box-shadow: 0 4px 12px 0 rgba(51, 65, 85, 0.07);
   }
 
-  &.size-small {
+  &.size-s {
     height: 32px;
     padding: 0 16px;
 
@@ -91,7 +91,7 @@ button {
     }
   }
 
-  &.size-medium {
+  &.size-m {
     height: 42px;
     padding: 0 24px;
 
@@ -100,12 +100,30 @@ button {
     }
   }
 
-  &.size-large {
+  &.size-l {
     height: 52px;
     padding: 0 32px;
 
     .button__text {
       font: 500 var(--ds-font-text-l);
+    }
+  }
+
+  &.size-xl {
+    height: 64px;
+    padding: 0 32px;
+
+    .button__text {
+      font: 500 var(--ds-font-text-xl);
+    }
+  }
+
+  &.size-2xl {
+    height: 72px;
+    padding: 0 32px;
+
+    .button__text {
+      font: 600 var(--ds-font-titles-s);
     }
   }
 
@@ -118,6 +136,7 @@ button {
   }
 
   .button__text {
+    white-space: nowrap;
     letter-spacing: 0;
 
     &+mat-icon {

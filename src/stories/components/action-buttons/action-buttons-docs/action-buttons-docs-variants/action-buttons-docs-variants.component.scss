@@ -1,0 +1,36 @@
+.variantsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.variantGroup {
+  app-docs-card-label {
+    display: block;
+    margin-bottom: .75rem;
+  }
+
+  &__label {
+    font-size: 10px;
+    color: var(--c-muted, #9ca3af);
+    padding-left: 24px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+    air-action-buttons {
+      margin-left: auto;
+
+      &[type="filled"],
+      &[type="vertical"] {
+        width: 100%;
+      }
+
+      &[type="center"] {
+        margin: 0 auto;
+      }
+    }
+  }
+}

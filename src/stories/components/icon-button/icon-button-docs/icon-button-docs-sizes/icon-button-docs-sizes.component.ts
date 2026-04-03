@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { DocsCardLabelComponent } from 'src/stories/components/docs/docs-card/docs-card-label.component';
+import { DocsCardTagBracketComponent } from 'src/stories/components/docs/docs-card/docs-card-tag-bracket.component';
 import { IconButtonComponent } from 'src/app/library/components/buttons/icon-button/icon-button.component';
 
 @Component({
@@ -9,7 +9,7 @@ import { IconButtonComponent } from 'src/app/library/components/buttons/icon-but
     templateUrl: './icon-button-docs-sizes.component.html',
     styleUrl: './icon-button-docs-sizes.component.scss',
     imports: [
-        DocsCardLabelComponent,
+        DocsCardTagBracketComponent,
         IconButtonComponent
     ],
 })

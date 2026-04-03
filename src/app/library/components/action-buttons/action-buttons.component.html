@@ -1,0 +1,33 @@
+@if (data.tertiary) {
+  <air-button
+    [type]="'tertiary'"
+    [size]="currentSize"
+    [data]="data.tertiary"
+    [disabled]="data.tertiary.disabled"
+    [isLoading]="data.tertiary.isLoading"
+    (buttonClick)="clickButton(data.tertiary)">
+  </air-button>
+}
+
+<div class="actionButtons__inner">
+  @if (data.secondary) {
+    <air-button
+      [type]="'secondary'"
+      [size]="currentSize"
+      [data]="data.secondary"
+      [disabled]="data.secondary.disabled"
+      [isLoading]="data.secondary.isLoading"
+      (buttonClick)="clickButton(data.secondary)">
+    </air-button>
+  }
+  @if (data.primary) {
+    <air-button
+      [type]="'primary'"
+      [size]="currentSize"
+      [data]="data.primary"
+      [disabled]="data.primary.disabled"
+      [isLoading]="data.primary.isLoading"
+      (buttonClick)="clickButton(data.primary)">
+    </air-button>
+  }
+</div>

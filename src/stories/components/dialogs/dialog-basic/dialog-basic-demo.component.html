@@ -7,13 +7,13 @@
     <mat-tab-group>
       <mat-tab label="Demo">
         <div class="demo-container">
-          <app-button
-            [theme]="'primary'"
-            [type]="'primary'"
-            [size]="'medium'"
+          <air-button
+            theme="primary"
+            type="primary"
+            size="m"
             [data]="{text: 'Open dialog'}"
             (buttonClick)="openDialog()">
-          </app-button>
+          </air-button>
 
           @if (dialogResult) {
             <div class="result">

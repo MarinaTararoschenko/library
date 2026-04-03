@@ -6,7 +6,7 @@
   @if (isLoading) {
     <mat-spinner
       [diameter]="iconSize"
-      [color]="currentType === 'danger' ? 'warn' : 'custom-theme'"
+      [color]="(currentType === 'danger' || currentType === 'dangerText') ? 'warn' : 'custom-theme'"
       [ngClass]="'size-' + iconSize"
       [class.mat-custom-theme]="currentType !== 'danger' && currentType !== 'dangerText'">
     </mat-spinner>

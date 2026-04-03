@@ -67,8 +67,8 @@ export function initializeIcons(
  *
  * @example
  * // Usage in templates after registration:
- * // Icons from library: <app-icon-button icon="save"></app-icon-button>
- * // Custom icons: <app-icon-button icon="custom-icon"></app-icon-button>
+ * // Icons from library: <air-icon-button icon="save"></air-icon-button>
+ * // Custom icons: <air-icon-button icon="custom-icon"></air-icon-button>
  */
 export const provideIcons = (iconSetPath?: string): Provider[] => [
     {

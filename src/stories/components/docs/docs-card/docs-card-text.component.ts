@@ -9,24 +9,8 @@ import { Component, Input } from "@angular/core";
     styles: `
         :host {
             display: block;
-            font-size: 13px;
-            color: var(--c-text);
-            line-height: 1.6;
-        }
-
-        :host-context(.success),
-        :host-context(.error) {
-            font-size: 12px;
-            margin: 0 0 0.75rem;
-            font-weight: 500;
-            line-height: 1.5;
-        }
-
-        :host-context(.success) {
-            color: #15803d;
-        }
-        :host-context(.error) {
-            color: #dc2626;
+            font: 400 var(--ds-font-text-l);
+            color: var(--ds-text-color-neutral-default);
         }
     `,
 })

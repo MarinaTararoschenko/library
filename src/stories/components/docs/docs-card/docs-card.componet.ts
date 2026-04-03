@@ -13,19 +13,18 @@ import { Component, Input } from "@angular/core";
     `,
     styles: `
         :host {
-            flex-grow: 1;
-            display: flex;
+            overflow: hidden;
 
             &.no-padding .docsCard {
                 padding: 0;
             }
 
-            &.success .docsCard {
+            &.success > .docsCard {
                 background: #f0fdf4;
                 border-color: #bbf7d0;
             }
 
-            &.error .docsCard {
+            &.error > .docsCard {
                 background: #fff1f2;
                 border-color: #fecdd3;
             }
@@ -34,18 +33,17 @@ import { Component, Input } from "@angular/core";
         .docsCard {
             display: flex;
             flex-direction: column;
-            gap: 1.25rem;
+            row-gap: 24px;
             width: 100%;
-            background: #fff;
-            border: 1px solid var(--c-border);
-            border-radius: var(--r-card);
-            padding: 1.5rem;
+            height: 100%;
+            padding: 20px;
+            border: 1px solid var(--ds-border-color-neutral-softest);
+            border-radius: var(--ds-border-radius-box);
+            background-color: var(--ds-background-color-screen-base);
 
             &__title {
-                font-size: 13px;
-                font-weight: 700;
-                color: var(--c-navy);
-                display: block;
+                font: 600 var(--ds-font-text-l);
+                color: var(--ds-text-color-neutral-default);
             }
         }
     `,

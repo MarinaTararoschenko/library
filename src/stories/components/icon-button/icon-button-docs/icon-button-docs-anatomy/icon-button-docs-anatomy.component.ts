@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { DocsCardTagComponent } from 'src/stories/components/docs/docs-card/docs-card-tag.component';
 import { IconButtonComponent } from 'src/app/library/components/buttons/icon-button/icon-button.component';
 
 @Component({
@@ -8,6 +9,7 @@ import { IconButtonComponent } from 'src/app/library/components/buttons/icon-but
     templateUrl: './icon-button-docs-anatomy.component.html',
     styleUrl: './icon-button-docs-anatomy.component.scss',
     imports: [
+        DocsCardTagComponent,
         IconButtonComponent
     ],
 })

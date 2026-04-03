@@ -34,7 +34,7 @@
   @if (isLoading) {
     <mat-spinner
       [diameter]="iconSize"
-      [color]="currentType === 'dangerText' ? 'warn' : 'custom-theme'"
+      [color]="(currentType === 'dangerText' || currentType === 'danger') ? 'warn' : 'custom-theme'"
       [class.mat-custom-theme]="currentType !== 'danger' && currentType !== 'dangerText'">
     </mat-spinner>
   } @else {

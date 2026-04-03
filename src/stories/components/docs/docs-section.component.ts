@@ -5,7 +5,9 @@ import { Component, Input } from "@angular/core";
     selector: 'app-docs-section',
     template: `
         <section class="docsSection">
-            <h2 class="docsSection__title">{{title}}</h2>
+            @if (title) {
+                <h2 class="docsSection__title">{{title}}</h2>
+            }
 
             <div class="docsSection__container">
                 <ng-content></ng-content>
@@ -17,31 +19,31 @@ import { Component, Input } from "@angular/core";
             &.columns .docsSection__container {
                 grid-template-columns: 1fr 1fr;
             }
-
-            &.first .docsSection {
-                padding-top: 3rem;
-            }
         }
 
         .docsSection {
-            padding: 0 3.5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+            padding: 32px;
+            border-radius: var(--ds-border-radius-box);
+            background-color: var(--ds-background-color-screen-softest);
 
             &__title {
-                font-size: 1.375rem;
-                font-weight: 700;
-                color: var(--c-navy);
-                margin: 0 0 1.5rem;
-                letter-spacing: -0.01em;
+                font: 700 var(--ds-font-titles-m);
+                color: var(--ds-text-color-neutral-default);
+                margin: 0;
             }
 
             &__container {
                 display: grid;
                 gap: 1rem;
+                overflow: hidden;
             }
         }
     `,
 })
 export class DocsSectionComponent {
-    @Input() public title!: string;
+    @Input() public title?: string;
 
 }

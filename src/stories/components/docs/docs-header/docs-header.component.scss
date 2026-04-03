@@ -1,61 +1,59 @@
 .docsHeader {
-  padding: 3rem 3.5rem 2.5rem;
-  border-bottom: 1px solid var(--c-border, #e8e9ef);
   position: relative;
+  padding: 32px;
+  background-color: var(--ds-background-color-screen-softest);
+  border-radius: var(--ds-border-radius-box);
   overflow: hidden;
 
-  &__content {
-    max-width: 580px;
-    position: relative;
-    z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 440px;
+    background: url("/assets/images/library/header/header-bg.svg") no-repeat center;
   }
 
-  &__badge {
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--c-navy, #1a1d2e);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    opacity: 0.35;
-    margin-bottom: 1.5rem;
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: 700px;
+    max-width: 100%;
+  }
+
+  &__logo {
+    margin-bottom: 32px;
   }
 
   &__title-wrapper {
     display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.125rem;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 12px;
+
+    air-tag {
+      margin-bottom: 12px;
+    }
   }
 
   &__title {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font: 700 var(--ds-font-headlines-h2);
+    color: var(--ds-text-color-neutral-default);
     margin: 0;
-    color: var(--c-navy, #1a1d2e);
-    line-height: 1.1;
-  }
-
-  &__version {
-    font-size: 11px;
-    font-weight: 600;
-    background: #e8e9ef;
-    color: #6b7280;
-    padding: 3px 10px;
-    border-radius: 999px;
-    flex-shrink: 0;
   }
 
   &__description {
-    font-size: 14px;
-    color: var(--c-text, #4b5563);
-    max-width: 680px;
-    margin: 0 0 2.25rem;
-    line-height: 1.75;
+    font: 400 var(--ds-font-text-m);
+    color: var(--ds-text-color-neutral-low);
+    text-shadow: 0 1px 0px var(--ds-background-color-screen-softest);
+    backdrop-filter: blur(1px);
+    margin: 0 0 32px;
   }
 
   &__copyright {
-    font-size: 12px;
-    color: var(--c-muted, #9ca3af);
+    font: 400 var(--ds-font-text-s);
+    color: var(--ds-text-color-neutral-low);
   }
 
   &__bg {

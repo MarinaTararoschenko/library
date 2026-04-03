@@ -1,52 +1,113 @@
-.variantsHeader {
-  display: flex;
-  gap: 8px;
-  margin-bottom: .25rem;
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
-
-  &__label {
-    font-size: 10px;
-    color: #9ca3af;
-    width: 40px;
-    text-align: center;
-  }
+:host {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  overflow-x: auto;
 }
 
-.variantsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+.variants {
+  border: 1px dashed #9747FF;
+  border-radius: 5px;
+  max-width: 100%;
 
-.variantGroup {
-  app-docs-card-label {
-    display: block;
-    margin-bottom: .75rem;
+  &__top {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    padding: 0 24px;
+    margin-bottom: 32px;
+
+    &-column {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+    }
+
+    &-row {
+      display: grid;
+      column-gap: 22px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 84px;
+    }
   }
 
-  &__button-row {
+  &__left {
+    display: grid;
+    row-gap: 24px;
+    padding: 40px 0;
+    margin-right: 32px;
+
+    &-column {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 8px;
+    }
+
+    &-row {
+      position: relative;
+      display: grid;
+      row-gap: 24px;
+
+      &.size-2xl {
+        app-docs-card-tag-bracket {
+          height: 72px;
+        }
+      }
+
+      &.size-xl {
+        app-docs-card-tag-bracket {
+          height: 64px;
+        }
+      }
+
+      &.size-l {
+        app-docs-card-tag-bracket {
+          height: 52px;
+        }
+      }
+
+      &.size-m {
+        app-docs-card-tag-bracket {
+          height: 42px;
+        }
+      }
+
+      &.size-s {
+        app-docs-card-tag-bracket {
+          height: 32px;
+        }
+      }
+
+      &.size-xs {
+        app-docs-card-tag-bracket {
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  &__content {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    align-items: center;
+    gap: 80px;
+    padding: 40px 24px;
   }
 
-  &__states-container {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  &__state-item {
+  &__column {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 6px;
+    row-gap: 24px;
   }
 
-  &__state-label {
-    font-size: 10px;
-    color: #9ca3af;
+  &__group {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 84px;
+    column-gap: 22px;
+    row-gap: 24px;
+
+    air-icon-button {
+      margin: 0 auto;
+    }
   }
 }

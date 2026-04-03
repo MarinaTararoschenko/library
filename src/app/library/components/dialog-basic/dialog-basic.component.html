@@ -20,18 +20,18 @@
 </mat-dialog-content>
 
 <mat-dialog-actions>
-  <app-button
-    [theme]="'primary'"
-    [type]="'secondary'"
-    [size]="'medium'"
+  <air-button
+    theme="primary"
+    type="secondary"
+    size="m"
     [data]="{ text: dialogData.actions[0].text }"
     (buttonClick)="dialog.closeAll()">
-  </app-button>
+  </air-button>
 
-  <app-button
-    [theme]="'primary'"
-    [type]="'primary'"
-    [size]="'medium'"
+  <air-button
+    theme="primary"
+    type="primary"
+    size="m"
     [data]="{ text: dialogData.actions[1].text }">
-  </app-button>
+  </air-button>
 </mat-dialog-actions>

@@ -1,0 +1,157 @@
+<div class="variantsContainer">
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Patrones de composición — Inline'"></app-docs-card-label>
+
+    <app-docs-card-box class="light">
+      <div class="variantGroup__column">
+        <div class="variantGroup__label">1 botón — acción única</div>
+        <air-action-buttons
+          size="m"
+          type="hugged"
+          [data]="{
+            primary: {
+              text: 'Guardar cambios'
+            },
+          }">
+        </air-action-buttons>
+      </div>
+
+      <div class="variantGroup__column">
+        <div class="variantGroup__label">2 botones — cancelar + confirmar</div>
+        <air-action-buttons
+          size="m"
+          type="hugged"
+          [data]="{
+            primary: {
+              text: 'Confirmar'
+            },
+            secondary: {
+              text: 'Cancelar'
+            },
+          }">
+        </air-action-buttons>
+      </div>
+
+      <div class="variantGroup__column">
+        <div class="variantGroup__label">3 botones: acción adicional + cancelar + confirmar</div>
+        <air-action-buttons
+          size="m"
+          type="hugged"
+          [data]="{
+            primary: {
+              text: 'Guardar'
+            },
+            secondary: {
+              text: 'Cancelar'
+            },
+            tertiary: {
+              text: 'Acción adicional'
+            },
+          }">
+        </air-action-buttons>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Tipo de alineación - type'"></app-docs-card-label>
+
+    <app-docs-card-box class="light">
+      <div class="variantGroup__column">
+        <div class="variantGroup__label">type="hugged"</div>
+        <air-action-buttons
+          size="m"
+          type="hugged"
+          [data]="{
+            primary: { text: 'Aceptar' },
+            secondary: { text: 'Rechazar' },
+            tertiary: { text: 'Cargar' },
+          }">
+        </air-action-buttons>
+      </div>
+
+      <div class="variantGroup__column">
+        <div class="variantGroup__label">type="filled"</div>
+        <air-action-buttons
+          size="m"
+          type="filled"
+          [data]="{
+            primary: { text: 'Continuar' },
+            secondary: { text: 'Volver' },
+          }">
+        </air-action-buttons>
+      </div>
+
+      <div class="variantGroup__column">
+        <div class="variantGroup__label">type="center"</div>
+        <air-action-buttons
+          size="m"
+          type="center"
+          [data]="{
+            primary: { text: 'Aceptar' },
+            secondary: { text: 'Rechazar' },
+          }">
+        </air-action-buttons>
+      </div>
+
+      <div class="variantGroup__column">
+        <div class="variantGroup__label">type="vertical"</div>
+        <air-action-buttons
+          size="m"
+          type="vertical"
+          [data]="{
+            primary: { text: 'Aceptar' },
+            secondary: { text: 'Rechazar' },
+          }">
+        </air-action-buttons>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Con íconos'"></app-docs-card-label>
+
+    <app-docs-card-box class="light">
+      <div class="variantGroup__column">
+        <div class="variantGroup__label">Íconos izquierda</div>
+        <air-action-buttons
+          size="m"
+          type="hugged"
+          [data]="{
+            primary: { text: 'Guardar', iconStart: 'disk' },
+            secondary: { text: 'Cancelar', iconStart: 'cross' },
+          }">
+        </air-action-buttons>
+      </div>
+
+      <div class="variantGroup__column">
+        <div class="variantGroup__label">Ícono derecha en acción principal</div>
+        <air-action-buttons
+          size="m"
+          type="hugged"
+          [data]="{
+            primary: { text: 'Enviar', iconEnd: 'paper-planer' },
+            secondary: { text: 'Cancelar' },
+          }">
+        </air-action-buttons>
+      </div>
+    </app-docs-card-box>
+  </div>
+
+  <div class="variantGroup">
+    <app-docs-card-label [text]="'Modo Oscuro'"></app-docs-card-label>
+
+    <app-docs-card-box class="dark">
+      <div class="variantGroup__column">
+        <air-action-buttons
+          size="m"
+          type="hugged"
+          [data]="{
+            primary: { text: 'Confirmar' },
+            secondary: { text: 'Cancelar' },
+          }">
+        </air-action-buttons>
+      </div>
+    </app-docs-card-box>
+  </div>
+</div>

@@ -1,18 +1,38 @@
-.button-row {
+.container-row {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 24px;
   align-items: center;
+  overflow-x: auto;
+}
+
+.container-column {
+  position: relative;
+  display: inline-flex;
+  padding: 0 0 60px;
+  margin: 0 auto;
+
+  app-docs-card-tag {
+    position: absolute;
+  }
 }
 
 .mobile-md {
-  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  max-width: 100%;
 }
 
 .mobile-xs {
-  max-width: 320px;
+  width: 320px;
+  max-width: 100%;
 }
 
 .mobile-xxs {
-  max-width: 280px;
+  width: 280px;
+  max-width: 100%;
+}
+
+app-docs-card app-docs-card {
+  flex-grow: 1;
 }

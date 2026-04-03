@@ -12,11 +12,10 @@ import { Component, Input } from "@angular/core";
     `,
     styles: `
         .docsCardList {
-            font-size: 13px;
-            color: var(--c-text);
+            font: 400 var(--ds-font-text-l);
+            color: var(--ds-text-color-neutral-default);
             margin: 0;
-            padding-left: 1.25rem;
-            line-height: 2.1;
+            padding-left: 20px;
 
             li {
                 margin: 0;

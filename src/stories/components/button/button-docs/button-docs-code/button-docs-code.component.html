@@ -1,0 +1,67 @@
+<mat-tab-group>
+  <mat-tab label="Demo">
+    <div class="demo-container">
+      <air-button
+        theme="primary"
+        type="primary"
+        [disabled]="false"
+        [isLoading]="false"
+        [data]="{ text: 'Primary', iconStart: 'layers', iconEnd: 'angle-right'}"
+        (buttonClick)="onAction()">
+      </air-button>
+
+      <air-button
+        theme="primary"
+        type="secondary"
+        [disabled]="false"
+        [isLoading]="false"
+        [data]="{text: 'Secondary', iconStart: 'layers', iconEnd: 'angle-right'}"
+        (buttonClick)="onAction()">
+      </air-button>
+
+      <air-button
+        theme="primary"
+        type="tertiary"
+        [disabled]="false"
+        [isLoading]="false"
+        [data]="{text: 'Tertiary', iconStart: 'layers', iconEnd: 'angle-right'}"
+        (buttonClick)="onAction()">
+      </air-button>
+
+      <air-button
+        theme="primary"
+        type="tonal"
+        [disabled]="false"
+        [isLoading]="false"
+        [data]="{text: 'Tonal', iconStart: 'layers', iconEnd: 'angle-right'}"
+        (buttonClick)="onAction()">
+      </air-button>
+
+      <air-button
+        theme="primary"
+        type="danger"
+        [disabled]="false"
+        [isLoading]="false"
+        [data]="{text: 'Danger', iconStart: 'layers', iconEnd: 'angle-right'}"
+        (buttonClick)="onAction()">
+      </air-button>
+
+      <air-button
+        theme="primary"
+        type="dangerText"
+        [disabled]="false"
+        [isLoading]="false"
+        [data]="{text: 'Danger Text', iconStart: 'layers', iconEnd: 'angle-right'}"
+        (buttonClick)="onAction()">
+      </air-button>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="html">
+    <pre><code>{{ templateCode }}</code></pre>
+  </mat-tab>
+
+  <mat-tab label="ts">
+    <pre><code>{{ componentCode }}</code></pre>
+  </mat-tab>
+</mat-tab-group>

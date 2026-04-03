@@ -1,9 +1,15 @@
 <app-docs>
   <!-- HEADER -->
-  <app-docs-header [data]="headerData"></app-docs-header>
+  <app-docs-header [data]="headerData" docsHeader></app-docs-header>
+
+  <app-docs-section class="first">
+    <app-docs-card>
+      <app-icon-button-docs-code></app-icon-button-docs-code>
+    </app-docs-card>
+  </app-docs-section>
 
   <!-- 01 OVERVIEW -->
-  <app-docs-section [title]="'01 Overview'" class="first columns">
+  <app-docs-section [title]="'01 Overview'" class="columns">
     @if (cardsOverview; as cards) {
       @for (card of cards; track $index) {
         <app-docs-card [title]="card.title">
@@ -20,52 +26,42 @@
 
   <!-- 02 ANATOMY -->
   <app-docs-section [title]="'02 Anatomy'">
-    <app-docs-card class="no-padding">
+    <app-docs-card>
       <app-icon-button-docs-anatomy></app-icon-button-docs-anatomy>
     </app-docs-card>
   </app-docs-section>
 
   <!-- 03 PROPERTIES - Variantes visuales -->
   <app-docs-section [title]="'03 Properties'">
-    <app-docs-section-subtitle [text]="'Variantes visuales'"></app-docs-section-subtitle>
-    <app-docs-card>
+    <app-docs-card [title]="'Variantes visuales'">
       <app-icon-button-docs-variants></app-icon-button-docs-variants>
     </app-docs-card>
 
-    <app-docs-section-subtitle [text]="'Tamaños'"></app-docs-section-subtitle>
-    <app-docs-card>
+    <app-docs-card [title]="'Tamaños'">
       <app-icon-button-docs-sizes></app-icon-button-docs-sizes>
     </app-docs-card>
   </app-docs-section>
 
   <!-- 04 BEHAVIOR -->
   <app-docs-section [title]="'04 Behavior'">
-    <app-docs-section-subtitle [text]="'Interacciones y transiciones'"></app-docs-section-subtitle>
-    <app-docs-card>
-      <app-docs-card-text [text]="behaviorIteractionsText"></app-docs-card-text>
+    <app-docs-card [title]="'Interacciones'">
+      <mat-divider></mat-divider>
 
-      <app-docs-card-label [text]="'Hover y Active disponibles en el canvas interactivo'"></app-docs-card-label>
+      <div class="container-column">
+        <air-icon-button type="primary" size="2xl" icon="layers"></air-icon-button>
+        <app-docs-card-tag [text]="'Hover/ Pressed '" class="bottom"></app-docs-card-tag>
+      </div>
 
-      <app-docs-card-box class="light">
-        <div class="button-row">
-          <app-icon-button type="primary" size="large" [icon]="icons.plus"></app-icon-button>
-          <app-icon-button type="secondary" size="large" [icon]="icons.edit"></app-icon-button>
-          <app-icon-button type="tertiary" size="large" [icon]="icons.search"></app-icon-button>
-          <app-icon-button type="tonal" size="large" [icon]="icons.bell"></app-icon-button>
-          <app-icon-button type="danger" size="large" [icon]="icons.trash"></app-icon-button>
-        </div>
-      </app-docs-card-box>
     </app-docs-card>
 
-    <app-docs-section-subtitle [text]="'Responsividad'"></app-docs-section-subtitle>
-    <app-docs-card>
+    <app-docs-card [title]="'Responsividad'">
       <div class="">
         <app-docs-card-header [data]="{label: '← Desktop', badge: 'Size L — 48px'}"></app-docs-card-header>
         <app-docs-card-box class="light dashed">
-          <div class="button-row">
-            <app-icon-button type="primary" size="large" [icon]="icons.plus"></app-icon-button>
-            <app-icon-button type="tertiary" size="large" [icon]="icons.search"></app-icon-button>
-            <app-icon-button type="tertiary" size="large" [icon]="icons.settings"></app-icon-button>
+          <div class="container-row">
+            <air-icon-button type="primary" size="l" [icon]="icons.plus"></air-icon-button>
+            <air-icon-button type="tertiary" size="l" [icon]="icons.search"></air-icon-button>
+            <air-icon-button type="tertiary" size="l" [icon]="icons.settings"></air-icon-button>
           </div>
         </app-docs-card-box>
       </div>
@@ -73,19 +69,19 @@
       <div class="mobile-md">
         <app-docs-card-header [data]="{label: '← Tablet', badge: 'Size M — 40px'}"></app-docs-card-header>
         <app-docs-card-box class="light dashed">
-          <div class="button-row">
-            <app-icon-button type="primary" size="medium" [icon]="icons.plus"></app-icon-button>
-            <app-icon-button type="tertiary" size="medium" [icon]="icons.search"></app-icon-button>
-            <app-icon-button type="tertiary" size="medium" [icon]="icons.settings"></app-icon-button>
+          <div class="container-row">
+            <air-icon-button type="primary" size="m" [icon]="icons.plus"></air-icon-button>
+            <air-icon-button type="tertiary" size="m" [icon]="icons.search"></air-icon-button>
+            <air-icon-button type="tertiary" size="m" [icon]="icons.settings"></air-icon-button>
           </div>
         </app-docs-card-box>
       </div>
       <div class="mobile-xs">
         <app-docs-card-header [data]="{label: '← Mobile', badge: 'Size S — 32px'}"></app-docs-card-header>
         <app-docs-card-box class="light dashed">
-          <div class="button-row">
-            <app-icon-button type="primary" size="small" [icon]="icons.plus"></app-icon-button>
-            <app-icon-button type="tertiary" size="small" [icon]="icons.search"></app-icon-button>
+          <div class="container-row">
+            <air-icon-button type="primary" size="s" [icon]="icons.plus"></air-icon-button>
+            <air-icon-button type="tertiary" size="s" [icon]="icons.search"></air-icon-button>
           </div>
         </app-docs-card-box>
       </div>
@@ -94,13 +90,11 @@
 
   <!-- 05 ACCESSIBILITY -->
   <app-docs-section [title]="'05 Accessibility'">
-    <app-docs-section-subtitle [text]="'Criterios base'"></app-docs-section-subtitle>
-    <app-docs-card>
+    <app-docs-card [title]="'Criterios base'">
       <app-docs-card-text [text]="accessibilityText"></app-docs-card-text>
     </app-docs-card>
 
-    <app-docs-section-subtitle [text]="'Especificación técnica'"></app-docs-section-subtitle>
-    <app-docs-card>
+    <app-docs-card [title]="'Específico de este componente'">
       <app-docs-card-list [data]="accessibilityList"></app-docs-card-list>
     </app-docs-card>
   </app-docs-section>
@@ -110,49 +104,84 @@
     <app-docs-card class="success">
       <app-docs-card-guideline-status [status]="'success'" [text]="'Do'"></app-docs-card-guideline-status>
 
-      <div>
+      <app-docs-card>
         <app-docs-card-text
-          [text]="'Agrupar Icon Buttons para acciones relacionadas en barras de herramientas.'">
+          [text]="'Usar íconos que representen con precisión la acción que ejecuta el botón.'">
         </app-docs-card-text>
-        <div class="button-row">
-          <app-icon-button type="tertiary" size="medium" [icon]="icons.edit"></app-icon-button>
-          <app-icon-button type="tertiary" size="medium" [icon]="icons.search"></app-icon-button>
-          <app-icon-button type="danger" size="medium" [icon]="icons.trash"></app-icon-button>
-        </div>
-      </div>
+        <mat-divider></mat-divider>
 
-      <div>
-        <app-docs-card-text
-          [text]="'Usar primary para la acción más importante del grupo.'">
-        </app-docs-card-text>
-        <div class="button-row">
-          <app-icon-button type="primary" size="large" [icon]="icons.plus"></app-icon-button>
-          <app-icon-button type="tertiary" size="large" [icon]="icons.search"></app-icon-button>
+        <div class="container-row">
+          <air-icon-button theme="primary" type="primary" size="2xl" icon="edit"></air-icon-button>
+          <air-icon-button theme="neutral" type="secondary" size="2xl" icon="trash"></air-icon-button>
         </div>
-      </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'Agrupar Icon Buttons cuando las acciones están relacionadas entre sí dentro de la misma zona'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-icon-button theme="primary" type="primary" size="2xl" icon="check"></air-icon-button>
+          <air-icon-button theme="neutral" type="secondary" size="2xl" icon="cross"></air-icon-button>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'El tamaño del Icon Button debe ser proporcional al contexto donde se usa.'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-icon-button theme="primary" type="primary" size="l" icon="layers"></air-icon-button>
+        </div>
+      </app-docs-card>
     </app-docs-card>
 
     <app-docs-card class="error">
       <app-docs-card-guideline-status [status]="'error'" [text]="'Don\'t'"></app-docs-card-guideline-status>
 
-      <div>
+      <app-docs-card>
         <app-docs-card-text
-          [text]="'No usar acciones ambiguas sin texto de apoyo cerca — el usuario no sabe qué hace el botón.'">
+          [text]="'No usar íconos genéricos o ambiguos que no comunican claramente la acción.'">
         </app-docs-card-text>
+        <mat-divider></mat-divider>
 
-        <div class="button-row">
-          <app-icon-button type="primary" size="medium" [icon]="icons.star"></app-icon-button>
-          <app-icon-button type="primary" size="medium" [icon]="icons.settings"></app-icon-button>
-          <app-icon-button type="primary" size="medium" [icon]="icons.bell"></app-icon-button>
+        <div class="container-row">
+          <air-icon-button theme="primary" type="primary" size="2xl" icon="speaker"></air-icon-button>
+          <air-icon-button theme="neutral" type="secondary" size="2xl" icon="drumstick"></air-icon-button>
         </div>
-      </div>
+      </app-docs-card>
 
-      <div>
+      <app-docs-card>
         <app-docs-card-text
-          [text]="'No usar XS en mobile — el área táctil de 24px es demasiado pequeña para el dedo.'">
+          [text]="'No agrupar demasiados Icon Buttons en una misma zona generando sobrecarga visual.'">
         </app-docs-card-text>
-        <app-icon-button type="primary" size="small" [icon]="icons.plus"></app-icon-button>
-      </div>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-icon-button theme="primary" type="tonal" size="2xl" icon="layers"></air-icon-button>
+          <air-icon-button theme="primary" type="tonal" size="2xl" icon="layers"></air-icon-button>
+          <air-icon-button theme="primary" type="tertiary" size="2xl" icon="layers"></air-icon-button>
+          <air-icon-button theme="primary" type="secondary" size="2xl" icon="layers"></air-icon-button>
+          <air-icon-button theme="primary" type="primary" size="2xl" icon="layers"></air-icon-button>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'No mezclar Icon Buttons de distinto tamaño en una misma zona de acciones sin que el contexto lo justifique.'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-icon-button theme="primary" type="tertiary" size="xs" icon="layers"></air-icon-button>
+          <air-icon-button theme="primary" type="secondary" size="m" icon="layers"></air-icon-button>
+          <air-icon-button theme="primary" type="primary" size="l" icon="layers"></air-icon-button>
+        </div>
+      </app-docs-card>
     </app-docs-card>
   </app-docs-section>
 

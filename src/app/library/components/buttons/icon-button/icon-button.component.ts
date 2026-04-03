@@ -6,11 +6,11 @@ import { MatIconModule } from '@angular/material/icon';
 
 export type IconButtonType = 'primary' | 'secondary' | 'tertiary' | 'tonal' | 'danger' | 'dangerText';
 export type IconButtonTheme = 'primary' | 'neutral';
-export type IconButtonSize = 'extrasmall' | 'small' | 'medium' | 'large' | 'xlarge' | '2xl';
+export type IconButtonSize = 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl';
 
 @Component({
     standalone: true,
-    selector: 'app-icon-button',
+    selector: 'air-icon-button',
     templateUrl: './icon-button.component.html',
     styleUrls: ['./icon-button.component.scss'],
     imports: [
@@ -27,7 +27,7 @@ export class IconButtonComponent {
 
     public currentType: IconButtonType = 'primary';
     public currentTheme: IconButtonTheme = 'primary';
-    public currentSize: IconButtonSize = 'medium';
+    public currentSize: IconButtonSize = 'm';
     public iconSize = 16;
 
     @Input() public set type(value: IconButtonType | null) {
@@ -54,15 +54,15 @@ export class IconButtonComponent {
         return 'theme-' + this.currentTheme;
     }
 
-    @Output() public buttonClick: EventEmitter<any> = new EventEmitter();
+    @Output() public buttonClick: EventEmitter<void> = new EventEmitter();
 
     private _setIconSize() {
         const iconSizeMap = {
-            'extrasmall': 12,
-            'small': 16,
-            'medium': 16,
-            'large': 20,
-            'xlarge': 24,
+            'xs': 12,
+            's': 16,
+            'm': 16,
+            'l': 20,
+            'xl': 24,
             '2xl': 32,
         };
 

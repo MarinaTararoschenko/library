@@ -1,0 +1,215 @@
+<app-docs>
+  <!-- HEADER -->
+  <app-docs-header [data]="headerData" docsHeader></app-docs-header>
+
+  <app-docs-section class="first">
+    <app-docs-card>
+      <app-action-buttons-docs-code></app-action-buttons-docs-code>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 01 OVERVIEW -->
+  <app-docs-section [title]="'01 Overview'" class="columns">
+    @if (cardsOverview; as cards) {
+      @for (card of cards; track $index) {
+        <app-docs-card [title]="card.title">
+
+          <!-- If there is a list -->
+          @if (card.list; as list) {
+            <app-docs-card-list [data]="list"></app-docs-card-list>
+          }
+
+        </app-docs-card>
+      }
+    }
+  </app-docs-section>
+
+  <!-- 02 ANATOMY -->
+  <app-docs-section [title]="'02 Anatomy'">
+    <app-docs-card>
+      <app-action-buttons-docs-anatomy></app-action-buttons-docs-anatomy>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 03 PROPERTIES - Variantes visuales -->
+  <app-docs-section [title]="'03 Properties'">
+    <app-docs-card [title]="'Variantes visuales'">
+      <mat-divider></mat-divider>
+      <app-action-buttons-docs-variants></app-action-buttons-docs-variants>
+    </app-docs-card>
+
+    <app-docs-section-subtitle [text]="'Tamaños'"></app-docs-section-subtitle>
+    <app-docs-card [title]="'Tamaños'">
+      <mat-divider></mat-divider>
+      <app-action-buttons-docs-sizes></app-action-buttons-docs-sizes>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 04 BEHAVIOR -->
+  <app-docs-section [title]="'04 Behavior'">
+    <app-docs-card [title]="'Interacciones'">
+      <mat-divider></mat-divider>
+
+      <div class="container-column">
+        <air-action-buttons
+          size="m"
+          type="hugged"
+          [data]="{
+            primary: { text: 'Confirmar', isLoading: true },
+            secondary: { text: 'Cancelar' },
+          }">
+        </air-action-buttons>
+        <app-docs-card-tag [text]="'Hover/ Pressed IconButton'" class="bottom"></app-docs-card-tag>
+      </div>
+    </app-docs-card>
+
+    <app-docs-card [title]="'Responsividad'">
+      <mat-divider></mat-divider>
+
+      <div class="">
+        <app-docs-card-header [data]="{label: '← Desktop', badge: 'Body text'}"></app-docs-card-header>
+        <app-docs-card-box class="light dashed">
+          <air-button
+            theme="primary"
+            type="primary"
+            size="l"
+            [data]="{text: 'Continuar', iconEnd: icons.chevronRight}">
+          </air-button>
+        </app-docs-card-box>
+      </div>
+
+      <div class="mobile-md">
+        <app-docs-card-header [data]="{label: '← Tablet', badge: 'Body text'}"></app-docs-card-header>
+        <app-docs-card-box class="light dashed">
+          <air-button
+            theme="primary"
+            type="primary"
+            size="m"
+            [data]="{text: 'Continuar', iconEnd: icons.chevronRight}">
+          </air-button>
+        </app-docs-card-box>
+      </div>
+      <div class="mobile-xs">
+        <app-docs-card-header [data]="{label: '← Mobile', badge: 'Body text'}"></app-docs-card-header>
+        <app-docs-card-box class="light dashed">
+          <air-button
+            theme="primary"
+            type="primary"
+            size="s"
+            [data]="{text: 'Continuar', iconEnd: icons.chevronRight}">
+          </air-button>
+          </app-docs-card-box>
+      </div>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 05 ACCESSIBILITY -->
+  <app-docs-section [title]="'05 Accessibility'">
+    <app-docs-card [title]="'Criterios base'">
+      <app-docs-card-text [text]="accessibilityText"></app-docs-card-text>
+    </app-docs-card>
+
+    <app-docs-card [title]="'Específico de este componente'">
+      <app-docs-card-list [data]="accessibilityList"></app-docs-card-list>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 06 USER GUIDELINES -->
+  <app-docs-section [title]="'06 User Guidelines'" class="columns">
+    <app-docs-card class="success">
+      <app-docs-card-guideline-status [status]="'success'" [text]="'Do'"></app-docs-card-guideline-status>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'Usar máximo 2 o 3 botones para mantener la claridad visual de la zona de acciones.'">
+        </app-docs-card-text>
+
+        <div class="container-row">
+          <air-action-buttons
+            type="hugged"
+            size="2xl"
+            [data]="{
+              tertiary: {text: 'Body text'},
+              secondary: {text: 'Body text'},
+              primary: {text: 'Body text'},
+            }">
+          </air-action-buttons>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'El botón primario se diferencia visualmente del secundario para comunicar la acción principal.'">
+        </app-docs-card-text>
+
+        <div class="container-row">
+          <air-action-buttons
+            type="filled"
+            size="2xl"
+            [data]="{
+              secondary: {text: 'Body text'},
+              primary: {text: 'Body text'},
+            }">
+          </air-action-buttons>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'En mobile los botones se adaptan ocupando el ancho completo disponible usando la variante vertical.'">
+        </app-docs-card-text>
+
+        <div class="container-row">
+          <air-action-buttons
+            type="vertical"
+            size="2xl"
+            [data]="{
+              primary: {text: 'Body text'},
+              secondary: {text: 'Body text'},
+              tertiary: {text: 'Body text'},
+            }">
+          </air-action-buttons>
+        </div>
+      </app-docs-card>
+    </app-docs-card>
+
+    <app-docs-card class="error">
+      <app-docs-card-guideline-status [status]="'error'" [text]="'Don\'t'"></app-docs-card-guideline-status>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'No usar más de 3 botones simultáneamente, genera sobrecarga visual en la zona de acciones.'">
+        </app-docs-card-text>
+
+        <div class="container-row">
+          <air-button theme="primary" type="tertiary" size="2xl" [data]="{text: 'Body text'}"></air-button>
+          <air-button theme="primary" type="secondary" size="2xl" [data]="{text: 'Body text'}"></air-button>
+          <air-button theme="primary" type="secondary" size="2xl" [data]="{text: 'Body text'}"></air-button>
+          <air-button theme="primary" type="primary" size="2xl" [data]="{text: 'Body text'}"></air-button>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'No usar botones paralelos con el mismo peso visual sin jerarquía entre ellos.'">
+        </app-docs-card-text>
+
+        <div class="container-row">
+          <air-button theme="primary" type="primary" size="2xl" [data]="{text: 'Body text'}"></air-button>
+          <air-button theme="primary" type="primary" size="2xl" [data]="{text: 'Body text'}"></air-button>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'No usar botones como elementos de navegación entre vistas, para eso existen otros componentes.'">
+        </app-docs-card-text>
+
+        <div class="container-row">
+          <air-button theme="primary" type="secondary" size="2xl" [data]="{text: 'Ir al incio'}"></air-button>
+          <air-button theme="primary" type="primary" size="2xl" [data]="{text: 'Ver productos'}"></air-button>
+        </div>
+      </app-docs-card>
+    </app-docs-card>
+  </app-docs-section>
+</app-docs>

@@ -1,36 +1,14 @@
 <div class="anatomy">
-  <div class="anatomy__top">
-    <div class="anatomy__pill-container">
-      <span class="anatomy__pill">air-button &lt;button&gt;</span>
-      <div class="anatomy__line-vertical"></div>
-      <div class="anatomy__dot"></div>
-    </div>
-  </div>
-  <div class="anatomy__dashed-box">
-    <div class="anatomy__content">
-      <div class="anatomy__icons-row">
-        <span class="anatomy__pill">iconLeft</span>
-        <div class="anatomy__line-horizontal"></div>
-        <app-button
-          theme="primary"
-          type="primary"
-          size="medium"
-          [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'angle-right' }">
-        </app-button>
-        <div class="anatomy__line-horizontal"></div>
-        <span class="anatomy__pill">iconRight</span>
-      </div>
-      <div class="anatomy__label-row">
-        <span class="anatomy__pill">label</span>
-      </div>
-    </div>
-  </div>
-  <div class="anatomy__sizes">
-    <span>XS: <strong>24px</strong></span>
-    <span>S: <strong>32px</strong></span>
-    <span>M: <strong>40px</strong></span>
-    <span>L: <strong>48px</strong></span>
-    <span>XL: <strong>56px</strong></span>
-    <span>2XL: <strong>64px</strong></span>
+  <div class="anatomy__content">
+    <app-docs-card-tag [text]="'text'" class="top"></app-docs-card-tag>
+    <app-docs-card-tag [text]="'iconStart'" class="start"></app-docs-card-tag>
+    <app-docs-card-tag [text]="'iconEnd'" class="end"></app-docs-card-tag>
+
+    <air-button
+      theme="primary"
+      type="primary"
+      size="m"
+      [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'angle-right' }">
+    </air-button>
   </div>
 </div>

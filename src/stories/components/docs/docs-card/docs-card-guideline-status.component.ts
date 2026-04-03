@@ -1,22 +1,16 @@
 import { NgClass } from "@angular/common";
 import { Component, Input } from "@angular/core";
+import { MatIconModule } from "@angular/material/icon";
 
 @Component({
     standalone: true,
     selector: 'app-docs-card-guideline-status',
     template: `
-        <span class="status__icon" [ngClass]="status">
-            @if (status === 'success') {
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                  <path d="M1.5 5l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-            } @else {
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                    <path d="M2 2l6 6M8 2L2 8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
-                </svg>
-            }
-        </span>
+        <mat-icon
+            [svgIcon]="status === 'success' ? 'check-circle' : 'cross-circle'"
+            class="size-24"
+            [ngClass]="status">
+        </mat-icon>
         <strong class="status__text" [ngClass]="status">{{text}}</strong>
     `,
     styles: `
@@ -26,38 +20,29 @@ import { Component, Input } from "@angular/core";
             gap: 0.5rem;
         }
 
-        .status__icon {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
+        .status__text {
+            font: 700 var(--ds-font-titles-s);
 
             &.success {
-                background: #16a34a;
+                color: var(--ds-text-color-success-default);
             }
 
             &.error {
-                background: #dc2626;
+                color: var(--ds-text-color-error-default);
             }
         }
 
-        .status__text {
-            font-size: 13px;
-            font-weight: 700;
-
+        mat-icon {
             &.success {
-                color: #15803d;
+                color: var(--ds-text-color-success-default);
             }
 
             &.error {
-                color: #dc2626;
+                color: var(--ds-text-color-error-default);
             }
         }
     `,
-    imports: [ NgClass ]
+    imports: [ NgClass, MatIconModule ]
 })
 export class DocsCardGuidelineStatusComponent {
     @Input() public status!: string;
