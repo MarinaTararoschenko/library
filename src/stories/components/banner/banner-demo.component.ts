@@ -5,7 +5,7 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { DomSanitizer } from "@angular/platform-browser";
 
 import { BannerComponent } from "src/app/library/components/banner/banner.component";
-import { ButtonComponent } from "src/app/library/components/buttons/button/button.component";
+import { ButtonComponent } from "src/app/library/components/action/button/button.component";
 
 @Component({
     standalone: true,

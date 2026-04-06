@@ -8,8 +8,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { BannerComponent } from 'src/app/library/components/banner/banner.component';
 import { DialogBasicComponent, IDialogBasic } from 'src/app/library/components/dialog-basic/dialog-basic.component';
 import { FormFieldInputComponent, IFormFieldInput } from 'src/app/library/components/form-field-input/form-field-input.component';
-import { ButtonComponent } from 'src/app/library/components/buttons/button/button.component';
-import { IconButtonComponent } from 'src/app/library/components/buttons/icon-button/icon-button.component';
+import { ButtonComponent } from 'src/app/library/components/action/button/button.component';
+import { IconButtonComponent } from 'src/app/library/components/action/icon-button/icon-button.component';
 import { HeaderComponent, IHeader } from 'src/app/library/components/navigation/header/header.component';
 import { IDropdown } from 'src/app/library/components/layout/dropdown-item/dropdown-item.component';
 

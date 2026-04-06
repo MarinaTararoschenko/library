@@ -16,7 +16,7 @@ import { ButtonDocsAnatomyComponent } from './button-docs-anatomy/button-docs-an
 import { ButtonDocsVariantsComponent } from './button-docs-variants/button-docs-variants.component';
 import { ButtonDocsSizesComponent } from './button-docs-sizes/button-docs-sizes.component';
 import { ButtonDocsStatesComponent } from './button-docs-states/button-docs-states.component';
-import { ButtonComponent } from 'src/app/library/components/buttons/button/button.component';
+import { ButtonComponent } from 'src/app/library/components/action/button/button.component';
 
 @Component({
     standalone: true,

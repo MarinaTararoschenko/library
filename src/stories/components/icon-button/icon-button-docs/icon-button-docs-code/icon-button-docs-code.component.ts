@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 
-import { IconButtonComponent } from 'src/app/library/components/buttons/icon-button/icon-button.component';
+import { IconButtonComponent } from 'src/app/library/components/action/icon-button/icon-button.component';
 
 @Component({
     standalone: true,

@@ -4,7 +4,7 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MAT_DIALOG_DATA, MatDialogActions, MatDialogClose, MatDialogContent, MatDialog } from '@angular/material/dialog';
 
-import { ButtonComponent } from '../buttons/button/button.component';
+import { ButtonComponent } from '../action/button/button.component';
 
 
 export interface IDialogBasic {

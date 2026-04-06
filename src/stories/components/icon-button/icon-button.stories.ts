@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { moduleMetadata } from '@storybook/angular';
 
-import { IconButtonComponent } from 'src/app/library/components/buttons/icon-button/icon-button.component';
+import { IconButtonComponent } from 'src/app/library/components/action/icon-button/icon-button.component';
 import { IconButtonDocsComponent } from './icon-button-docs/icon-button-docs.component';
 
 const meta: Meta<IconButtonComponent> = {

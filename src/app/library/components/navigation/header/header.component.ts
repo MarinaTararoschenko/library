@@ -3,8 +3,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { FormGroup } from '@angular/forms';
 
-import { ButtonComponent, ButtonSize, ButtonTheme, ButtonType, IButton } from '../../buttons/button/button.component';
-import { IconButtonComponent, IconButtonSize, IconButtonTheme, IconButtonType } from '../../buttons/icon-button/icon-button.component';
+import { ButtonComponent, ButtonSize, ButtonTheme, ButtonType, IButton } from '../../action/button/button.component';
+import { IconButtonComponent, IconButtonSize, IconButtonTheme, IconButtonType } from '../../action/icon-button/icon-button.component';
 import { ITag, TagColor, TagComponent, TagSize } from '../../feedback/tag/tag.component';
 import { DropdownItemComponent, IDropdown } from '../../layout/dropdown-item/dropdown-item.component';
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 
-import { ActionButtonsComponent } from 'src/app/library/components/action-buttons/action-buttons.component';
+import { ActionButtonsComponent } from 'src/app/library/components/action/action-buttons/action-buttons.component';
 
 @Component({
     standalone: true,

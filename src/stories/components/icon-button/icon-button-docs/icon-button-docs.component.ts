@@ -15,7 +15,7 @@ import { IconButtonDocsCodeComponent } from './icon-button-docs-code/icon-button
 import { IconButtonDocsAnatomyComponent } from './icon-button-docs-anatomy/icon-button-docs-anatomy.component';
 import { IconButtonDocsVariantsComponent } from './icon-button-docs-variants/icon-button-docs-variants.component';
 import { IconButtonDocsSizesComponent } from './icon-button-docs-sizes/icon-button-docs-sizes.component';
-import { IconButtonComponent } from 'src/app/library/components/buttons/icon-button/icon-button.component';
+import { IconButtonComponent } from 'src/app/library/components/action/icon-button/icon-button.component';
 
 @Component({
     standalone: true,

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ButtonComponent } from 'src/app/library/components/buttons/button/button.component';
+import { ButtonComponent } from 'src/app/library/components/action/button/button.component';
 import { DocsCardTagComponent } from 'src/stories/components/docs/docs-card/docs-card-tag.component';
 
 @Component({

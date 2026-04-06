@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { DocsCardLabelComponent } from 'src/stories/components/docs/docs-card/docs-card-label.component';
-import { ActionButtonsComponent } from 'src/app/library/components/action-buttons/action-buttons.component';
+import { ActionButtonsComponent } from 'src/app/library/components/action/action-buttons/action-buttons.component';
 
 @Component({
     standalone: true,

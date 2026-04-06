@@ -1,6 +1,6 @@
 import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 
-import { ButtonComponent, ButtonSize, IButton } from '../buttons/button/button.component';
+import { ButtonComponent, ButtonSize, IButton } from '../button/button.component';
 
 export interface IActionButtons {
     tertiary?: IButtonWithState;

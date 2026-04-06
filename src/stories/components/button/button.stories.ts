@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { moduleMetadata } from '@storybook/angular';
 
-import { ButtonComponent } from 'src/app/library/components/buttons/button/button.component';
+import { ButtonComponent } from 'src/app/library/components/action/button/button.component';
 import { ButtonDocsComponent } from './button-docs/button-docs.component';
 
 const meta: Meta<ButtonComponent> = {

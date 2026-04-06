@@ -6,7 +6,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { JsonPipe } from "@angular/common";
 
 import { DialogBasicComponent, IDialogBasic } from "src/app/library/components/dialog-basic/dialog-basic.component";
-import { ButtonComponent } from "src/app/library/components/buttons/button/button.component";
+import { ButtonComponent } from "src/app/library/components/action/button/button.component";
 
 @Component({
     standalone: true,

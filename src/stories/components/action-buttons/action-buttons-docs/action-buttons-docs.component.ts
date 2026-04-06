@@ -16,8 +16,8 @@ import { ActionButtonsDocsCodeComponent } from './action-buttons-docs-code/actio
 import { ActionButtonsDocsAnatomyComponent } from './action-buttons-docs-anatomy/action-buttons-docs-anatomy.component';
 import { ActionButtonsDocsVariantsComponent } from './action-buttons-docs-variants/action-buttons-docs-variants.component';
 import { ActionButtonsDocsSizesComponent } from './action-buttons-docs-sizes/action-buttons-docs-sizes.component';
-import { ActionButtonsComponent } from 'src/app/library/components/action-buttons/action-buttons.component';
-import { ButtonComponent } from 'src/app/library/components/buttons/button/button.component';
+import { ActionButtonsComponent } from 'src/app/library/components/action/action-buttons/action-buttons.component';
+import { ButtonComponent } from 'src/app/library/components/action/button/button.component';
 
 @Component({
     standalone: true,

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { moduleMetadata } from '@storybook/angular';
 
 import { ActionButtonsDocsComponent } from './action-buttons-docs/action-buttons-docs.component';
-import { ActionButtonsComponent } from 'src/app/library/components/action-buttons/action-buttons.component';
+import { ActionButtonsComponent } from 'src/app/library/components/action/action-buttons/action-buttons.component';
 
 const meta: Meta<ActionButtonsComponent> = {
     title: 'Action/Action Buttons',
