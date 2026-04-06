@@ -45,3 +45,22 @@ mat-sidenav.matSidenav {
     margin-left: 0 !important;
   }
 }
+
+@media (max-width: 992px) {
+  mat-sidenav.matSidenav {
+    width: 280px !important;
+    transform: translate3d(-100%, 0, 0) !important;
+
+    &.mat-drawer-opened {
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    .btnToggle {
+      display: none;
+    }
+  }
+
+  .matSidenavContent {
+    margin-left: 0 !important;
+  }
+}

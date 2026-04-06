@@ -1,0 +1,155 @@
+@if (data) {
+  <div class="header">
+
+    <!-- TOP area -->
+    <div class="header__top">
+      <!-- COLUMN LEFT area -->
+      <div class="header__column">
+
+        <!-- LEFT ACTION -->
+        @if (data.menu) {
+          <air-icon-button
+            icon="menu"
+            size="s"
+            type="tertiary"
+            theme="neutral"
+            (buttonClick)="toggleMenu()">
+          </air-icon-button>
+        }
+
+        @if (data.back) {
+          <air-icon-button
+            icon="arrow-left"
+            size="s"
+            type="tertiary"
+            theme="neutral"
+            (buttonClick)="back()">
+          </air-icon-button>
+        }
+
+        <!-- CONTENT area -->
+        <div class="header__content">
+          <div class="header__content-text">
+            @if (data.title) {
+              <div class="header__content-title">{{data.title}}</div>
+            }
+            @if (data.subtitle) {
+              <div class="header__content-subtitle">{{data.subtitle}}</div>
+            }
+            @if (data.tags; as tags) {
+              <div class="header__tags">
+                @for (tag of tags; track $index) {
+                  <air-tag
+                    [data]="tag.data"
+                    [color]="tag.color ? tag.color : null"
+                    [size]="tag.size ? tag.size : null">
+                  </air-tag>
+                }
+              </div>
+            }
+          </div>
+          @if (data.info) {
+            <mat-icon [svgIcon]="'info-circle'" class="size-16"></mat-icon>
+          }
+        </div>
+
+        <!-- ACTIONS area -->
+        @if (data.actions; as actions) {
+          <div class="header__actions">
+
+            <!-- TAG -->
+            @if (actions.tag; as tag) {
+              <air-tag
+                [data]="tag.data"
+                [color]="tag.color ? tag.color : null"
+                [size]="tag.size ? tag.size : null">
+              </air-tag>
+            }
+
+            <!-- Icon Button's -->
+            @if (actions.iconButtons; as iconButtons) {
+              @for (iconButton of iconButtons; track $index) {
+                <air-icon-button
+                  [theme]="iconButton.theme ? iconButton.theme : null"
+                  [type]="iconButton.type ? iconButton.type : null"
+                  [size]="iconButton.size ? iconButton.size : null"
+                  [icon]="iconButton.icon"
+                  [disabled]="iconButton.disabled"
+                  [isLoading]="iconButton.isLoading"
+                  [matMenuTriggerFor]="iconButton.menu ? menu : null"
+                  (buttonClick)="onActionButton(iconButton)">
+                </air-icon-button>
+
+                <mat-menu #menu="matMenu" class="dsMatMenu">
+                  @for (item of iconButton.menu; track item) {
+                    @if (item) {
+                      <air-dropdown-item
+                        [data]="{
+                          text: item.text,
+                          subtext: item.subtext,
+                          checkbox: item.checkbox,
+                          disabled: item.disabled,
+                          badge: item.badge,
+                          icon: item.icon,
+                        }"
+                        [form]="form"
+                        [selected]="isSelected(item)"
+                        (selectItem)="onDropdownClick(item)"
+                        (click)="$event.stopPropagation()">
+                      </air-dropdown-item>
+                    }
+                  }
+                </mat-menu>
+              }
+            }
+
+            <!-- Button's -->
+            @if (actions.buttons; as buttons) {
+              @for (button of buttons; track $index) {
+                <air-button
+                  [theme]="button.theme ? button.theme : null"
+                  [type]="button.type ? button.type : null"
+                  [size]="button.size ? button.size : null"
+                  [data]="button.data"
+                  [disabled]="button.disabled"
+                  [isLoading]="button.isLoading"
+                  (buttonClick)="onActionButton(button)">
+                </air-button>
+              }
+            }
+          </div>
+        }
+      </div>
+
+      <!-- COLUMN RIGHT area -->
+      @if (type === 'columns') {
+        <div class="header__column">
+          Column right
+        </div>
+      }
+    </div>
+
+    <!-- Bottom (submenu) area -->
+    <div class="header__bottom">
+      @if (data.submenu?.tags; as tags) {
+        <div class="header__tags">
+          @for (tag of tags; track $index) {
+            <air-tag
+              [data]="tag.data"
+              [color]="tag.color ? tag.color : null"
+              [size]="tag.size ? tag.size : null">
+            </air-tag>
+          }
+        </div>
+      }
+
+      @if (data.submenu?.tag; as tag) {
+        <air-tag
+          [data]="tag.data"
+          [color]="tag.color ? tag.color : null"
+          [size]="tag.size ? tag.size : null">
+        </air-tag>
+      }
+    </div>
+  </div>
+}

@@ -1,0 +1,7 @@
+<ng-container [formGroup]="form">
+  <mat-checkbox [formControlName]="data.controlName" (click)="onCheckboxClick($event)">
+    @if (data.label) {
+      <span class="checkbox__label">{{data.label}}</span>
+    }
+  </mat-checkbox>
+</ng-container>

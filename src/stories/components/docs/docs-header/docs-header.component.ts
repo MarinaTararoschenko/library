@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
-import { TagComponent } from 'src/app/library/components/tag/tag.component';
+import { TagComponent } from 'src/app/library/components/feedback/tag/tag.component';
 
 export interface IDocsHeader {
     badge?: string;

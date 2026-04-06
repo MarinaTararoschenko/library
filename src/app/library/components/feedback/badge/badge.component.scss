@@ -1,0 +1,70 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--ds-border-radius-full);
+
+  &.size-xs {
+    font: var(--ds-font-weight-medium) var(--ds-font-text-xs);
+    letter-spacing: 0;
+    padding: 0 2px;
+  }
+
+  &.size-s {
+    font: var(--ds-font-weight-medium) var(--ds-font-text-s);
+    letter-spacing: 0;
+    padding: 2px 4px;
+  }
+
+  &.size-m {
+    font: var(--ds-font-weight-medium) var(--ds-font-text-m);
+    letter-spacing: 0;
+    padding: 2px 5px;
+  }
+
+  &.size-l {
+    font: var(--ds-font-weight-medium) var(--ds-font-text-l);
+    letter-spacing: 0;
+    padding: 2px 5px;
+  }
+
+  &.color-blue {
+    color: var(--ds-text-color-info-default);
+    background-color: var(--ds-background-color-theme-soft);
+  }
+
+  &.color-green {
+    color: var(--ds-text-color-success-high);
+    background-color: var(--ds-background-color-success-soft);
+  }
+
+  &.color-red {
+    color: var(--ds-text-color-error-high);
+    background-color: var(--ds-background-color-error-soft);
+  }
+
+  &.color-yellow {
+    color: var(--ds-text-color-warning-high);
+    background-color: var(--ds-background-color-warning-soft);
+  }
+
+  &.color-grey {
+    color: var(--ds-text-color-neutral-default);
+    background-color: var(--ds-background-color-neutral-soft);
+  }
+
+  &.color-notifications {
+    color: var(--ds-text-color-neutral-accent);
+    background-color: var(--ds-background-color-error-default);
+  }
+
+  &.color-theme {
+    color: var(--ds-text-color-neutral-accent);
+    background-color: var(--ds-background-color-info-default);
+  }
+
+  &.color-disabled,
+  &.disabled {
+    color: var(--ds-text-color-neutral-action-disabled);
+    background-color: var(--ds-background-color-neutral-action-disabled);
+  }
+}

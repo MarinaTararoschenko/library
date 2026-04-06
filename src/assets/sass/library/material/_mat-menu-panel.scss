@@ -1,0 +1,35 @@
+.mat-mdc-menu-panel {
+  &.dsMatMenu {
+    min-width: 178px;
+    padding: 8px;
+    border-radius: var(--ds-border-radius-box);
+    background-color: var(--ds-background-color-screen-base);
+
+    &[class*=mat-elevation] {
+      box-shadow: 0 16px 24px 0 rgba(51, 65, 85, 0.07);
+    }
+
+    .mat-mdc-menu-content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+      padding: 0;
+    }
+
+    .mat-mdc-menu-item {
+      height: auto;
+      min-height: fit-content;
+      background: transparent;
+      padding: 0;
+    }
+
+    &.dsMatMenu--limited-height {
+      max-height: 320px;
+
+      .mat-mdc-menu-content {
+        max-height: none;
+        overflow: visible;
+      }
+    }
+  }
+}
