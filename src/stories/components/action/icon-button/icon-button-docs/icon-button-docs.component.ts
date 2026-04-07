@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 
-import { DocsHeaderComponent, IDocsHeader } from '../../docs/docs-header/docs-header.component';
-import { DocsSectionComponent } from '../../docs/docs-section.component';
-import { DocsComponent } from '../../docs/docs.component';
-import { DocsCardComponent } from '../../docs/docs-card/docs-card.componet';
-import { DocsCardListComponent } from '../../docs/docs-card/docs-card-list.component';
-import { DocsCardTextComponent } from '../../docs/docs-card/docs-card-text.component';
-import { DocsCardBoxComponent } from '../../docs/docs-card/docs-card-box.component';
-import { DocsCardHeaderComponent } from '../../docs/docs-card/docs-card-header.component';
-import { DocsCardGuidelineStatusComponent } from '../../docs/docs-card/docs-card-guideline-status.component';
-import { DocsCardTagComponent } from '../../docs/docs-card/docs-card-tag.component';
+import { DocsHeaderComponent, IDocsHeader } from '../../../docs/docs-header/docs-header.component';
+import { DocsSectionComponent } from '../../../docs/docs-section.component';
+import { DocsComponent } from '../../../docs/docs.component';
+import { DocsCardComponent } from '../../../docs/docs-card/docs-card.componet';
+import { DocsCardListComponent } from '../../../docs/docs-card/docs-card-list.component';
+import { DocsCardTextComponent } from '../../../docs/docs-card/docs-card-text.component';
+import { DocsCardBoxComponent } from '../../../docs/docs-card/docs-card-box.component';
+import { DocsCardHeaderComponent } from '../../../docs/docs-card/docs-card-header.component';
+import { DocsCardGuidelineStatusComponent } from '../../../docs/docs-card/docs-card-guideline-status.component';
+import { DocsCardTagComponent } from '../../../docs/docs-card/docs-card-tag.component';
 import { IconButtonDocsCodeComponent } from './icon-button-docs-code/icon-button-docs-code.component';
 import { IconButtonDocsAnatomyComponent } from './icon-button-docs-anatomy/icon-button-docs-anatomy.component';
 import { IconButtonDocsVariantsComponent } from './icon-button-docs-variants/icon-button-docs-variants.component';

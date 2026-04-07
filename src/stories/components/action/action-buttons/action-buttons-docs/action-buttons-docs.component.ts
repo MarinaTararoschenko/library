@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 
-import { DocsComponent } from '../../docs/docs.component';
-import { DocsHeaderComponent, IDocsHeader } from '../../docs/docs-header/docs-header.component';
-import { DocsSectionComponent } from '../../docs/docs-section.component';
-import { DocsSectionSubtitleComponent } from '../../docs/docs-section-subtitle.component';
-import { DocsCardComponent } from '../../docs/docs-card/docs-card.componet';
-import { DocsCardListComponent } from '../../docs/docs-card/docs-card-list.component';
-import { DocsCardTextComponent } from '../../docs/docs-card/docs-card-text.component';
-import { DocsCardBoxComponent } from '../../docs/docs-card/docs-card-box.component';
-import { DocsCardHeaderComponent } from '../../docs/docs-card/docs-card-header.component';
-import { DocsCardGuidelineStatusComponent } from '../../docs/docs-card/docs-card-guideline-status.component';
-import { DocsCardTagComponent } from '../../docs/docs-card/docs-card-tag.component';
+import { DocsComponent } from '../../../docs/docs.component';
+import { DocsHeaderComponent, IDocsHeader } from '../../../docs/docs-header/docs-header.component';
+import { DocsSectionComponent } from '../../../docs/docs-section.component';
+import { DocsSectionSubtitleComponent } from '../../../docs/docs-section-subtitle.component';
+import { DocsCardComponent } from '../../../docs/docs-card/docs-card.componet';
+import { DocsCardListComponent } from '../../../docs/docs-card/docs-card-list.component';
+import { DocsCardTextComponent } from '../../../docs/docs-card/docs-card-text.component';
+import { DocsCardBoxComponent } from '../../../docs/docs-card/docs-card-box.component';
+import { DocsCardHeaderComponent } from '../../../docs/docs-card/docs-card-header.component';
+import { DocsCardGuidelineStatusComponent } from '../../../docs/docs-card/docs-card-guideline-status.component';
+import { DocsCardTagComponent } from '../../../docs/docs-card/docs-card-tag.component';
 import { ActionButtonsDocsCodeComponent } from './action-buttons-docs-code/action-buttons-docs-code.component';
 import { ActionButtonsDocsAnatomyComponent } from './action-buttons-docs-anatomy/action-buttons-docs-anatomy.component';
 import { ActionButtonsDocsVariantsComponent } from './action-buttons-docs-variants/action-buttons-docs-variants.component';
