@@ -1,0 +1,199 @@
+<app-docs>
+  <!-- HEADER -->
+  <app-docs-header [data]="headerData" docsHeader></app-docs-header>
+
+  <app-docs-section class="first">
+    <app-docs-card>
+      <app-tag-docs-code></app-tag-docs-code>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 01 OVERVIEW -->
+  <app-docs-section [title]="'01 Overview'" class="columns">
+    @if (cardsOverview; as cards) {
+      @for (card of cards; track $index) {
+        <app-docs-card [title]="card.title">
+
+          <!-- If there is a list -->
+          @if (card.list; as list) {
+            <app-docs-card-list [data]="list"></app-docs-card-list>
+          }
+
+        </app-docs-card>
+      }
+    }
+  </app-docs-section>
+
+  <!-- 02 ANATOMY -->
+  <app-docs-section [title]="'02 Anatomy'">
+    <app-docs-card>
+      <app-tag-docs-anatomy></app-tag-docs-anatomy>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 03 PROPERTIES - Variantes visuales -->
+  <app-docs-section [title]="'03 Properties'">
+    <app-docs-card [title]="'Variantes visuales'">
+      <app-tag-docs-variants></app-tag-docs-variants>
+    </app-docs-card>
+
+    <app-docs-card [title]="'Tamaños'">
+      <app-tag-docs-sizes></app-tag-docs-sizes>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 04 BEHAVIOR -->
+  <app-docs-section [title]="'04 Behavior'">
+    <app-docs-card [title]="'Interacciones'">
+      <mat-divider></mat-divider>
+
+      <div class="container-column">
+        <air-tag
+          color="grey"
+          size="s"
+          [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'x-close'}">
+        </air-tag>
+        <app-docs-card-tag [text]="'Sin interacción'" class="bottom"></app-docs-card-tag>
+      </div>
+
+    </app-docs-card>
+
+    <app-docs-card [title]="'Responsividad'">
+      <div class="">
+        <app-docs-card-header [data]="{label: '← Desktop', badge: 'Size L — 48px'}"></app-docs-card-header>
+        <app-docs-card-box class="light dashed">
+          <div class="container-row">
+            <air-tag
+              color="grey"
+              size="s"
+              [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'x-close'}">
+            </air-tag>
+            <air-tag
+              color="grey"
+              size="s"
+              [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'x-close'}">
+            </air-tag>
+            <air-tag
+              color="grey"
+              size="s"
+              [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'x-close'}">
+            </air-tag>
+          </div>
+        </app-docs-card-box>
+      </div>
+
+      <div class="mobile-md">
+        <app-docs-card-header [data]="{label: '← Tablet', badge: 'Size M — 40px'}"></app-docs-card-header>
+        <app-docs-card-box class="light dashed">
+          <div class="container-row">
+            <air-tag
+              color="grey"
+              size="s"
+              [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'x-close'}">
+            </air-tag>
+            <air-tag
+              color="grey"
+              size="s"
+              [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'x-close'}">
+            </air-tag>
+            <air-tag
+              color="grey"
+              size="s"
+              [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'x-close'}">
+            </air-tag>
+          </div>
+        </app-docs-card-box>
+      </div>
+      <div class="mobile-xs">
+        <app-docs-card-header [data]="{label: '← Mobile', badge: 'Size S — 32px'}"></app-docs-card-header>
+        <app-docs-card-box class="light dashed">
+          <div class="container-row">
+            <air-tag
+              color="grey"
+              size="s"
+              [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'x-close'}">
+            </air-tag>
+            <air-tag
+              color="grey"
+              size="s"
+              [data]="{text: 'Body text', iconStart: 'layers', iconEnd: 'x-close'}">
+            </air-tag>
+          </div>
+        </app-docs-card-box>
+      </div>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 05 ACCESSIBILITY -->
+  <app-docs-section [title]="'05 Accessibility'">
+    <app-docs-card [title]="'Criterios base'">
+      <app-docs-card-text [text]="accessibilityText"></app-docs-card-text>
+    </app-docs-card>
+
+    <app-docs-card [title]="'Específico de este componente'">
+      <app-docs-card-list [data]="accessibilityList"></app-docs-card-list>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 06 USER GUIDELINES -->
+  <app-docs-section [title]="'06 User Guidelines'" class="columns">
+    <app-docs-card class="success">
+      <app-docs-card-guideline-status [status]="'success'" [text]="'Do'"></app-docs-card-guideline-status>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'Usar tags para mostrar filtros activos'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-tag
+            color="theme"
+            size="s"
+            [data]="{text: 'Región: RM', iconStart: 'layers', iconEnd: 'x-close'}">
+          </air-tag>
+          <air-tag
+            color="theme"
+            size="s"
+            [data]="{text: 'Tipo: Arriendo', iconStart: 'layers', iconEnd: 'x-close'}">
+          </air-tag>
+          <air-tag
+            color="theme"
+            size="s"
+            [data]="{text: 'Precio: 500k-1M', iconStart: 'layers', iconEnd: 'x-close'}">
+          </air-tag>
+        </div>
+      </app-docs-card>
+    </app-docs-card>
+
+    <app-docs-card class="error">
+      <app-docs-card-guideline-status [status]="'error'" [text]="'Don\'t'"></app-docs-card-guideline-status>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'No usar para mostrar estados, para eso usar tag state.'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-tag
+            color="green"
+            size="s"
+            [data]="{text: 'Activo'}">
+          </air-tag>
+          <air-tag
+            color="grey"
+            size="s"
+            [data]="{text: 'Inactivo'}">
+          </air-tag>
+          <air-tag
+            color="orange"
+            size="s"
+            [data]="{text: 'Pendiente'}">
+          </air-tag>
+        </div>
+      </app-docs-card>
+    </app-docs-card>
+  </app-docs-section>
+
+</app-docs>

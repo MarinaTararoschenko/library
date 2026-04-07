@@ -1,0 +1,16 @@
+.sizes {
+  display: flex;
+  justify-content: center;
+  column-gap: 48px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 14px;
+  }
+
+  app-docs-card-tag-bracket {
+    width: 100%;
+  }
+}

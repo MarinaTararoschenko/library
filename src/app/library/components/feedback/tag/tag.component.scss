@@ -1,5 +1,5 @@
 :host {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   border-radius: var(--ds-border-radius-button);
   column-gap: 4px;
@@ -8,7 +8,6 @@
     padding: 2px 6px;
     font: var(--ds-font-weight-medium) var(--ds-font-text-s);
     letter-spacing: 0;
-
   }
 
   &.size-m {
@@ -18,7 +17,7 @@
   }
 
   &.size-l {
-    column-gap: 6px;
+    column-gap: 8px 12px;
     padding: 8px 12px;
     font: var(--ds-font-weight-medium) var(--ds-font-text-l);
     letter-spacing: 0;
@@ -26,7 +25,7 @@
 
   &.size-xl {
     column-gap: 6px;
-    padding: 8px 16px;
+    padding: 14px 16px;
     font: var(--ds-font-weight-medium) var(--ds-font-text-xl);
     letter-spacing: 0;
   }
