@@ -4,6 +4,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
 
+import { BadgeColor, BadgeComponent, BadgeSize } from '../../feedback/badge/badge.component';
+
 export type IconButtonType = 'primary' | 'secondary' | 'tertiary' | 'tonal' | 'danger' | 'dangerText';
 export type IconButtonTheme = 'primary' | 'neutral';
 export type IconButtonSize = 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl';
@@ -17,13 +19,15 @@ export type IconButtonSize = 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl';
         MatButtonModule,
         NgClass,
         MatProgressSpinnerModule,
-        MatIconModule
+        MatIconModule,
+        BadgeComponent
     ],
 })
 export class IconButtonComponent {
     @Input() public disabled?: boolean;
     @Input() public icon!: string;
     @Input() public isLoading?: boolean;
+    @Input() public badge?: { text: string; size: BadgeSize; color: BadgeColor };
 
     public currentType: IconButtonType = 'primary';
     public currentTheme: IconButtonTheme = 'primary';

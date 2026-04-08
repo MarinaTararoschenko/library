@@ -1,0 +1,15 @@
+.anatomy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__content {
+    position: relative;
+    display: inline-flex;
+    padding: 60px 0;
+
+    app-docs-card-tag {
+      position: absolute;
+    }
+  }
+}

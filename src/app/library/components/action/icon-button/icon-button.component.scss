@@ -101,6 +101,12 @@ button[mat-icon-button] {
     align-items: center;
     justify-content: center;
   }
+
+  air-badge {
+    position: absolute;
+    top: 0px;
+    right: 0;
+  }
 }
 
 mat-spinner[color="warn"] {

@@ -3,68 +3,149 @@
   align-items: center;
   border-radius: var(--ds-border-radius-full);
 
+  &.type-no-number {
+    padding: 0 !important;
+    width: 8px;
+    height: 8px;
+  }
+
+  &.type-state {
+    position: relative;
+    padding: 0 !important;
+    width: 8px;
+    height: 8px;
+  }
+
   &.size-xs {
-    font: var(--ds-font-weight-medium) var(--ds-font-text-xs);
+    font: var(--ds-font-weight-regular) var(--ds-font-text-xs);
     letter-spacing: 0;
-    padding: 0 2px;
+    padding: 0 3px;
   }
 
   &.size-s {
     font: var(--ds-font-weight-medium) var(--ds-font-text-s);
     letter-spacing: 0;
-    padding: 2px 4px;
+    padding: 2px 6px;
   }
 
   &.size-m {
     font: var(--ds-font-weight-medium) var(--ds-font-text-m);
     letter-spacing: 0;
-    padding: 2px 5px;
+    padding: 2px 6px;
   }
 
   &.size-l {
     font: var(--ds-font-weight-medium) var(--ds-font-text-l);
     letter-spacing: 0;
-    padding: 2px 5px;
+    padding: 2px 7px;
+  }
+
+  &.size-xl {
+    font: var(--ds-font-weight-medium) var(--ds-font-text-xl);
+    letter-spacing: 0;
+    padding: 1px 7px;
+    border-radius: var(--ds-border-radius-sm);
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  &.size-2xl {
+    font: var(--ds-font-weight-medium) var(--ds-font-titles-m);
+    letter-spacing: 0;
+    padding: 1px 7px;
+    border-radius: var(--ds-border-radius-sm);
+    border-width: 1px;
+    border-style: solid;
   }
 
   &.color-blue {
     color: var(--ds-text-color-info-default);
+    border-color: var(--ds-border-color-info-default);
     background-color: var(--ds-background-color-theme-soft);
   }
 
   &.color-green {
     color: var(--ds-text-color-success-high);
+    border-color: var(--ds-border-color-success-default);
     background-color: var(--ds-background-color-success-soft);
   }
 
   &.color-red {
     color: var(--ds-text-color-error-high);
+    border-color: var(--ds-border-color-error-default);
     background-color: var(--ds-background-color-error-soft);
   }
 
   &.color-yellow {
     color: var(--ds-text-color-warning-high);
+    border-color: var(--ds-border-color-warning-default);
     background-color: var(--ds-background-color-warning-soft);
   }
 
   &.color-grey {
     color: var(--ds-text-color-neutral-default);
-    background-color: var(--ds-background-color-neutral-soft);
+    border-color: var(--ds-border-color-neutral-default);
+    background-color: var(--ds-background-color-neutral-softest);
   }
 
-  &.color-notifications {
+  &.color-green-fill {
     color: var(--ds-text-color-neutral-accent);
+    border-color: var(--ds-border-color-success-default);
+    background-color: var(--ds-background-color-success-default);
+
+    &.type-state {
+      box-shadow: 0 0 0 6px rgba(22, 163, 74, 0.10);
+    }
+  }
+
+  &.color-yellow-fill {
+    color: var(--ds-text-color-neutral-accent);
+    border-color: var(--ds-border-color-warning-default);
+    background-color: var(--ds-background-color-warning-default);
+
+    &.type-state {
+      box-shadow: 0 0 0 6px rgba(217, 119, 6, 0.10);
+    }
+  }
+
+  &.color-red-fill {
+    color: var(--ds-text-color-neutral-accent);
+    border-color: var(--ds-border-color-error-default);
     background-color: var(--ds-background-color-error-default);
+
+    &.type-state {
+      box-shadow: 0 0 0 6px rgba(220, 38, 38, 0.10);
+    }
   }
 
-  &.color-theme {
+  &.color-blue-fill {
     color: var(--ds-text-color-neutral-accent);
+    border-color: var(--ds-border-color-info-default);
     background-color: var(--ds-background-color-info-default);
+
+    &.type-state {
+      box-shadow: 0 0 0 6px rgba(27, 85, 245, 0.10);
+    }
+  }
+
+  &.color-black-fill {
+    color: var(--ds-text-color-neutral-accent);
+    border-color: var(--ds-border-color-neutral-default);
+    background-color: var(--ds-background-color-neutral-action-hover);
+
+    &.type-state {
+      box-shadow: 0 0 0 6px rgba(27, 85, 245, 0.10);
+    }
   }
 
   &.color-disabled,
   &.disabled {
     color: var(--ds-text-color-neutral-action-disabled);
+    border-color: transparent;
     background-color: var(--ds-background-color-neutral-action-disabled);
+
+    &.type-state {
+      box-shadow: 0 0 0 6px rgba(203, 213, 225, 0.10);
+    }
   }
 }

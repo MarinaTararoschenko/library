@@ -12,5 +12,9 @@
     </mat-spinner>
   } @else {
     <mat-icon [svgIcon]="icon" [ngClass]="'size-' + iconSize"></mat-icon>
+
+    @if (badge) {
+      <air-badge [text]="badge.text" [color]="badge.color" [size]="badge.size"></air-badge>
+    }
   }
 </button>

@@ -25,8 +25,21 @@
 
     &-row {
       display: grid;
-      column-gap: 22px;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 60px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr minmax(40px, 40px) minmax(40px, 40px);
+
+      app-docs-card-tag-bracket {
+        &:first-of-type {
+          grid-column-start: 7;
+          grid-column-end: 8;
+        }
+
+        &:last-of-type {
+          grid-column-start: 8;
+          grid-column-end: 9;
+        }
+      }
+
     }
   }
 
@@ -48,7 +61,7 @@
       row-gap: 24px;
 
       app-docs-card-tag-bracket {
-        height: 52px;
+        height: 32px;
       }
     }
   }
@@ -62,7 +75,7 @@
   &__column {
     flex-grow: 1;
     display: grid;
-    grid-template-rows: repeat(auto-fill, 52px);
+    grid-template-rows: repeat(auto-fill, 32px);
     row-gap: 24px;
   }
 
@@ -70,11 +83,12 @@
     position: relative;
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 22px;
-    row-gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr minmax(40px, 40px) minmax(40px, 40px);
+    column-gap: 60px;
+    row-gap: 60px;
 
-    air-tag {
+    air-badge {
       margin: 0 auto;
     }
   }

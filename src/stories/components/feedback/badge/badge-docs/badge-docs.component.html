@@ -1,0 +1,182 @@
+<app-docs>
+  <!-- HEADER -->
+  <app-docs-header [data]="headerData" docsHeader></app-docs-header>
+
+  <app-docs-section class="first">
+    <app-docs-card>
+      <app-badge-docs-code></app-badge-docs-code>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 01 OVERVIEW -->
+  <app-docs-section [title]="'01 Overview'" class="columns">
+    @if (cardsOverview; as cards) {
+      @for (card of cards; track $index) {
+        <app-docs-card [title]="card.title">
+
+          <!-- If there is a list -->
+          @if (card.list; as list) {
+            <app-docs-card-list [data]="list"></app-docs-card-list>
+          }
+
+        </app-docs-card>
+      }
+    }
+  </app-docs-section>
+
+  <!-- 02 ANATOMY -->
+  <app-docs-section [title]="'02 Anatomy'">
+    <app-docs-card>
+      <app-badge-docs-anatomy></app-badge-docs-anatomy>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 03 PROPERTIES - Variantes visuales -->
+  <app-docs-section [title]="'03 Properties'">
+    <app-docs-card [title]="'Variantes visuales'">
+      <app-badge-docs-variants></app-badge-docs-variants>
+    </app-docs-card>
+
+    <app-docs-card [title]="'Tamaños'">
+      <app-badge-docs-sizes></app-badge-docs-sizes>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 04 BEHAVIOR -->
+  <app-docs-section [title]="'04 Behavior'">
+    <app-docs-card [title]="'Interacciones'">
+      <mat-divider></mat-divider>
+
+      <div class="container-column">
+        <air-badge
+          color="blue"
+          size="2xl"
+          [text]="'9'">
+        </air-badge>
+        <app-docs-card-tag [text]="'Sin interacción'" class="bottom"></app-docs-card-tag>
+      </div>
+
+    </app-docs-card>
+
+    <app-docs-card [title]="'Responsividad'">
+      <div class="">
+        <app-docs-card-header [data]="{label: '← Desktop', badge: 'Size L — 48px'}"></app-docs-card-header>
+        <app-docs-card-box class="light dashed">
+          <div class="container-row">
+            <air-badge
+              color="grey"
+              size="s"
+              [text]="'9'">
+            </air-badge>
+            <air-badge
+              color="grey"
+              size="s"
+              [text]="'9'">
+            </air-badge>
+            <air-badge
+              color="grey"
+              size="s"
+              [text]="'9'">
+            </air-badge>
+          </div>
+        </app-docs-card-box>
+      </div>
+
+      <div class="mobile-md">
+        <app-docs-card-header [data]="{label: '← Tablet', badge: 'Size M — 40px'}"></app-docs-card-header>
+        <app-docs-card-box class="light dashed">
+          <div class="container-row">
+            <air-badge
+              color="grey"
+              size="s"
+              [text]="'9'">
+            </air-badge>
+            <air-badge
+              color="grey"
+              size="s"
+              [text]="'9'">
+            </air-badge>
+            <air-badge
+              color="grey"
+              size="s"
+              [text]="'9'">
+            </air-badge>
+          </div>
+        </app-docs-card-box>
+      </div>
+      <div class="mobile-xs">
+        <app-docs-card-header [data]="{label: '← Mobile', badge: 'Size S — 32px'}"></app-docs-card-header>
+        <app-docs-card-box class="light dashed">
+          <div class="container-row">
+            <air-badge
+              color="grey"
+              size="s"
+              [text]="'9'">
+            </air-badge>
+            <air-badge
+              color="grey"
+              size="s"
+              [text]="'9'">
+            </air-badge>
+          </div>
+        </app-docs-card-box>
+      </div>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 05 ACCESSIBILITY -->
+  <app-docs-section [title]="'05 Accessibility'">
+    <app-docs-card [title]="'Criterios base'">
+      <app-docs-card-text [text]="accessibilityText"></app-docs-card-text>
+    </app-docs-card>
+
+    <app-docs-card [title]="'Específico de este componente'">
+      <app-docs-card-list [data]="accessibilityList"></app-docs-card-list>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 06 USER GUIDELINES -->
+  <app-docs-section [title]="'06 User Guidelines'" class="columns">
+    <app-docs-card class="success">
+      <app-docs-card-guideline-status [status]="'success'" [text]="'Do'"></app-docs-card-guideline-status>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'Superponer el badge sobre el ícono de notificaciones en la barra de navegación, con conteo real de alertas pendientes.'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-icon-button
+            theme="neutral"
+            type="primary"
+            size="xl"
+            [icon]="'bell'"
+            [badge]="{ text: '+9', color: 'red-fill', size: 'm'}">
+          </air-icon-button>
+        </div>
+      </app-docs-card>
+    </app-docs-card>
+
+    <app-docs-card class="error">
+      <app-docs-card-guideline-status [status]="'error'" [text]="'Don\'t'"></app-docs-card-guideline-status>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'No colocar el badge directamente sobre texto en línea — el lector de pantalla no puede asociarlo al contenido correcto.'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <span class="badge-label">Sebastián García</span>
+          <air-badge
+            color="blue"
+            size="2xl"
+            [text]="'9'">
+          </air-badge>
+        </div>
+      </app-docs-card>
+    </app-docs-card>
+  </app-docs-section>
+
+</app-docs>
