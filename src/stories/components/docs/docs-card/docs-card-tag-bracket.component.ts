@@ -2,6 +2,7 @@ import { Component, HostBinding, Input } from "@angular/core";
 
 import { DocsCardTagComponent } from "./docs-card-tag.component";
 
+type TagBracketPosition = 'top' | 'left' | 'bottom';
 @Component({
     standalone: true,
     selector: 'app-docs-card-tag-bracket',
@@ -62,6 +63,33 @@ import { DocsCardTagComponent } from "./docs-card-tag.component";
                     margin: auto 0 auto auto;
                 }
             }
+
+            &.bottom {
+                justify-content: center;
+                padding-top: 26px;
+
+                &.size-xl {
+                    height: 64px;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    top: 0;
+                    height: 14px;
+                    border: 1px solid #9747FF;
+                    border-radius: 5px;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                    border-top-color: transparent;
+                }
+
+                app-docs-card-tag {
+                    margin: auto auto 0;
+                }
+            }
         }
     `,
     imports: [DocsCardTagComponent]
@@ -69,9 +97,9 @@ import { DocsCardTagComponent } from "./docs-card-tag.component";
 export class DocsCardTagBracketComponent {
     @Input() public text!: string;
 
-    public currentPosition: 'top' | 'left' = 'top'
+    public currentPosition: TagBracketPosition = 'top';
 
-    @Input() public set position(value: 'top' | 'left') {
+    @Input() public set position(value: TagBracketPosition) {
         if (value !== null) {
             this.currentPosition = value;
         }

@@ -1,0 +1,149 @@
+<app-docs>
+  <!-- HEADER -->
+  <app-docs-header [data]="headerData" docsHeader></app-docs-header>
+
+  <app-docs-section class="first">
+    <app-docs-card>
+      <app-header-docs-code></app-header-docs-code>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 01 OVERVIEW -->
+  <app-docs-section [title]="'01 Overview'" class="columns">
+    @if (cardsOverview; as cards) {
+      @for (card of cards; track $index) {
+        <app-docs-card [title]="card.title">
+
+          <!-- If there is a list -->
+          @if (card.list; as list) {
+            <app-docs-card-list [data]="list"></app-docs-card-list>
+          }
+
+        </app-docs-card>
+      }
+    }
+  </app-docs-section>
+
+  <!-- 02 ANATOMY -->
+  <app-docs-section [title]="'02 Anatomy'">
+    <app-docs-card>
+      <app-header-docs-anatomy></app-header-docs-anatomy>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 03 PROPERTIES - Variantes visuales -->
+  <app-docs-section [title]="'03 Properties'">
+    <app-docs-card [title]="'Variantes visuales'">
+      <app-header-docs-variants></app-header-docs-variants>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 04 BEHAVIOR -->
+  <app-docs-section [title]="'04 Behavior'">
+    <app-docs-card [title]="'Interacciones'">
+      <mat-divider></mat-divider>
+
+      <div class="">
+        <air-header
+          [data]="dataInteractions">
+        </air-header>
+      </div>
+
+    </app-docs-card>
+
+    <app-docs-card [title]="'Responsividad'">
+      <app-header-docs-sizes></app-header-docs-sizes>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 05 ACCESSIBILITY -->
+  <app-docs-section [title]="'05 Accessibility'">
+    <app-docs-card [title]="'Criterios base'">
+      <app-docs-card-text [text]="accessibilityText"></app-docs-card-text>
+    </app-docs-card>
+
+    <app-docs-card [title]="'Específico de este componente'">
+      <app-docs-card-list [data]="accessibilityList"></app-docs-card-list>
+    </app-docs-card>
+  </app-docs-section>
+
+  <!-- 06 USER GUIDELINES -->
+  <app-docs-section [title]="'06 User Guidelines'" class="columns">
+    <!-- Gudline "do"-->
+    <app-docs-card class="success">
+      <app-docs-card-guideline-status [status]="'success'" [text]="'Do'"></app-docs-card-guideline-status>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'Mostrar solo los elementos necesarios según el contexto de cada vista'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-header [data]="dataGuidelinesDo" class="desktop"></air-header>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'Usar icon buttons en mobile para optimizar el espacio disponible en el header'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-header [data]="dataGuidelinesDo2"></air-header>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'La bajada aparece solo cuando el contenido de la vista necesita contexto adicional'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-header [data]="dataGuidelinesDo3"></air-header>
+        </div>
+      </app-docs-card>
+    </app-docs-card>
+
+    <!-- Gudline "don't"-->
+    <app-docs-card class="error">
+      <app-docs-card-guideline-status [status]="'error'" [text]="'Don\'t'"></app-docs-card-guideline-status>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'No mostrar todos los elementos del header en todas las vistas sin considerar el contexto'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-header [data]="dataGuidelinesDont"></air-header>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'No usar buttons de texto en mobile cuando el espacio es insuficiente para mostrarlos correctamente'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-header [data]="dataGuidelinesDont2" class="mobile"></air-header>
+        </div>
+      </app-docs-card>
+
+      <app-docs-card>
+        <app-docs-card-text
+          [text]="'No omitir el botón back en vistas que forman parte de una jerarquía de navegación'">
+        </app-docs-card-text>
+        <mat-divider></mat-divider>
+
+        <div class="container-row">
+          <air-header [data]="dataGuidelinesDont3" class="desktop"></air-header>
+        </div>
+      </app-docs-card>
+    </app-docs-card>
+  </app-docs-section>
+
+</app-docs>

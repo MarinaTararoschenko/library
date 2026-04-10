@@ -130,26 +130,28 @@
     </div>
 
     <!-- Bottom (submenu) area -->
-    <div class="header__bottom">
-      @if (data.submenu?.tags; as tags) {
-        <div class="header__tags">
-          @for (tag of tags; track $index) {
-            <air-tag
-              [data]="tag.data"
-              [color]="tag.color ? tag.color : null"
-              [size]="tag.size ? tag.size : null">
-            </air-tag>
-          }
-        </div>
-      }
+    @if (data.submenu; as submenu) {
+      <div class="header__bottom">
+        @if (submenu.tags; as tags) {
+          <div class="header__tags">
+            @for (tag of tags; track $index) {
+              <air-tag
+                [data]="tag.data"
+                [color]="tag.color ? tag.color : null"
+                [size]="tag.size ? tag.size : null">
+              </air-tag>
+            }
+          </div>
+        }
 
-      @if (data.submenu?.tag; as tag) {
-        <air-tag
-          [data]="tag.data"
-          [color]="tag.color ? tag.color : null"
-          [size]="tag.size ? tag.size : null">
-        </air-tag>
-      }
-    </div>
+        @if (submenu.tag; as tag) {
+          <air-tag
+            [data]="tag.data"
+            [color]="tag.color ? tag.color : null"
+            [size]="tag.size ? tag.size : null">
+          </air-tag>
+        }
+      </div>
+    }
   </div>
 }

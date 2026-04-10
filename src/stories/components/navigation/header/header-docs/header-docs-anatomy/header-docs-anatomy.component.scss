@@ -1,0 +1,62 @@
+.anatomy {
+  display: flex;
+  overflow-x: auto;
+
+  &__content {
+    position: relative;
+    min-width: 1070px;
+    padding: 60px 0 100px 120px;
+
+    app-docs-card-tag {
+      position: absolute;
+
+      &.start {
+        right: auto;
+        left: 0;
+        top: 100px;
+        transform: none;
+        margin-left: 0;
+      }
+
+      &.top-left {
+        left: 34%;
+        transform: none;
+      }
+
+      &.top-right {
+        left: auto;
+        right: 34%;
+        transform: none;
+      }
+
+      &.bottom-left {
+        left: 24%;
+        transform: none;
+        bottom: 40px;
+      }
+
+      &.bottom-right {
+        left: auto;
+        right: 9%;
+        transform: none;
+        bottom: 40px;
+      }
+    }
+
+    app-docs-card-tag-bracket {
+      &.top {
+        width: 280px;
+        position: absolute;
+        right: 40px;
+        top: 0;
+      }
+
+      &.bottom {
+        position: absolute;
+        bottom: 0;
+        left: 120px;
+        right: 0;
+      }
+    }
+  }
+}

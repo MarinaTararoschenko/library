@@ -1,0 +1,61 @@
+<div class="variants__top">
+
+  <div class="variants__top-column">
+    <app-docs-card-tag-bracket [text]="'Style: Buttons'" [position]="'top'"></app-docs-card-tag-bracket>
+  </div>
+  <div class="variants__top-column">
+    <app-docs-card-tag-bracket [text]="'Style: IconButtons'" [position]="'top'"></app-docs-card-tag-bracket>
+  </div>
+</div>
+
+<div class="variants__left">
+  <!-- Colors -->
+  <div class="variants__left-column">
+
+    <div class="variants__left-row">
+      <app-docs-card-tag-bracket [text]="'Size: 2XL'" [position]="'left'"></app-docs-card-tag-bracket>
+
+      <app-docs-card-tag-bracket [text]="'Size: L'" [position]="'left'"></app-docs-card-tag-bracket>
+    </div>
+  </div>
+</div>
+
+<div class="variants">
+  <div class="variants__content">
+    <div class="variants__column">
+
+      <!-- Size: 2XL  -->
+      <div class="variants__group">
+        <air-button
+          theme="primary"
+          type="primary"
+          size="2xl"
+          [data]="{ text: 'Body text' }">
+        </air-button>
+        <air-icon-button
+          theme="primary"
+          type="primary"
+          size="2xl"
+          icon="layers">
+        </air-icon-button>
+      </div>
+
+      <!-- Size: L -->
+      <div class="variants__group">
+        <air-button
+          theme="primary"
+          type="primary"
+          size="l"
+          [data]="{ text: 'Body text' }">
+        </air-button>
+        <air-icon-button
+          theme="primary"
+          type="primary"
+          size="l"
+          icon="layers">
+        </air-icon-button>
+      </div>
+
+    </div>
+  </div>
+</div>
